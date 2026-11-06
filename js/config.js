@@ -67,7 +67,7 @@ window.HEIRLOOM = {
     menuCountdown: "The Countdown",
     menuClosing: "A Closing Note",
     openingEyebrow: "You are cordially invited to the wedding of",
-    openingHint: "Touch the gates to enter",
+    openingHint: "Touch the doors to enter",
     openButton: "Enter the Celebration",
     skipButton: "Skip straight to the invitation",
     envelopeAddress: "their honoured guests",
@@ -172,11 +172,11 @@ window.HEIRLOOM = {
   theme: "grove",
   themeColors: {},
   fonts: {
-    editorial: "marcellus",
-    display: "cormorant",
-    script: "pinyon",
-    hand: "laBelle",
-    body: "jost"
+    editorial: "italiana",
+    display: "ebGaramond",
+    script: "allura",
+    hand: "cedarville",
+    body: "karla"
   },
 
   /* ── Wedding-day moments — SAMPLE words for the wedding programme.

@@ -1,18 +1,21 @@
 /* ═══════════════════════════════════════════════════════════════
    VESPERWOOD · rsvp.css
-   The reply card — an engraved ivory plate laid upon the grove
-   wall. Ink on paper, hairline fields, a gilded focus.
+   The reply card — engraved ivory paper set into the dusk, with
+   the handwritten watermark behind it and a quiet, hairline form.
    ═══════════════════════════════════════════════════════════════ */
 
-.scene--rsvp { overflow: visible; }
+.scene--rsvp {
+  padding-bottom: calc(var(--pad-section) + 2rem);
+}
 
 .watermark-script {
   position: absolute;
+  top: 4%;
   left: 50%;
-  top: 4.2rem;
-  transform: translateX(-50%);
+  transform: translateX(-50%) rotate(-5deg);
   font-family: var(--font-script);
-  font-size: clamp(4.5rem, 13vw, 9rem);
+  font-size: clamp(4.4rem, 14vw, 9.6rem);
+  line-height: 1;
   white-space: nowrap;
   color: color-mix(in srgb, var(--champagne) 8%, transparent);
   pointer-events: none;
@@ -21,201 +24,251 @@
 
 .rsvp-card {
   position: relative;
-  padding: clamp(2.4rem, 6.5vw, 4rem) clamp(1.4rem, 5vw, 3.4rem);
+  padding: clamp(2.6rem, 6vw, 4rem) clamp(1.6rem, 5vw, 3.4rem) clamp(2.4rem, 5vw, 3.2rem);
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--paper-raised) 96%, transparent), var(--paper-raised));
-  border: 1px solid color-mix(in srgb, var(--burgundy) 30%, transparent);
-  outline: 1px solid color-mix(in srgb, var(--burgundy) 14%, transparent);
-  outline-offset: 6px;
-  box-shadow: var(--shadow-plate);
+    linear-gradient(176deg,
+      color-mix(in srgb, var(--paper-raised) 96%, var(--champagne) 4%),
+      color-mix(in srgb, var(--ivory) 97%, var(--champagne) 3%));
+  border-radius: 6px;
+  box-shadow: var(--shadow-lift);
   color: var(--ink);
 }
 
+.rsvp-card::after {
+  content: "";
+  position: absolute;
+  inset: 11px;
+  border: 1px solid color-mix(in srgb, var(--burgundy) 24%, transparent);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.scene--rsvp .kicker--ink { color: var(--burgundy); margin-bottom: 1.1rem; }
+
 .rsvp-title {
-  margin: 0 0 .5rem;
   text-align: center;
   font-family: var(--font-editorial);
   font-weight: 400;
-  font-size: clamp(1.8rem, 5vw, 2.6rem);
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  letter-spacing: .1em;
   color: var(--ink);
-}
-.rsvp-deadline {
-  margin: 0 0 1.2rem;
-  text-align: center;
-  font-family: var(--font-display);
-  font-size: var(--fs-lead);
-  font-style: italic;
-  color: var(--ink-soft);
-}
-.rsvp-ornament {
-  width: clamp(180px, 26vw, 250px);
-  margin: 0 auto 2rem;
-  color: color-mix(in srgb, var(--burgundy) 55%, var(--champagne) 45%);
 }
 
-/* ── Fields — hairlines on paper ─────────────────────────────── */
-.rsvp-form { display: grid; gap: 1.5rem; }
-.field {
-  display: grid;
-  gap: .45rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
+.rsvp-deadline {
+  margin-top: .9rem;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
 }
+
+.rsvp-ornament {
+  width: min(300px, 70vw);
+  margin: 1.7rem auto 0;
+  color: var(--burgundy);
+}
+
+.rsvp-ornament svg {
+  width: 100%;
+  height: auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* ── the form ──────────────────────────────────────────────────── */
+
+.rsvp-form {
+  margin-top: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+  max-width: 27rem;
+  margin-inline: auto;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
 .field label,
 .field-legend {
-  font-family: var(--font-body);
   font-size: var(--fs-eyebrow);
-  font-weight: 400;
   letter-spacing: .26em;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--burgundy) 76%, var(--ink) 24%);
-  padding: 0;
+  color: var(--ink-soft);
 }
+
 .field input,
 .field textarea {
-  width: 100%;
-  padding: .65em .2em;
-  font-family: var(--font-display);
-  font-size: 1.12rem;
+  font: inherit;
   color: var(--ink);
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 26%, transparent);
-  border-radius: 0;
-  transition: border-color var(--t-fast) var(--ease-soft);
+  background: color-mix(in srgb, var(--paper-raised) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 26%, transparent);
+  border-radius: 3px;
+  padding: .78em .95em;
+  transition: border-color var(--t-fast) var(--ease-soft),
+              box-shadow var(--t-fast) var(--ease-soft);
 }
-.field textarea { resize: vertical; min-height: 2.8em; line-height: 1.6; }
-.field input::placeholder,
-.field textarea::placeholder { color: color-mix(in srgb, var(--ink) 38%, transparent); font-style: italic; }
+
+.field textarea { resize: vertical; min-height: 3.2em; }
+
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-bottom-color: var(--gold);
+  border-color: var(--burgundy);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--burgundy) 55%, transparent);
 }
-.field.is-invalid input,
-.field.is-invalid textarea { border-bottom-color: #A03446; }
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: color-mix(in srgb, var(--charcoal) 72%, transparent);
+  font-style: italic;
+}
 
 .field-error {
-  margin: .2rem 0 0;
-  font-size: var(--fs-small);
-  color: #A03446;
+  font-size: .84rem;
+  color: #8a3c2e;
 }
 
-/* attendance — gilded diamond radios */
+.field.is-invalid input,
+.field.is-invalid textarea {
+  border-color: #b45544;
+  box-shadow: 0 0 0 1px color-mix(in srgb, #b45544 50%, transparent);
+}
+
+/* attendance — gold diamonds */
 .choices {
   display: flex;
-  flex-wrap: wrap;
-  gap: .8rem 2.2rem;
-  padding-top: .35rem;
-}
-.choice {
-  display: inline-flex;
-  align-items: center;
+  flex-direction: column;
   gap: .7rem;
-  cursor: pointer;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  color: var(--ink);
 }
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  cursor: pointer;
+  padding: .45em .2em;
+}
+
 .choice input {
   position: absolute;
   opacity: 0;
-  width: 1px;
-  height: 1px;
-}
-.choice .diamond {
-  width: 13px;
-  height: 13px;
-  transform: rotate(45deg);
-  border: 1px solid color-mix(in srgb, var(--ink) 55%, transparent);
-  transition: background var(--t-fast) var(--ease-soft),
-              border-color var(--t-fast) var(--ease-soft),
-              box-shadow var(--t-fast) var(--ease-soft);
-}
-.choice input:checked + .diamond {
-  background: var(--gold);
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 22%, transparent);
-}
-.choice input:focus-visible + .diamond {
-  outline: 1px solid var(--gold);
-  outline-offset: 4px;
+  width: 0;
+  height: 0;
 }
 
-/* honeypot — genuinely hidden from people */
+.choice .diamond {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  flex: none;
+  transform: rotate(45deg);
+  border: 1px solid var(--burgundy);
+  transition: background-color var(--t-fast) var(--ease-soft),
+              box-shadow var(--t-fast) var(--ease-soft);
+}
+
+.choice input:checked + .diamond {
+  background: var(--burgundy);
+  box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--burgundy) 26%, transparent);
+}
+
+.choice input:focus-visible + .diamond {
+  outline: 1.5px solid var(--burgundy);
+  outline-offset: 3px;
+}
+
+.choice .text {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  color: var(--ink);
+}
+
 .rsvp-honeypot {
   position: absolute !important;
-  left: -9999px !important;
   width: 1px;
   height: 1px;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
+
+/* ── actions & status ──────────────────────────────────────────── */
 
 .rsvp-actions {
-  display: grid;
-  justify-items: center;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
   margin-top: .4rem;
 }
-.rsvp-note {
-  max-width: 30rem;
-  margin: 0;
-  text-align: center;
-  font-size: var(--fs-small);
-  line-height: 1.65;
-  color: var(--ink-soft);
-}
-.rsvp-note strong { font-weight: 500; color: var(--ink); }
-.rsvp-status {
-  margin: 0;
-  min-height: 1.3em;
-  font-size: var(--fs-small);
-  color: color-mix(in srgb, var(--burgundy) 82%, var(--ink) 18%);
-}
-.rsvp-status.is-error { color: #A03446; }
 
-/* ── The reply preview — gratitude on paper ──────────────────── */
-.rsvp-preview {
-  display: grid;
-  gap: 1.2rem;
-  justify-items: center;
+.rsvp-note {
+  font-size: .85rem;
+  line-height: 1.6;
+  color: var(--charcoal);
   text-align: center;
-  padding-top: 1.6rem;
-  border-top: 1px solid color-mix(in srgb, var(--burgundy) 20%, transparent);
+  max-width: 34ch;
 }
+
+.rsvp-note strong { color: var(--ink-soft); font-weight: 600; }
+
+.rsvp-status {
+  min-height: 1.4em;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.rsvp-status.is-error { color: #8a3c2e; }
+
+/* ── the reply preview ─────────────────────────────────────────── */
+
+.rsvp-preview {
+  margin-top: 2.2rem;
+  text-align: center;
+  outline: none;
+}
+
 .script-intro {
-  margin: 0;
   font-family: var(--font-script);
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  color: color-mix(in srgb, var(--burgundy) 78%, var(--ink) 22%);
+  font-size: clamp(1.6rem, 4.4vw, 2.2rem);
+  color: var(--burgundy);
 }
+
 .rsvp-summary {
   display: grid;
-  gap: .55rem;
-  margin: 0;
-  width: min(26rem, 100%);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.8rem auto 0;
+  max-width: 32rem;
+  text-align: left;
 }
-.rsvp-summary div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.2rem;
-  padding-bottom: .5rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+
+.rsvp-summary > div {
+  padding: .9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--ink) 16%, transparent);
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--paper-raised) 55%, transparent);
 }
+
 .rsvp-summary dt {
-  font-family: var(--font-body);
   font-size: var(--fs-eyebrow);
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--charcoal);
 }
+
 .rsvp-summary dd {
-  margin: 0;
+  margin: .3rem 0 0;
   font-family: var(--font-display);
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--ink);
-  text-align: right;
+  overflow-wrap: anywhere;
 }
+
+.rsvp-preview .rsvp-actions { margin-top: 1.8rem; }

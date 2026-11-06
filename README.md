@@ -1,10 +1,10 @@
 # Vesperwood — a wedding invitation
 
-An enchanted forest at dusk: fern-lace woven into the pine-dark ground,
-a wreath of gilded ferns holding the couple's initials, garden gates
-trellised with climbing vines, fireflies drifting between the scenes,
-and a Victorian glasshouse glowing among the pines. Engraved ivory
-cards, antique-gold hairlines and a whisper of amber light. Fully
+An enchanted forest at dusk: hairline ferns and wild roses engraved in
+leaf-gold over pine-dark velvet, a bower door of woven branches beneath
+a fern arch, fireflies drifting between the scenes, engraved ivory
+cards with arched tops, and a Victorian glasshouse glowing among the
+pines. Fully
 customisable in the browser with a guided, auto-saving visual editor —
 then published live with one click on Cloudflare.
 

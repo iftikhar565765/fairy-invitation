@@ -1,736 +1,1005 @@
 /* ═══════════════════════════════════════════════════════════════
    VESPERWOOD · sections.css
-   The glades of the grove — one scene per clearing:
-   hero · story · save-the-date · details · palette · itinerary ·
-   venue · countdown · closing · footer
+   The scenes of the invitation — hero bower, field-journal story,
+   announcement plate, arched programme plaques, the palette, the
+   garland of moments, the glasshouse, the fern-wreath countdown,
+   the closing note and the footer.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ══ Ⅰ · THE HERO — the open grove ════════════════════════════ */
+/* ══ Ⅰ · THE INVITATION — beneath the bower arch ═══════════════ */
+
 .scene--hero {
   min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding-block: clamp(6rem, 16vh, 9rem) clamp(4rem, 10vh, 6rem);
-  text-align: center;
-}
-.hero-glow {
-  position: absolute;
-  left: 50%;
-  top: 36%;
-  width: min(76vw, 800px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle,
-    color-mix(in srgb, var(--candle) 15%, transparent) 0%,
-    transparent 60%);
-  filter: blur(10px);
-  pointer-events: none;
-}
-/* a faint gilded arch behind the names (static art, whisper-quiet) */
-.hero-arch { display: none; }
-.hero-inner {
-  position: relative;
-  display: grid;
-  justify-items: center;
-}
-/* the grand monogram medallion — static gilded art, initials laid on top */
-.hero-crest {
-  position: relative;
-  display: grid;
-  justify-items: center;
-  margin: 0 0 clamp(1.6rem, 4.5vh, 2.6rem);
-  width: clamp(190px, 30vmin, 260px);
-  filter: drop-shadow(0 12px 34px color-mix(in srgb, var(--night-deep) 72%, transparent));
-}
-.hero-crest__art { width: 100%; height: auto; }
-.hero-crest__initials {
-  position: absolute;
-  top: 54%;
-  transform: translateY(-50%);
-  font-size: clamp(1.3rem, 3.2vmin, 1.9rem);
-  letter-spacing: .08em;
-  color: var(--gilding);
-  text-shadow: 0 1px 2px color-mix(in srgb, var(--night-deep) 72%, transparent),
-               0 0 14px color-mix(in srgb, var(--candle) 30%, transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: calc(var(--pad-section) + 3.4rem);
+  overflow: hidden;
 }
 
-.hero-eyebrow { color: var(--champagne); }
+.hero-glow {
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(120vh, 880px);
+  height: min(120vh, 880px);
+  background: radial-gradient(circle,
+    color-mix(in srgb, var(--candle) 13%, transparent) 0%,
+    color-mix(in srgb, var(--champagne) 7%, transparent) 34%,
+    transparent 66%);
+  pointer-events: none;
+}
+
+.hero-frond {
+  position: absolute;
+  bottom: 4%;
+  width: clamp(90px, 11vw, 150px);
+  height: auto;
+  color: var(--champagne-soft);
+  opacity: .34;
+  pointer-events: none;
+}
+
+.hero-frond--left { left: clamp(6px, 3.5vw, 58px); }
+.hero-frond--right { right: clamp(6px, 3.5vw, 58px); transform: scaleX(-1); }
+
+.hero-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-crest {
+  position: relative;
+  width: clamp(150px, 24vw, 210px);
+  aspect-ratio: 1;
+  margin-bottom: clamp(1.6rem, 4vh, 2.6rem);
+}
+
+.hero-crest__art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 40px color-mix(in srgb, var(--candle) 16%, transparent));
+}
+
+.hero-crest__initials {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding-top: .35em;
+  font-size: clamp(2rem, 5.4vw, 3rem);
+  color: var(--gilding);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .22);
+}
+
+.hero-eyebrow { margin-bottom: clamp(1.6rem, 4vh, 2.6rem); }
+
 .hero-names {
-  margin: .4em 0 .35em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+}
+
+.hero-name {
   font-family: var(--font-editorial);
   font-weight: 400;
   font-size: var(--fs-h1);
-  line-height: 1.06;
-  letter-spacing: .05em;
-  color: var(--ivory);
-  text-shadow: 0 2px 24px color-mix(in srgb, var(--night-deep) 70%, transparent);
+  line-height: 1.04;
+  letter-spacing: .045em;
 }
-.hero-name { display: block; }
+
 .hero-amp {
-  display: block;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: calc(var(--fs-h1) * .72);
-  line-height: .8;
-  margin-block: -.05em;
-  color: var(--gilding);
+  font-size: var(--fs-script-xl);
+  line-height: .9;
+  color: var(--champagne);
+  margin: -.08em 0 -.12em;
 }
+
 .hero-lead {
-  max-width: 34rem;
-  margin: 0 auto 1.6rem;
+  max-width: var(--w-text);
+  margin-top: clamp(1.6rem, 4vh, 2.8rem);
   font-family: var(--font-display);
   font-size: var(--fs-lead);
-  font-style: italic;
-  color: var(--night-ink);
+  line-height: 1.72;
+  color: color-mix(in srgb, var(--ivory) 86%, transparent);
 }
+
 .hero-divider {
-  width: clamp(200px, 30vw, 300px);
-  color: var(--champagne);
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 1px 2px color-mix(in srgb, var(--night-deep) 60%, transparent));
+  width: min(300px, 74vw);
+  height: auto;
+  margin-top: clamp(1.8rem, 4.4vh, 3rem);
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
+
 .hero-words {
-  margin: 0 0 .5rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  margin-top: clamp(1.4rem, 3.4vh, 2.2rem);
+  font-family: var(--font-editorial);
+  font-size: clamp(.94rem, 2.6vw, 1.14rem);
+  letter-spacing: .2em;
   color: var(--moonlit);
 }
-.hero-venue { color: var(--champagne); }
-.hero-venue-suffix { opacity: .85; }
+
+.hero-venue {
+  margin-top: .9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5em 1em;
+  color: var(--night-faint);
+}
 
 .hero-scroll {
   position: absolute;
   left: 50%;
-  bottom: clamp(.8rem, 3vh, 1.8rem);
+  bottom: clamp(14px, 3.4vh, 34px);
   transform: translateX(-50%);
-  display: grid;
-  justify-items: center;
-  gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
-  opacity: .85;
-  transition: opacity var(--t-fast) var(--ease-soft);
-}
-.hero-scroll:hover { opacity: 1; }
-.hero-scroll__line {
-  width: 1px;
-  height: clamp(30px, 6vh, 52px);
-  background: linear-gradient(to bottom, transparent, var(--champagne));
-  animation: scroll-pulse 2.6s var(--ease-soft) infinite;
-}
-.hero-scroll__fleur { width: 15px; color: var(--champagne); }
-@keyframes scroll-pulse {
-  0%, 100% { transform: scaleY(.55); transform-origin: top; opacity: .5; }
-  50% { transform: scaleY(1); opacity: 1; }
+  opacity: .8;
+  z-index: 1;
 }
 
-/* ══ Ⅱ · THE STORY — an illuminated chronicle ════════════════ */
-.scene--story {
-  border-top: 1px solid color-mix(in srgb, var(--champagne) 16%, transparent);
+.hero-scroll__line {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom,
+    transparent,
+    color-mix(in srgb, var(--champagne) 55%, transparent) 30%,
+    color-mix(in srgb, var(--champagne) 55%, transparent));
+  animation: scroll-pulse 2.6s var(--ease-soft) infinite;
+  transform-origin: top center;
 }
+
+@keyframes scroll-pulse {
+  0%   { transform: scaleY(.25); opacity: .2; }
+  45%  { transform: scaleY(1); opacity: .9; }
+  100% { transform: scaleY(.25); opacity: .2; }
+}
+
+.hero-scroll__bud {
+  width: 20px;
+  height: 28px;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll__line { animation: none; transform: none; opacity: .6; }
+}
+
+/* ══ Ⅱ · THEIR STORY — the field journal ═══════════════════════ */
+
+.scene--story .kicker { margin-bottom: 1.4rem; }
+
 .story-grid {
   display: grid;
-  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-  gap: clamp(2.5rem, 6vw, 5rem);
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, .8fr);
+  gap: clamp(2.6rem, 6vw, 5.5rem);
   align-items: start;
 }
-.story-copy .display { margin-bottom: 1.2em; }
+
+.display--h2 { margin-bottom: clamp(1.8rem, 4.4vh, 2.8rem); }
+
+.story-copy .prose + .prose { margin-top: 1.4em; }
+
 .story-note {
-  display: grid;
-  gap: .2rem;
-  margin-top: 2rem;
-  font-size: 1.15rem;
+  margin-top: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: clamp(1.1rem, 2.8vw, 1.35rem);
+  color: var(--sage);
 }
+
 .story-note-credit {
-  font-family: var(--font-body);
-  font-size: var(--fs-eyebrow);
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--night-faint);
+  font-size: .78em;
+  color: var(--charcoal);
 }
+
 .story-rose {
-  width: clamp(74px, 10vw, 104px);
+  width: clamp(120px, 14vw, 168px);
   height: auto;
-  margin-top: 1.4rem;
+  margin-top: 2.6rem;
+  margin-left: auto;
   opacity: .92;
-  filter: drop-shadow(0 6px 16px color-mix(in srgb, var(--night-deep) 65%, transparent));
 }
 
 .story-aside {
-  display: grid;
-  gap: 2rem;
-  padding-left: clamp(1.5rem, 3vw, 2.5rem);
-  border-left: 1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
-}
-/* the quote — an ivory card pinned to the velvet, gilded corners */
-.story-quote {
   position: relative;
-  padding: clamp(1.8rem, 4vw, 2.4rem) clamp(1.4rem, 3vw, 2rem) clamp(1.5rem, 3vw, 1.9rem);
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--paper-raised) 96%, transparent), var(--paper-raised));
-  border: 1px solid color-mix(in srgb, var(--burgundy) 34%, transparent);
-  outline: 1px solid color-mix(in srgb, var(--burgundy) 16%, transparent);
-  outline-offset: 5px;
-  box-shadow: var(--shadow-card);
-}
-.story-quote .leaf-corner { opacity: .9; }
-.story-quote__mark {
-  position: absolute;
-  top: -.4rem;
-  left: .7rem;
-  font-size: 4.6rem;
-  line-height: 1;
-  color: color-mix(in srgb, var(--burgundy) 38%, var(--champagne) 62%);
-  pointer-events: none;
-}
-.story-quote__text {
-  margin: 0 0 1rem;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
-  line-height: 1.45;
-  color: var(--ink);
-}
-.story-quote__label { color: color-mix(in srgb, var(--burgundy) 62%, var(--ink) 38%); letter-spacing: .18em; }
-.story-aside-note { font-size: clamp(1.9rem, 4.5vw, 2.6rem); color: var(--gilding); }
-.story-captions {
-  display: grid;
-  gap: .9rem;
-}
-.story-caption {
-  display: grid;
-  gap: .35rem;
-  justify-items: start;
-}
-.story-caption svg { width: 92px; color: var(--champagne); opacity: .85; }
-.story-caption span {
-  font-family: var(--font-body);
-  font-size: var(--fs-eyebrow);
-  letter-spacing: .26em;
-  text-transform: uppercase;
-  color: var(--night-faint);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: clamp(1rem, 3vh, 2.4rem);
 }
 
-/* ══ Ⅲ · SAVE THE DATE — the engraved announcement ════════════ */
-.scene--std { overflow: visible; }
+.story-quote {
+  position: relative;
+  width: 100%;
+  padding: clamp(2rem, 5vw, 2.8rem) clamp(1.6rem, 4vw, 2.4rem) clamp(2.2rem, 5vw, 3rem);
+  background: linear-gradient(176deg,
+    color-mix(in srgb, var(--parchment) 97%, white 3%),
+    color-mix(in srgb, var(--parchment) 92%, var(--champagne) 8%));
+  border-radius: 4px;
+  box-shadow: var(--shadow-lift);
+  transform: rotate(-1.4deg);
+}
+
+.leaf-corner {
+  position: absolute;
+  width: clamp(58px, 7vw, 84px);
+  height: auto;
+  opacity: .62;
+  pointer-events: none;
+}
+
+.leaf-corner--tl { top: -14px; left: -14px; }
+.leaf-corner--tr { top: -14px; right: -14px; transform: scaleX(-1); }
+.leaf-corner--bl { bottom: -14px; left: -14px; transform: scaleY(-1); }
+.leaf-corner--br { bottom: -14px; right: -14px; transform: scale(-1); }
+
+.story-quote__mark {
+  display: block;
+  font-size: 3rem;
+  line-height: .55;
+  color: var(--champagne-soft);
+  margin-bottom: .9rem;
+}
+
+.story-quote__text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.2rem, 3.2vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.story-quote__label {
+  margin-top: 1.4rem;
+  color: var(--ink-soft);
+  letter-spacing: .18em;
+}
+
+.story-aside-note {
+  margin-top: 2.8rem;
+  font-size: clamp(2rem, 5.4vw, 2.9rem);
+  color: var(--champagne);
+}
+
+.story-captions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.1rem 2.2rem;
+  margin-top: 1.8rem;
+}
+
+.story-caption {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-family: var(--font-hand);
+  font-size: 1.02rem;
+  color: var(--sage);
+}
+
+.story-caption svg {
+  width: 52px;
+  height: 13px;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* ══ Ⅲ · SAVE THE DATE — the announcement plate ════════════════ */
+
+.scene--std { overflow-x: clip; }
+
 .std-glow {
   position: absolute;
+  top: 12%;
   left: 50%;
-  top: 50%;
-  width: min(80vw, 720px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+  width: min(90vh, 720px);
+  height: min(90vh, 720px);
   background: radial-gradient(circle,
-    color-mix(in srgb, var(--candle) 13%, transparent) 0%,
+    color-mix(in srgb, var(--candle) 11%, transparent) 0%,
     transparent 62%);
-  filter: blur(8px);
   pointer-events: none;
 }
+
 .std-plate {
   position: relative;
-  padding: clamp(2.6rem, 7vw, 4.5rem) clamp(1.4rem, 5vw, 3.5rem) clamp(3.2rem, 8vw, 5rem);
+  padding: clamp(2.8rem, 7vw, 4.6rem) clamp(1.6rem, 5vw, 3.6rem) clamp(3.4rem, 8vw, 5rem);
+  background:
+    linear-gradient(174deg,
+      color-mix(in srgb, var(--paper-raised) 96%, var(--champagne) 4%),
+      color-mix(in srgb, var(--ivory) 96%, var(--champagne) 4%));
+  border-radius: 999px 999px 6px 6px;
+  box-shadow: var(--shadow-plate);
   text-align: center;
   color: var(--ink);
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--paper-raised) 96%, transparent), var(--paper-raised));
-  border: 1.5px solid color-mix(in srgb, var(--burgundy) 42%, transparent);
-  outline: 1px solid color-mix(in srgb, var(--burgundy) 18%, transparent);
-  outline-offset: 6px;
-  box-shadow: var(--shadow-plate);
 }
-/* the inner gilded rule of the plate */
-.std-plate::before {
+
+.std-plate::after {
   content: "";
   position: absolute;
-  inset: 11px;
-  border: 1px solid color-mix(in srgb, var(--burgundy) 30%, transparent);
+  inset: 12px;
+  border: 1px solid color-mix(in srgb, var(--burgundy) 26%, transparent);
+  border-radius: 999px 999px 3px 3px;
   pointer-events: none;
 }
-/* the laurel emblem above the announcement title */
+
 .std-emblem {
-  width: clamp(46px, 7vw, 62px);
-  margin: 0 auto 1rem;
-  color: color-mix(in srgb, var(--burgundy) 62%, var(--gold) 38%);
+  width: 108px;
+  height: 72px;
+  margin: 0 auto 1.6rem;
+  color: var(--burgundy);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
+
 .std-title {
-  margin: 0 0 .2rem;
   font-family: var(--font-editorial);
-  font-weight: 400;
-  font-size: clamp(1.9rem, 5.5vw, 3rem);
-  letter-spacing: .14em;
-  text-transform: uppercase;
+  font-size: clamp(1.7rem, 4.6vw, 2.3rem);
+  letter-spacing: .1em;
   color: var(--ink);
 }
+
 .std-crossing {
-  margin: 0 0 1.6rem;
-  font-size: clamp(1.6rem, 4.5vw, 2.3rem);
-  color: color-mix(in srgb, var(--crimson) 74%, var(--ink) 26%);
+  margin-top: .5rem;
+  font-size: clamp(1.35rem, 3.6vw, 1.8rem);
+  color: var(--burgundy);
 }
+
+.std-plate .foil {
+  background: linear-gradient(168deg, #cfa75c 0%, #a5813e 38%, #8a6b34 58%, #b6924e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .std-numerals {
+  margin-top: 1.6rem;
   font-family: var(--font-editorial);
   font-size: var(--fs-numerals);
   letter-spacing: .1em;
-  line-height: 1.1;
-  margin-bottom: .9rem;
-  background: linear-gradient(100deg,
-    color-mix(in srgb, var(--burgundy) 78%, black 6%) 0%,
-    color-mix(in srgb, var(--champagne-soft) 84%, black 16%) 50%,
-    color-mix(in srgb, var(--burgundy) 82%, black 8%) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  line-height: 1;
 }
+
 .std-display {
-  margin: 0 auto 1.4rem;
-  max-width: 30rem;
+  margin-top: 1rem;
   font-family: var(--font-display);
-  font-size: var(--fs-lead);
-  font-style: italic;
+  font-size: clamp(1.02rem, 2.6vw, 1.2rem);
   color: var(--ink-soft);
 }
+
 .std-note {
-  max-width: 28rem;
-  margin: 0 auto 1.8rem;
-  font-size: var(--fs-body);
-  color: var(--ink-soft);
+  margin-top: 1.8rem;
+  font-size: var(--fs-small);
+  color: var(--charcoal);
 }
+
 .std-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .9rem;
-}
-.std-seal {
-  position: absolute;
-  left: 50%;
-  bottom: -34px;
-  transform: translateX(-50%);
-  filter: drop-shadow(0 14px 22px rgba(3, 10, 6, .5));
+  gap: 1rem;
+  margin-top: 2.2rem;
 }
 
-/* ══ Ⅳ · DETAILS — the order of celebration ═══════════════════ */
+.std-seal {
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.seal {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--seal-wax);
+  box-shadow: var(--shadow-seal);
+}
+
+.seal::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 248, 224, .5);
+}
+
+.seal__initials {
+  font-family: var(--font-script);
+  font-size: 1.5rem;
+  color: color-mix(in srgb, #2b2008 78%, var(--gold));
+  transform: rotate(-6deg);
+}
+
+/* ══ Ⅳ · THE DETAILS — arched plaques ═══════════════════════════ */
+
 .details-head {
   text-align: center;
-  max-width: 40rem;
-  margin: 0 auto clamp(2.4rem, 6vw, 4rem);
+  margin-bottom: clamp(2.6rem, 6vh, 4rem);
 }
+
+.details-head .kicker { margin-bottom: 1.2rem; }
+
 .details-intro {
-  margin: 0;
+  margin-top: 1rem;
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--fs-lead);
-  color: var(--night-ink);
+  color: var(--night-faint);
 }
+
 .programme {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 62rem;
-  margin: 0 auto clamp(2.2rem, 5vw, 3.4rem);
+  gap: clamp(1.2rem, 2.6vw, 2rem);
 }
+
 .programme-item {
   position: relative;
-  padding: clamp(1.4rem, 3vw, 2.2rem) clamp(1.2rem, 2.6vw, 2rem);
+  padding: 3rem 1.8rem 2.2rem;
   text-align: center;
-  display: grid;
-  justify-items: center;
-  gap: .55rem;
+  background: linear-gradient(176deg,
+    color-mix(in srgb, var(--night) 68%, var(--crimson) 8%) 0%,
+    var(--glass-deep) 100%);
+  border: 1px solid color-mix(in srgb, var(--champagne) 17%, transparent);
+  border-radius: 999px 999px 6px 6px / 210px 210px 6px 6px;
+  box-shadow: var(--shadow-flat);
 }
-.programme-item + .programme-item {
-  border-left: 1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
-}
+
 .programme-index {
+  position: absolute;
+  top: 1.15rem;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: var(--font-editorial);
-  font-size: 1rem;
-  letter-spacing: .2em;
+  font-size: .95rem;
+  letter-spacing: .18em;
+  color: var(--champagne-soft);
+}
+
+.programme-orn {
+  width: 26px;
+  height: 36px;
+  margin-bottom: 1rem;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.programme-item h3 {
+  font-family: var(--font-editorial);
+  font-size: var(--fs-h3);
+  font-weight: 400;
+  letter-spacing: .07em;
+  color: var(--moonlit);
+}
+
+.programme-value {
+  margin-top: .7rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.08rem;
   color: var(--champagne);
 }
-.programme-orn {
-  width: 20px;
-  color: var(--gilding);
-  opacity: .95;
-}
-.programme-item h3 {
-  margin: .2rem 0 0;
-  font-family: var(--font-editorial);
-  font-weight: 400;
-  font-size: var(--fs-h3);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ivory);
-}
-.programme-value {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: clamp(1.35rem, 3.4vw, 1.8rem);
-  font-style: italic;
-  color: var(--gilding);
-}
+
 .programme-note {
-  margin: 0;
-  max-width: 20rem;
+  margin-top: .8rem;
   font-size: var(--fs-small);
-  line-height: 1.7;
+  line-height: 1.65;
   color: var(--night-faint);
 }
+
 .details-orn {
-  width: clamp(200px, 30vw, 300px);
-  margin: 0 auto clamp(2rem, 5vw, 3rem);
-  color: var(--champagne);
   display: block;
+  width: min(320px, 72vw);
+  height: auto;
+  margin: clamp(2.8rem, 6vh, 4rem) auto;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
+
 .particulars {
-  position: relative;
-  max-width: 58rem;
-  margin: 0 auto;
-  padding-block: clamp(1.6rem, 4vw, 2.4rem);
-  border-top: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
-  text-align: center;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1.4rem, 4vw, 2.8rem);
+  background: color-mix(in srgb, var(--night) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--champagne) 15%, transparent);
+  border-radius: 6px;
+  box-shadow: var(--shadow-flat);
 }
-/* small gilded diamonds on the particulars rails */
-.particulars::before,
-.particulars::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: 7px;
-  height: 7px;
-  transform: translateX(-50%) rotate(45deg);
-  background: color-mix(in srgb, var(--champagne) 60%, transparent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--night-deep) 82%, transparent);
-}
-.particulars::before { top: -4px; }
-.particulars::after { bottom: -4px; }
+
 .particulars-eyebrow {
   display: block;
-  margin-bottom: 1.4rem;
-  color: var(--champagne);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--champagne-soft);
 }
+
 .particulars-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1.2rem, 3vw, 2rem);
-}
-.particular {
-  display: grid;
-  gap: .45rem;
-  justify-items: center;
-  align-content: start;
-}
-.particular-label { color: var(--champagne); }
-.particular-value {
-  font-family: var(--font-display);
-  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
-  color: var(--ivory);
-  max-width: 15rem;
-}
-.particular-note {
-  font-size: var(--fs-small);
-  color: var(--night-faint);
-  max-width: 14rem;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
 }
 
-/* ══ Ⅴ · THE COLOURS OF THE GROVE ═════════════════════════════ */
+.particular {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+
+.particular-label { color: var(--champagne-soft); }
+
+.particular-value {
+  font-family: var(--font-display);
+  font-size: 1.04rem;
+  line-height: 1.45;
+  color: color-mix(in srgb, var(--ivory) 90%, transparent);
+}
+
+.particular-note {
+  font-size: .82rem;
+  line-height: 1.6;
+  color: var(--night-faint);
+}
+
+/* ══ Ⅴ · THE PALETTE ═════════════════════════════════════════════ */
+
 .scene--palette { text-align: center; }
-.palette-intro { margin-bottom: 2.4rem; }
+
+.scene--palette .kicker { margin-bottom: 1.2rem; }
+
+.palette-intro {
+  max-width: var(--w-text);
+  margin: 0 auto clamp(2.4rem, 6vh, 3.6rem);
+}
+
 .palette-swatches {
   list-style: none;
-  margin: 0 0 2.6rem;
-  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: clamp(1rem, 2.6vw, 1.8rem);
+  gap: clamp(1.4rem, 3.6vw, 2.6rem);
 }
-.palette-swatches li {
-  display: grid;
-  gap: .6rem;
-  justify-items: center;
-}
-.swatch {
-  width: clamp(58px, 8vw, 76px);
-  aspect-ratio: 1;
+
+.palette-swatches .swatch {
+  display: block;
+  width: clamp(54px, 9vw, 72px);
+  height: clamp(54px, 9vw, 72px);
   border-radius: 50%;
-  border: 1.5px solid color-mix(in srgb, var(--champagne) 62%, transparent);
-  outline: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
-  outline-offset: 4px;
-  box-shadow: inset 0 2px 6px rgba(3, 10, 6, .3), var(--shadow-flat);
+  border: 1px solid color-mix(in srgb, var(--champagne) 55%, transparent);
+  box-shadow:
+    inset 0 0 0 4px color-mix(in srgb, var(--night) 82%, transparent),
+    0 8px 24px rgba(2, 8, 5, .45);
 }
-.swatch-name {
-  font-family: var(--font-body);
+
+.palette-swatches .swatch-name {
+  display: block;
+  margin-top: .8rem;
   font-size: var(--fs-eyebrow);
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--moonlit-soft);
-}
-.dresscode {
-  display: grid;
-  gap: .5rem;
-  justify-items: center;
-  padding: clamp(1.6rem, 4vw, 2.2rem) clamp(1.2rem, 4vw, 2.4rem);
-  border-top: 1px solid color-mix(in srgb, var(--champagne) 24%, transparent);
-  border-bottom: 1px solid color-mix(in srgb, var(--champagne) 24%, transparent);
-}
-.dresscode-rose {
-  width: clamp(60px, 8vw, 84px);
-  height: auto;
-  margin-bottom: .6rem;
-  opacity: .92;
-  filter: drop-shadow(0 6px 16px color-mix(in srgb, var(--night-deep) 65%, transparent));
-}
-.dresscode-label { color: var(--champagne); }
-.dresscode-title {
-  font-family: var(--font-editorial);
-  font-size: var(--fs-h3);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--ivory);
-}
-.dresscode-note {
-  max-width: 30rem;
-  font-size: var(--fs-small);
   color: var(--night-faint);
 }
 
-/* ══ Ⅵ · THE WEDDING DAY — a garland of moments ═══════════════ */
+.dresscode {
+  position: relative;
+  max-width: var(--w-text);
+  margin: clamp(2.8rem, 7vh, 4.2rem) auto 0;
+  padding: 1.8rem clamp(1.4rem, 4vw, 2.4rem);
+  border: 1px solid color-mix(in srgb, var(--champagne) 20%, transparent);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--night) 52%, transparent);
+}
+
+.dresscode-rose {
+  position: absolute;
+  top: -44px;
+  right: -18px;
+  width: 104px;
+  height: auto;
+  opacity: .95;
+}
+
+.dresscode-label {
+  display: block;
+  color: var(--champagne-soft);
+  margin-bottom: .55rem;
+}
+
+.dresscode-title {
+  display: block;
+  font-family: var(--font-editorial);
+  font-size: clamp(1.3rem, 3.4vw, 1.7rem);
+  letter-spacing: .08em;
+  color: var(--moonlit);
+}
+
+.dresscode-note {
+  display: block;
+  margin-top: .7rem;
+  font-size: var(--fs-small);
+  line-height: 1.65;
+  color: var(--night-faint);
+}
+
+/* ══ Ⅵ · THE WEDDING DAY — the garland of moments ══════════════ */
+
 .scene--itinerary { text-align: center; }
+
+.scene--itinerary .kicker { margin-bottom: 1.2rem; }
+
 .day-words {
   list-style: none;
-  margin: clamp(2rem, 6vw, 3.4rem) auto 0;
-  padding: 0;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 58rem;
+  gap: clamp(1.6rem, 4.5vw, 3.4rem);
+  margin-top: clamp(3rem, 8vh, 4.6rem);
+  padding-top: 6px;
 }
+
+/* the sagging vine cable the moments hang from */
+.day-words::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(-8px, calc(-1 * var(--pad-gutter)));
+  right: max(-8px, calc(-1 * var(--pad-gutter)));
+  height: 30px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 30' preserveAspectRatio='none'><path d='M0,4 Q200,26 400,14 T800,4' fill='none' stroke='rgba(217,188,127,0.5)' stroke-width='1.6'/></svg>") center / 100% 100% no-repeat;
+  opacity: .8;
+}
+
 .day-word {
   position: relative;
-  flex: 1 1 auto;
-  min-width: 88px;
-  padding: 30px clamp(.4rem, 1.2vw, 1rem) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
 }
-/* the gilded garland line + bead (main.js renders .day-word__bulb) */
+
 .day-word__bulb {
   position: absolute;
   top: 0;
   left: 50%;
-  width: 9px;
-  height: 9px;
-  transform: translateX(-50%) rotate(45deg);
-  background: linear-gradient(135deg, var(--gilding), var(--champagne-soft));
-  border: 1px solid var(--champagne);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--night-deep) 88%, transparent);
+  width: 1px;
+  height: 20px;
+  background: color-mix(in srgb, var(--champagne) 45%, transparent);
 }
-.day-word::before,
-.day-word::after {
+
+.day-word__bulb::after {
   content: "";
   position: absolute;
-  top: 4px;
-  height: 1px;
-  width: calc(50% - 14px);
-  background: linear-gradient(to right,
-    transparent,
-    color-mix(in srgb, var(--champagne) 44%, transparent));
-}
-.day-word::before { left: 0; }
-.day-word::after {
-  right: 0;
-  background: linear-gradient(to left,
-    transparent,
-    color-mix(in srgb, var(--champagne) 44%, transparent));
-}
-.day-word:first-child::before,
-.day-word:last-child::after { display: none; }
-.day-word__text {
-  display: block;
-  font-family: var(--font-editorial);
-  font-size: clamp(.86rem, 2vw, 1.02rem);
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--moonlit);
-  white-space: nowrap;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff3cd 0%, var(--candle) 46%, transparent 78%);
+  box-shadow:
+    0 0 10px 3px color-mix(in srgb, var(--candle) 55%, transparent),
+    0 0 26px 10px color-mix(in srgb, var(--candle) 18%, transparent);
+  animation: votive-breathe 3.4s ease-in-out infinite;
 }
 
-/* ══ Ⅶ · THE GLASSHOUSE — venue ═══════════════════════════════════ */
-.scene--venue { text-align: center; }
-.venue-title {
-  margin: .2rem 0 clamp(1.8rem, 5vw, 2.8rem);
+.day-word:nth-child(2n) .day-word__bulb::after { animation-delay: -1.7s; }
+.day-word:nth-child(3n) .day-word__bulb::after { animation-duration: 4.1s; }
+
+@keyframes votive-breathe {
+  0%, 100% { opacity: .75; }
+  50%      { opacity: 1; }
+}
+
+.day-word__text {
   font-family: var(--font-editorial);
-  font-weight: 400;
-  font-size: clamp(1.7rem, 5vw, 2.9rem);
-  line-height: 1.2;
-  letter-spacing: .06em;
-  color: var(--ivory);
-}
-/* the glasshouse — static art with a candle halo */
-.venue-facade-art {
-  width: min(560px, 80vw);
-  height: auto;
-  margin: 0 auto .6rem;
-  filter: drop-shadow(0 10px 30px color-mix(in srgb, var(--night-deep) 75%, transparent));
-}
-.venue-colonnade {
-  width: min(320px, 56vw);
-  margin: 0 auto clamp(1.8rem, 5vw, 2.6rem);
-  color: color-mix(in srgb, var(--champagne) 74%, transparent);
-}
-.venue-description {
-  max-width: 36rem;
-  margin-bottom: 2rem;
-}
-.venue-sublines {
-  display: grid;
-  gap: .55rem;
-  margin-bottom: 1.6rem;
-}
-.venue-sublines .sub {
-  margin: 0;
-  font-size: var(--fs-body);
-  color: var(--night-ink);
-}
-.venue-sublines .label-caps { margin-right: .6rem; }
-.venue-sublines em {
-  font-family: var(--font-display);
-  font-style: italic;
+  font-size: clamp(1.02rem, 2.8vw, 1.28rem);
+  letter-spacing: .16em;
   color: var(--moonlit);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .day-word__bulb::after { animation: none; opacity: .85; }
+}
+
+/* ══ Ⅶ · THE GLASSHOUSE ══════════════════════════════════════════ */
+
+.scene--venue { text-align: center; }
+
+.scene--venue .kicker { margin-bottom: 1.2rem; }
+
+.venue-title {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5.6vw, 2.9rem);
+  letter-spacing: .06em;
+  line-height: 1.2;
+  color: var(--moonlit);
+  margin-bottom: clamp(2rem, 5vh, 3rem);
+}
+
+.venue-facade-art {
+  width: min(600px, 88vw);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 44px color-mix(in srgb, var(--candle) 12%, transparent));
+}
+
+.venue-colonnade {
+  width: min(340px, 76vw);
+  height: auto;
+  margin: 1.6rem auto 0;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  opacity: .9;
+}
+
+.venue-description {
+  max-width: var(--w-text);
+  margin: clamp(2rem, 5vh, 3rem) auto 0;
+}
+
+.venue-sublines {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-top: clamp(1.8rem, 4vh, 2.6rem);
+}
+
+.venue-sublines .sub {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: color-mix(in srgb, var(--ivory) 84%, transparent);
+}
+
+.venue-sublines .label-caps { color: var(--champagne-soft); margin-right: .6em; }
+
+.venue-sublines em { font-style: italic; }
+
 .venue-address {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: .55rem;
-  margin-bottom: 1.8rem;
-  font-size: var(--fs-small);
-  letter-spacing: .1em;
+  justify-content: center;
+  gap: .7rem;
+  margin-top: 1.8rem;
   color: var(--night-faint);
 }
-.venue-address .icon { width: 1rem; height: 1rem; color: var(--champagne); }
-.venue-address p { margin: 0; }
-.venue-actions { display: flex; justify-content: center; }
 
-/* ══ Ⅷ · THE COUNTDOWN — beneath the wreath ═══════════════════ */
-.scene--countdown { text-align: center; }
+.venue-address .icon {
+  width: 16px;
+  height: 16px;
+  stroke: var(--champagne-soft);
+  stroke-width: 1.6;
+  fill: none;
+  flex: none;
+}
+
+.venue-actions {
+  margin-top: clamp(1.8rem, 4vh, 2.6rem);
+}
+
+/* ══ Ⅷ · THE COUNTDOWN — beneath the fern wreath ════════════════ */
+
+.scene--countdown {
+  text-align: center;
+  padding-top: calc(var(--pad-section) + 3rem);
+}
+
 .countdown-wreath {
   position: absolute;
+  top: calc(var(--pad-section) + 6.8rem);
   left: 50%;
-  top: 50%;
-  width: clamp(300px, 52vw, 470px);
-  transform: translate(-50%, -50%);
-  color: var(--champagne);
-  opacity: .36;
+  transform: translateX(-50%);
+  width: clamp(180px, 30vw, 280px);
+  height: auto;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  opacity: .55;
   pointer-events: none;
 }
-.count-script {
-  margin: 0 0 2.4rem;
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.7rem, 5.5vw, 3.1rem);
-  line-height: 1.25;
-  color: var(--ivory);
+
+.scene--countdown .container > * {
+  position: relative;
+  z-index: 1;
 }
+
+.scene--countdown .kicker {
+  position: relative;
+  margin-bottom: 1.2rem;
+}
+
+.count-script {
+  position: relative;
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  line-height: 1.3;
+  color: var(--moonlit);
+  max-width: 30ch;
+  margin: 0 auto;
+}
+
 .count-script em {
   font-family: var(--font-script);
   font-style: normal;
-  font-size: 1.25em;
-  color: var(--gilding);
+  font-size: 1.24em;
+  color: var(--champagne);
 }
+
 .count-clock {
-  position: relative;
   display: flex;
   justify-content: center;
-  gap: clamp(1rem, 4vw, 2.6rem);
-  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+  gap: clamp(1.4rem, 4.4vw, 3.2rem);
+  margin-top: clamp(2.4rem, 6vh, 3.6rem);
 }
-.count-unit {
-  display: grid;
-  gap: .3rem;
-  justify-items: center;
-  min-width: clamp(58px, 10vw, 92px);
-}
+
+.count-unit { min-width: 74px; }
+
 .count-num {
+  display: block;
   font-family: var(--font-editorial);
-  font-size: clamp(2.2rem, 7vw, 4rem);
+  font-size: var(--fs-numerals);
   line-height: 1;
-  font-variant-numeric: tabular-nums;
 }
-.count-label { color: var(--champagne); }
-.count-summary { min-height: 1.2em; margin: 0; font-size: var(--fs-small); color: var(--night-faint); }
+
+.count-label {
+  display: block;
+  margin-top: .7rem;
+  color: var(--champagne-soft);
+}
+
+.count-summary {
+  margin-top: 1.6rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--night-faint);
+  min-height: 1.5em;
+}
+
 .count-message {
-  margin: .4rem 0 0;
+  margin-top: 1.4rem;
   font-family: var(--font-display);
   font-style: italic;
   font-size: var(--fs-lead);
   color: var(--moonlit);
+  max-width: 34ch;
+  margin-inline: auto;
 }
-.count-date { margin-top: 1rem; color: var(--night-faint); }
-.count-date__zone { text-transform: none; letter-spacing: .1em; }
 
-/* ══ Ⅹ · CLOSING + FOOTER ═════════════════════════════════════ */
+.count-date {
+  margin-top: 1.6rem;
+  color: var(--night-faint);
+  letter-spacing: .2em;
+}
+
+.count-date__zone { color: var(--charcoal); }
+
+/* ══ X · THE CLOSING NOTE ════════════════════════════════════════ */
+
 .scene--closing {
   text-align: center;
-  border-top: 1px solid color-mix(in srgb, var(--champagne) 16%, transparent);
-  overflow: visible;
+  padding-top: calc(var(--pad-section) + 1rem);
 }
+
 .closing-garland {
-  width: clamp(200px, 30vw, 330px);
+  width: min(460px, 84vw);
   height: auto;
-  margin: 0 auto clamp(1.6rem, 4vw, 2.4rem);
-  opacity: .9;
-  filter: drop-shadow(0 6px 18px color-mix(in srgb, var(--night-deep) 70%, transparent));
+  margin: 0 auto clamp(1.4rem, 4vh, 2.4rem);
+  opacity: .95;
 }
+
 .closing-script {
-  margin: 0 0 .4rem;
-  font-size: clamp(1.7rem, 4.5vw, 2.4rem);
-  color: var(--champagne);
+  font-family: var(--font-hand);
+  font-size: clamp(1.2rem, 3.2vw, 1.5rem);
+  color: var(--sage);
 }
+
 .closing-names {
-  margin: 0 0 1rem;
   font-size: var(--fs-script);
-  color: var(--ivory);
-  text-shadow: 0 2px 26px color-mix(in srgb, var(--night-deep) 72%, transparent);
+  line-height: 1.1;
+  color: var(--moonlit);
+  margin-top: .4rem;
+  text-shadow: 0 2px 30px color-mix(in srgb, var(--candle) 18%, transparent);
 }
+
 .closing-date {
-  margin: 0 0 1.6rem;
-  font-family: var(--font-body);
-  font-size: var(--fs-small);
-  letter-spacing: .22em;
-  text-transform: uppercase;
+  margin-top: 1.2rem;
+  font-family: var(--font-editorial);
+  letter-spacing: .18em;
+  font-size: .95rem;
   color: var(--night-faint);
 }
+
 .closing-message {
-  max-width: 32rem;
-  margin: 0 auto 2.2rem;
-  color: var(--night-ink);
+  max-width: 40ch;
+  margin: clamp(1.8rem, 4vh, 2.6rem) auto 0;
+  font-family: var(--font-display);
+  font-size: var(--fs-lead);
+  line-height: 1.72;
+  color: color-mix(in srgb, var(--ivory) 86%, transparent);
 }
+
 .closing-seal {
+  margin: clamp(2.2rem, 5vh, 3.2rem) auto 0;
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
 }
+
 .closing-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: .8rem;
+  gap: 1rem;
+  margin-top: clamp(2rem, 5vh, 3rem);
 }
 
+/* ══ FOOTER ══════════════════════════════════════════════════════ */
+
 .footer {
+  position: relative;
   text-align: center;
-  padding: clamp(2.4rem, 6vw, 3.6rem) var(--pad-gutter) clamp(2.8rem, 7vw, 4rem);
-  border-top: 1px solid color-mix(in srgb, var(--champagne) 14%, transparent);
+  padding: clamp(2.6rem, 7vh, 4.4rem) 0 clamp(2.2rem, 6vh, 3.4rem);
 }
+
 .footer-ornament {
-  width: clamp(200px, 26vw, 280px);
-  margin: 0 auto 1.4rem;
-  color: var(--champagne);
-  opacity: .85;
+  width: min(320px, 72vw);
+  height: auto;
+  margin: 0 auto 1.8rem;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
 }
-.footer-credit { margin-top: 1rem; }
+
+.footer .small {
+  font-size: var(--fs-small);
+  letter-spacing: .14em;
+  color: var(--night-faint);
+}
+
+.footer .small + .small { margin-top: .5rem; }
+
+.footer-credit { margin-top: 1.6rem; }
+
 .footer-credit a {
-  color: var(--champagne);
-  text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--champagne) 34%, transparent);
-  padding-bottom: 2px;
+  color: var(--champagne-soft);
+  text-decoration: underline;
+  text-underline-offset: .35em;
+  text-decoration-color: color-mix(in srgb, var(--champagne) 30%, transparent);
   transition: color var(--t-fast) var(--ease-soft);
 }
-.footer-credit a:hover { color: var(--gilding); }
+
+.footer-credit a:hover { color: var(--champagne); }

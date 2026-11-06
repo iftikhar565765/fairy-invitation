@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Allura&family=EB+Garamond:ital@0;1&family=Karla:wght@300;400&display=swap" rel="stylesheet">
+<style>
+body { margin:0; width:1200px; height:630px; overflow:hidden; background:#06120b; }
+.cover { width:1200px; height:630px; position:relative;
+  background:
+    radial-gradient(120% 100% at 50% -10%, #14301f 0%, #0a1c12 52%, #06120b 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+.glow { position:absolute; top:30px; left:50%; transform:translateX(-50%);
+  width:560px; height:560px; border-radius:50%;
+  background:radial-gradient(circle, rgba(246,223,164,.15) 0%, rgba(217,188,127,.06) 40%, transparent 68%); }
+.fern { position:absolute; opacity:.34; color:#d9bc7f; }
+.fl { left:-30px; bottom:-60px; }
+.fr { right:-34px; top:-40px; transform:scaleX(-1) rotate(6deg); }
+.wreath { position:relative; width:238px; height:238px; }
+.init { position:absolute; inset:0; display:grid; place-items:center; padding-top:32px;
+  font-family:'Allura',cursive; font-size:62px; color:#e2c78e; }
+.names { font-family:'Italiana',serif; font-size:62px; letter-spacing:.05em; color:#f6f1e2; margin-top:16px; }
+.names .amp { font-family:'Allura',cursive; color:#d9bc7f; font-size:54px; padding:0 16px; }
+.line { width:430px; height:1px; margin:20px 0 18px;
+  background:linear-gradient(90deg, transparent, rgba(217,188,127,.65), transparent); position:relative; }
+.line i { position:absolute; left:50%; top:-3.5px; width:8px; height:8px; transform:translateX(-50%) rotate(45deg);
+  border:1px solid rgba(217,188,127,.8); background:#0a1c12; }
+.date { font-family:'Karla',sans-serif; font-weight:300; font-size:19px; letter-spacing:.44em; text-transform:uppercase; color:#b7a67c; }
+.sub { margin-top:13px; font-family:'EB Garamond',serif; font-style:italic; font-size:20px; color:#8f9c84; }
+.wordmark { position:absolute; bottom:26px; left:0; right:0; font-family:'Karla',sans-serif;
+  font-size:12px; letter-spacing:.5em; color:rgba(217,188,127,.5); text-transform:uppercase; }
+</style></head><body><div class="cover">
+  <div class="glow"></div>
+  <img class="fern fl" src="assets/orn/understory-left.svg" width="430" alt="">
+  <img class="fern fr" src="assets/orn/understory-right.svg" width="400" alt="">
+  <div class="wreath">
+    <img src="assets/orn/crest-fern.webp" style="width:238px;height:238px;object-fit:contain" alt="">
+    <div class="init">W · T</div>
+  </div>
+  <div class="names">Wren<span class="amp">&amp;</span>Theodore</div>
+  <div class="line"><i></i></div>
+  <div class="date">19 · 06 · 2027</div>
+  <div class="sub">an evening of fireflies &amp; ferns — you are cordially invited</div>
+  <div class="wordmark">Vesperwood · Wedding Invitation</div>
+</div></body></html>

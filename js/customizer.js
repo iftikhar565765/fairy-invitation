@@ -1149,19 +1149,19 @@
   /* ── design step: curated moods & voices ───────────────────── */
 
   var THEME_META = [
-    { key: 'grove', name: 'Deep Pine & Gold', chips: ['#7C6A3A', '#F7F3E4', '#D6B87E', '#0E2417'] },
-    { key: 'fern', name: 'Mossy Emerald', chips: ['#7A6C3C', '#F7F4E9', '#C6B183', '#12271B'] },
-    { key: 'ember', name: 'Autumn Ember', chips: ['#8C6B2F', '#F9F3E6', '#D9B98A', '#2A1C10'] },
-    { key: 'dusk', name: 'Twilight Dusk', chips: ['#7C6F45', '#F6F5EC', '#CFBA8F', '#122229'] }
+    { key: 'grove', name: 'Pine & Firelight', chips: ['#A8894C', '#F6F1E2', '#D9BC7F', '#0A1C12'] },
+    { key: 'fern', name: 'Moss & Fern', chips: ['#A38A52', '#F7F4E9', '#D3BC8B', '#0E2016'] },
+    { key: 'ember', name: 'Autumn Ember', chips: ['#9A7433', '#F9F3E6', '#DBBB88', '#241608'] },
+    { key: 'dusk', name: 'Twilight Fern', chips: ['#9C9256', '#F6F5EC', '#D5C394', '#0A1A16'] }
   ];
 
   var TYPE_PAIRINGS = [
-    { name: 'Court Royal', fonts: { editorial: 'marcellus', display: 'cormorant', script: 'pinyon', hand: 'laBelle', body: 'jost' } },
-    { name: 'Gilded Didone', fonts: { editorial: 'bodoni', display: 'playfair', script: 'greatVibes', hand: 'caveat', body: 'dmSans' } },
-    { name: 'Palace Italiana', fonts: { editorial: 'italiana', display: 'cormorant', script: 'parisienne', hand: 'cedarville', body: 'jost' } },
-    { name: 'Vellum & Ink', fonts: { editorial: 'libreCaslon', display: 'crimsonPro', script: 'allura', hand: 'homemadeApple', body: 'karla' } },
-    { name: 'Regency Romance', fonts: { editorial: 'prata', display: 'ebGaramond', script: 'alexBrush', hand: 'shadowsIntoLight', body: 'montserrat' } },
-    { name: 'Empire Modern', fonts: { editorial: 'dmSerif', display: 'lora', script: 'tangerine', hand: 'nothingYouCouldDo', body: 'outfit' } }
+    { name: 'Woodland Classic', fonts: { editorial: 'italiana', display: 'ebGaramond', script: 'allura', hand: 'cedarville', body: 'karla' } },
+    { name: 'Ink & Ivory', fonts: { editorial: 'bodoni', display: 'playfair', script: 'greatVibes', hand: 'caveat', body: 'dmSans' } },
+    { name: 'Moonlit Garden', fonts: { editorial: 'prata', display: 'ebGaramond', script: 'parisienne', hand: 'shadowsIntoLight', body: 'montserrat' } },
+    { name: 'Field Notes', fonts: { editorial: 'libreCaslon', display: 'crimsonPro', script: 'homemadeApple', hand: 'nothingYouCouldDo', body: 'karla' } },
+    { name: 'Wildflower Ink', fonts: { editorial: 'dmSerif', display: 'lora', script: 'tangerine', hand: 'shadowsIntoLight', body: 'outfit' } },
+    { name: 'Gilded Fern', fonts: { editorial: 'marcellus', display: 'cormorant', script: 'pinyon', hand: 'laBelle', body: 'jost' } }
   ];
 
   function fontPreviewFamily(font) {

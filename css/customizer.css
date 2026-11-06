@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   THE HEIRLOOM FILM · customizer.css
+   VESPERWOOD · customizer.css
    ---------------------------------------------------------------
    The Invitation Atelier — a guided, seven-step studio.
    Design language: quiet ink surfaces, Syne headlines, Jost
@@ -13,31 +13,31 @@
   color-scheme: dark;
 
   /* surfaces — warm ink, flat */
-  --desk: #161214;
-  --desk-soft: #191416;
-  --panel: #1d181a;
-  --panel-soft: #241e21;
-  --panel-deep: #191416;
+  --desk: #11150e;
+  --desk-soft: #14180f;
+  --panel: #171c12;
+  --panel-soft: #1e2416;
+  --panel-deep: #12160d;
   --well: rgba(0, 0, 0, .3);
 
   /* lines & type colours */
-  --edge: rgba(234, 230, 224, .06);
-  --line: rgba(234, 230, 224, .1);
-  --line-strong: rgba(234, 230, 224, .24);
-  --copy: #eceae6;
-  --muted: #a9a29a;
-  --faint: #857f78;
+  --edge: rgba(224, 210, 172, .06);
+  --line: rgba(224, 210, 172, .1);
+  --line-strong: rgba(224, 210, 172, .24);
+  --copy: #ece9df;
+  --muted: #a8a393;
+  --faint: #7f7c6d;
 
   /* accents — bone only where a thing is interactive */
-  --accent: #eae6e0;
-  --accent-strong: #f5f2ed;
-  --accent-ink: #161214;
+  --accent: #dfc084;
+  --accent-strong: #f2dca8;
+  --accent-ink: #151206;
   --sage: #a4b494;
   --rose-soft: #d8a5a5;
 
   /* shape & depth */
   --radius: 2px;
-  --ring: 0 0 0 2px rgba(234, 230, 224, .35);
+  --ring: 0 0 0 2px rgba(223, 192, 132, .38);
   --shadow-pop: 0 18px 44px -18px rgba(0, 0, 0, .55);
 
   /* motion */
@@ -72,14 +72,14 @@ button, a, label { -webkit-tap-highlight-color: transparent; }
 
 [hidden] { display: none !important; }
 
-::selection { background: rgba(234, 230, 224, .25); }
+::selection { background: rgba(223, 192, 132, .28); }
 
 :focus-visible { outline: none; box-shadow: var(--ring); border-radius: var(--radius); }
 
 /* quiet scrollbars */
-* { scrollbar-width: thin; scrollbar-color: rgba(236, 234, 230, .14) transparent; }
+* { scrollbar-width: thin; scrollbar-color: rgba(224, 210, 172, .15) transparent; }
 *::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-thumb { background: rgba(236, 234, 230, .14); border-radius: 8px; }
+*::-webkit-scrollbar-thumb { background: rgba(224, 210, 172, .15); border-radius: 8px; }
 *::-webkit-scrollbar-track { background: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -198,9 +198,9 @@ button, a, label { -webkit-tap-highlight-color: transparent; }
   color: var(--muted);
 }
 
-.backup-quiet:hover { background: rgba(234, 230, 224, .08); color: var(--copy); }
+.backup-quiet:hover { background: rgba(224, 210, 172, .08); color: var(--copy); }
 
-.backup-quiet:active { background: rgba(234, 230, 224, .12); }
+.backup-quiet:active { background: rgba(224, 210, 172, .12); }
 
 .text-button {
   appearance: none;
@@ -236,7 +236,7 @@ button, a, label { -webkit-tap-highlight-color: transparent; }
 .header-menu__toggle:hover,
 .header-menu__toggle[aria-expanded="true"] {
   color: var(--copy);
-  background: rgba(234, 230, 224, .06);
+  background: rgba(224, 210, 172, .06);
 }
 
 .header-menu__list {
@@ -275,7 +275,7 @@ button, a, label { -webkit-tap-highlight-color: transparent; }
 }
 
 .header-menu__item small { color: var(--faint); font-size: 12px; letter-spacing: .02em; }
-.header-menu__item:hover { background: rgba(234, 230, 224, .06); }
+.header-menu__item:hover { background: rgba(224, 210, 172, .06); }
 
 /* published link bar */
 .header-published { background: var(--desk-soft); }
@@ -328,7 +328,7 @@ button, a, label { -webkit-tap-highlight-color: transparent; }
 }
 
 .header-published__row button:hover,
-.header-published__row .submissions-button:hover { background: rgba(234, 230, 224, .1); color: var(--accent-strong); }
+.header-published__row .submissions-button:hover { background: rgba(224, 210, 172, .1); color: var(--accent-strong); }
 
 /* ── page scaffold ────────────────────────────────────────────── */
 
@@ -406,7 +406,7 @@ h1 {
 
 .flow-progress__bar {
   height: 1px;
-  background: rgba(234, 230, 224, .1);
+  background: rgba(224, 210, 172, .1);
   overflow: hidden;
 }
 
@@ -604,10 +604,10 @@ h1 {
   transition: box-shadow var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
 }
 
-.choice-card:hover { background: #2a2427; }
+.choice-card:hover { background: #242a1a; }
 
 .choice-card.is-selected {
-  background: rgba(234, 230, 224, .07);
+  background: rgba(224, 210, 172, .07);
   box-shadow: 0 0 0 1px var(--accent);
 }
 
@@ -689,7 +689,7 @@ h1 {
   transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
 }
 
-.maps-button:hover { background: rgba(234, 230, 224, .08); color: var(--accent-strong); }
+.maps-button:hover { background: rgba(224, 210, 172, .08); color: var(--accent-strong); }
 
 /* stepper (guest party size) */
 
@@ -712,7 +712,7 @@ h1 {
   transition: background var(--t-fast) var(--ease);
 }
 
-.stepper button:hover { background: rgba(234, 230, 224, .07); }
+.stepper button:hover { background: rgba(224, 210, 172, .07); }
 
 .stepper button:disabled { color: var(--faint); cursor: default; background: transparent; }
 
@@ -941,13 +941,13 @@ body.preview-open { overflow: hidden; }
   font-size: 13px;
 }
 
-.preview-close:hover { color: var(--copy); background: rgba(234, 230, 224, .1); }
+.preview-close:hover { color: var(--copy); background: rgba(224, 210, 172, .1); }
 
 .preview-frame {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--night, #24090d);
+  background: var(--night, #160b05);
 }
 
 .preview-frame iframe {
@@ -955,7 +955,7 @@ body.preview-open { overflow: hidden; }
   width: 100%;
   height: clamp(560px, calc(100vh - 322px), 860px);
   border: 0;
-  background: #24090d;
+  background: #140c07;
 }
 
 .preview-loading {
@@ -963,7 +963,7 @@ body.preview-open { overflow: hidden; }
   inset: 0;
   display: grid;
   place-items: center;
-  background: rgba(22, 18, 20, .88);
+  background: rgba(13, 18, 10, .9);
   color: var(--muted);
   font-size: 14px;
   letter-spacing: .06em;
@@ -1078,7 +1078,7 @@ body.preview-open .preview-footer { justify-content: center; }
   cursor: pointer;
 }
 
-.canvas-color-action__actions button:hover { color: var(--copy); background: rgba(234, 230, 224, .1); }
+.canvas-color-action__actions button:hover { color: var(--copy); background: rgba(224, 210, 172, .1); }
 
 #remove-element { color: var(--rose-soft); }
 #remove-element:hover { color: #e6b4b4; }
@@ -1245,6 +1245,6 @@ body.preview-open .preview-toggle { display: none; }
   transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
 }
 
-.submissions-button:hover { background: rgba(234, 230, 224, .1); color: var(--copy); }
+.submissions-button:hover { background: rgba(224, 210, 172, .1); color: var(--copy); }
 
 body.celebration-open { overflow: hidden; }

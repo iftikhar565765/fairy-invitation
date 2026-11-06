@@ -1,82 +1,79 @@
 /* ═══════════════════════════════════════════════════════════════
    VESPERWOOD · variables.css
    Design tokens — the whole visual identity in one place.
-   An enchanted forest at dusk: deep pine velvet, firefly amber,
-   fern-hairline gold, engraved ivory paper. The token names follow
-   the editor's colour roles so the theme picker recolours every
-   surface. The design reads dark-first: --night is the forest
-   floor, --ivory the engraved card, --champagne the leaf gold.
+   A clearing in an old forest at dusk: pine-dark velvet, fern
+   gold, warm ivory paper, firefly amber. Token names follow the
+   editor's colour roles so the theme picker recolours every
+   surface; the design reads dark-first: --night is the forest
+   floor, --ivory the engraved paper, --champagne the leaf gold.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
-  /* ── Palette (theme presets refine these at runtime) ──────────
-     grove  : deep pine + firefly gold          (default)
-     fern   : mossy emerald + brassy gold
-     ember  : walnut & autumn amber
-     dusk   : blue-green twilight + moon gold   */
-  --burgundy:      #7C6A3A;
-  --burgundy-deep: #5F5028;
-  --wine:          #16301F;
-  --crimson:       #35634A;
-  --ivory:         #F7F3E4;
+  /* ── Palette (theme presets refine these at runtime) ────────── */
+  --burgundy:      #A8894C;   /* leaf-gold, the metal of the grove  */
+  --burgundy-deep: #82683A;
+  --wine:          #14291B;   /* deep pine                          */
+  --crimson:       #2E5B44;   /* moss                               */
+  --ivory:         #F6F1E2;
   --paper-raised:  #FCF8EC;
-  --parchment:     #EFE8D2;
-  --champagne:     #D6B87E;
-  --champagne-soft:#B5975F;
-  --olive:         #6F7C53;
-  --olive-deep:    #5B6842;
-  --sage:          #9DAA8C;
-  --rose:          #C0A49B;
-  --ink:           #1F2A1E;
-  --ink-soft:      #46543F;
-  --charcoal:      #6B7261;
-  /* the forest in its wedding finery — the whole of the grove */
-  --night:         #0E2417;
-  --night-deep:    #07140D;
+  --parchment:     #EEE6D1;
+  --champagne:     #D9BC7F;
+  --champagne-soft:#B79B62;
+  --olive:         #6E7C50;
+  --olive-deep:    #596740;
+  --sage:          #9EA98B;
+  --rose:          #C3A39B;
+  --ink:           #1E2A20;
+  --ink-soft:      #48563F;
+  --charcoal:      #6D7462;
+  /* the forest in its wedding finery — the whole of the grove   */
+  --night:         #0A1C12;
+  --night-deep:    #06120B;
   --gold:          #CDA750;
 
   /* ── Derived grove tokens — computed from the theme colours,
-     so every theme preset recolours them automatically ─────── */
-  --wall-1:       var(--night-deep);
-  --wall-2:       color-mix(in srgb, var(--night) 84%, var(--wine) 16%);
-  --glass:        color-mix(in srgb, var(--night) 78%, transparent);
-  --glass-deep:   color-mix(in srgb, var(--night-deep) 88%, transparent);
-  --glass-edge:   color-mix(in srgb, var(--champagne) 26%, transparent);
-  --gilding:      color-mix(in srgb, var(--champagne) 82%, white 18%);
-  --gilding-soft: color-mix(in srgb, var(--champagne) 55%, transparent);
-  --gilding-deep: color-mix(in srgb, var(--champagne) 58%, var(--burgundy) 42%);
-  --moonlit:      color-mix(in srgb, var(--ivory) 92%, var(--champagne) 8%);
-  --moonlit-soft: color-mix(in srgb, var(--ivory) 64%, transparent);
-  --night-ink:    color-mix(in srgb, var(--ivory) 72%, transparent);
-  --night-faint:  color-mix(in srgb, var(--ivory) 44%, transparent);
-  --candle:       color-mix(in srgb, var(--champagne) 42%, #F2D9A2 58%);
-  --seal-wax:     linear-gradient(145deg,
-                    color-mix(in srgb, var(--gold) 88%, white 12%),
-                    color-mix(in srgb, var(--champagne-soft) 74%, black 26%) 55%,
-                    color-mix(in srgb, var(--gold) 92%, black 8%));
+     so every theme preset recolours them automatically ──────── */
+  --bark:          color-mix(in srgb, var(--night) 78%, var(--burgundy) 22%);
+  --canopy-1:      color-mix(in srgb, var(--night) 88%, var(--crimson) 12%);
+  --canopy-2:      color-mix(in srgb, var(--night-deep) 90%, var(--night) 10%);
+  --glass:         color-mix(in srgb, var(--night) 76%, transparent);
+  --glass-deep:    color-mix(in srgb, var(--night-deep) 86%, transparent);
+  --gilding:       color-mix(in srgb, var(--champagne) 82%, white 18%);
+  --gilding-soft:  color-mix(in srgb, var(--champagne) 55%, transparent);
+  --gilding-deep:  color-mix(in srgb, var(--champagne) 58%, var(--burgundy) 42%);
+  --moonlit:       color-mix(in srgb, var(--ivory) 92%, var(--champagne) 8%);
+  --moonlit-soft:  color-mix(in srgb, var(--ivory) 64%, transparent);
+  --night-ink:     color-mix(in srgb, var(--ivory) 72%, transparent);
+  --night-faint:   color-mix(in srgb, var(--ivory) 42%, transparent);
+  --candle:        color-mix(in srgb, var(--champagne) 42%, #F2D9A2 58%);
+  --ember:         color-mix(in srgb, var(--candle) 60%, #FFD98A 40%);
+  --seal-wax:      linear-gradient(145deg,
+                     color-mix(in srgb, var(--gold) 88%, white 12%),
+                     color-mix(in srgb, var(--champagne-soft) 74%, black 26%) 55%,
+                     color-mix(in srgb, var(--gold) 92%, black 8%));
 
   /* ── Typography — five voices, five jobs ─────────────────────
-     Editorial     : Marcellus — Roman inscriptional caps
-     Romantic serif: Cormorant Garamond — prose, leads, vows
-     Expressive    : Pinyon Script — copperplate names & flourishes
-     Handwritten   : La Belle Aurore — margin notes
-     Functional    : Jost — labels, nav, forms                */
-  --font-editorial: 'Marcellus', 'Trajan Pro', 'Cinzel', 'Times New Roman', serif;
-  --font-display: 'Cormorant Garamond', 'Cormorant', 'Times New Roman', Georgia, serif;
-  --font-script:  'Pinyon Script', 'Snell Roundhand', 'Apple Chancery', 'Segoe Script', cursive;
-  --font-hand:    'La Belle Aurore', 'Bradley Hand', 'Segoe Script', cursive;
-  --font-body:    'Jost', 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
+     Editorial     : Italiana — tall engraved caps, botanical poise
+     Romantic serif: EB Garamond — prose, leads, vows
+     Expressive    : Allura — flowing names & flourishes
+     Handwritten   : Cedarville Cursive — field-journal notes
+     Functional    : Karla — labels, nav, forms                */
+  --font-editorial: 'Italiana', 'Optima', 'Trajan Pro', 'Times New Roman', serif;
+  --font-display: 'EB Garamond', 'Garamond', 'Times New Roman', Georgia, serif;
+  --font-script:  'Allura', 'Snell Roundhand', 'Apple Chancery', 'Segoe Script', cursive;
+  --font-hand:    'Cedarville Cursive', 'Bradley Hand', 'Segoe Script', cursive;
+  --font-body:    'Karla', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
 
   /* fluid scale */
   --fs-eyebrow:   clamp(.62rem, 1.6vw, .72rem);
   --fs-small:     clamp(.74rem, 1.8vw, .85rem);
   --fs-body:      clamp(1.02rem, 2.2vw, 1.12rem);
-  --fs-lead:      clamp(1.14rem, 2.6vw, 1.3rem);
-  --fs-h3:        clamp(1.32rem, 3.6vw, 1.6rem);
-  --fs-h2:        clamp(2rem, 6.5vw, 3.3rem);
-  --fs-h1:        clamp(2.5rem, 9vw, 5rem);
-  --fs-script:    clamp(2.6rem, 9.5vw, 5.8rem);
-  --fs-script-xl: clamp(3.6rem, 14vw, 8.8rem);
+  --fs-lead:      clamp(1.16rem, 2.6vw, 1.34rem);
+  --fs-h3:        clamp(1.3rem, 3.4vw, 1.6rem);
+  --fs-h2:        clamp(2.1rem, 6.5vw, 3.4rem);
+  --fs-h1:        clamp(2.6rem, 9vw, 5.2rem);
+  --fs-script:    clamp(2.8rem, 9.5vw, 5.6rem);
+  --fs-script-xl: clamp(3.4rem, 13vw, 8.2rem);
   --fs-numerals:  clamp(2.6rem, 8.5vw, 5.4rem);
 
   /* ── Layout ─────────────────────────────────────────────────── */
@@ -86,18 +83,18 @@
   --pad-section: clamp(4.5rem, 12vh, 9rem);
   --pad-gutter: clamp(1.25rem, 5vw, 3rem);
 
-  /* ── Hairlines & shadows — leaf-gold edges on the pines ────── */
-  --hairline: 1px solid color-mix(in srgb, var(--champagne) 30%, transparent);
-  --hairline-strong: 1px solid color-mix(in srgb, var(--champagne) 50%, transparent);
-  --hairline-light: 1px solid color-mix(in srgb, var(--ivory) 16%, transparent);
-  --hairline-ink: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
-  --shadow-card:  0 1px 2px rgba(3, 10, 6, .5), 0 24px 60px rgba(3, 10, 6, .45);
-  --shadow-lift:  0 1px 3px rgba(3, 10, 6, .5), 0 26px 70px rgba(3, 10, 6, .55);
-  --shadow-flat:  0 1px 3px rgba(3, 10, 6, .4), 0 10px 26px rgba(3, 10, 6, .35);
-  --shadow-seal:  0 3px 8px color-mix(in srgb, var(--burgundy) 45%, transparent),
+  /* ── Hairlines & shadows — leaf-gold edges in the dusk ─────── */
+  --hairline: 1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
+  --hairline-strong: 1px solid color-mix(in srgb, var(--champagne) 46%, transparent);
+  --hairline-light: 1px solid color-mix(in srgb, var(--ivory) 14%, transparent);
+  --hairline-ink: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+  --shadow-card:  0 1px 2px rgba(2, 8, 5, .5), 0 24px 60px rgba(2, 8, 5, .45);
+  --shadow-lift:  0 1px 3px rgba(2, 8, 5, .5), 0 26px 70px rgba(2, 8, 5, .55);
+  --shadow-flat:  0 1px 3px rgba(2, 8, 5, .4), 0 10px 26px rgba(2, 8, 5, .35);
+  --shadow-seal:  0 4px 10px color-mix(in srgb, var(--burgundy) 45%, transparent),
                   0 14px 30px color-mix(in srgb, var(--burgundy) 28%, transparent);
   --shadow-plate: 0 1px 0 color-mix(in srgb, var(--gilding) 30%, transparent) inset,
-                  0 30px 80px rgba(3, 10, 6, .6);
+                  0 30px 80px rgba(2, 8, 5, .6);
 
   /* ── Motion ──────────────────────────────────────────────────── */
   --ease-soft: cubic-bezier(.22, .61, .21, 1);
