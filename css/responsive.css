@@ -1,0 +1,82 @@
+/* ═══════════════════════════════════════════════════════════════
+   SERAPHINE · responsive.css
+   The palace, folded for smaller courts.
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 960px) {
+  .nav__links { display: none; }
+  .nav__inner { grid-template-columns: 1fr auto; }
+
+  .story-grid { grid-template-columns: 1fr; }
+  .story-aside {
+    padding-left: 0;
+    padding-top: 2rem;
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
+  }
+
+  .programme {
+    grid-template-columns: 1fr;
+    max-width: 30rem;
+  }
+  .programme-item + .programme-item {
+    border-left: 0;
+    border-top: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
+  }
+
+  .particulars-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pad-section: clamp(3.4rem, 11vh, 5.5rem);
+  }
+
+  /* the gates: taller, tighter scrollwork */
+  .gate-stage {
+    width: min(19rem, 84vw);
+    aspect-ratio: 3 / 4.4;
+  }
+  .gate__scroll { inset: 6% 10%; width: 80%; }
+  .opening__corner { width: clamp(72px, 22vw, 120px); }
+  .opening__names { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+
+  /* the court frame folds tighter on small courts */
+  .court-frame { outline-offset: -22px; }
+  .court-frame__band { inset: 8px; border-width: 10px; }
+  .court-frame i { width: clamp(34px, 9vw, 52px); }
+
+  .hero-names { letter-spacing: .03em; }
+  .hero-crest { width: clamp(160px, 44vw, 220px); }
+  .hero-arch { width: min(88vw, 460px); }
+
+  .particulars-row { grid-template-columns: 1fr; gap: 1.6rem; }
+
+  /* the garland of moments becomes a two-beat line */
+  .day-words { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.9rem .6rem; max-width: 20rem; }
+  .day-word { min-width: 0; padding-top: 26px; }
+  .day-word::before,
+  .day-word::after { display: none; }
+
+  .count-clock { flex-wrap: wrap; gap: 1.1rem 1.4rem; }
+  .count-unit { min-width: 72px; }
+
+  .std-actions { flex-direction: column; align-items: stretch; }
+  .closing-actions { flex-direction: column; align-items: stretch; }
+
+  .rsvp-card { padding-inline: clamp(1.1rem, 5vw, 1.6rem); }
+  .choices { gap: .7rem 1.6rem; }
+}
+
+@media (max-width: 400px) {
+  .day-words { grid-template-columns: 1fr; }
+  .day-word { padding-top: 22px; }
+  .menu__list a span { font-size: 1.15rem; }
+}
+
+/* a taller gesture area on notched phones */
+@media (max-width: 640px) {
+  .nav__inner { padding-block: .7rem; }
+  .scene--hero { min-height: 100svh; }
+  .hero-scroll { bottom: 1rem; }
+}

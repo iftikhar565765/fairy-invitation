@@ -1,0 +1,108 @@
+/* ═══════════════════════════════════════════════════════════════
+   SERAPHINE · variables.css
+   Design tokens — the whole visual identity in one place.
+   A king's wedding: crimson velvet palace walls, heavy gilding,
+   engraved ivory cards and candlelight. The token names follow
+   the editor's colour roles so the theme picker recolours every
+   surface. The design reads dark-first: --night is the velvet
+   wall, --ivory the engraved card, --champagne the leaf gold.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Palette (theme presets refine these at runtime) ──────────
+     gilt       : royal crimson velvet + leaf gold     (default)
+     royal      : garnet brocade + antique gold
+     verdant    : imperial emerald + gilt
+     porcelain  : Versailles porcelain blue + gold     */
+  --burgundy:      #8C6B2F;
+  --burgundy-deep: #6E5322;
+  --wine:          #471223;
+  --crimson:       #8E2740;
+  --ivory:         #F7F1E1;
+  --paper-raised:  #FCF7EA;
+  --parchment:     #EFE6CF;
+  --champagne:     #D6B87E;
+  --champagne-soft:#B5975F;
+  --olive:         #7A8464;
+  --olive-deep:    #666F52;
+  --sage:          #A8B096;
+  --rose:          #C9A9A0;
+  --ink:           #2E1B14;
+  --ink-soft:      #5B4232;
+  --charcoal:      #6E5F55;
+  /* the palace in its wedding finery — the whole of the court */
+  --night:         #2E0A15;
+  --night-deep:    #1C040B;
+  --gold:          #CDA750;
+
+  /* ── Derived palace tokens — computed from the theme colours,
+     so every theme preset recolours them automatically ─────── */
+  --wall-1:       var(--night-deep);
+  --wall-2:       color-mix(in srgb, var(--night) 84%, var(--wine) 16%);
+  --glass:        color-mix(in srgb, var(--night) 78%, transparent);
+  --glass-deep:   color-mix(in srgb, var(--night-deep) 88%, transparent);
+  --glass-edge:   color-mix(in srgb, var(--champagne) 26%, transparent);
+  --gilding:      color-mix(in srgb, var(--champagne) 82%, white 18%);
+  --gilding-soft: color-mix(in srgb, var(--champagne) 55%, transparent);
+  --gilding-deep: color-mix(in srgb, var(--champagne) 58%, var(--burgundy) 42%);
+  --moonlit:      color-mix(in srgb, var(--ivory) 92%, var(--champagne) 8%);
+  --moonlit-soft: color-mix(in srgb, var(--ivory) 64%, transparent);
+  --night-ink:    color-mix(in srgb, var(--ivory) 72%, transparent);
+  --night-faint:  color-mix(in srgb, var(--ivory) 44%, transparent);
+  --candle:       color-mix(in srgb, var(--champagne) 46%, #F2D9A2 54%);
+  --seal-wax:     linear-gradient(145deg,
+                    color-mix(in srgb, var(--gold) 88%, white 12%),
+                    color-mix(in srgb, var(--champagne-soft) 74%, black 26%) 55%,
+                    color-mix(in srgb, var(--gold) 92%, black 8%));
+
+  /* ── Typography — five voices, five jobs ─────────────────────
+     Editorial     : Marcellus — Roman inscriptional caps
+     Romantic serif: Cormorant Garamond — prose, leads, vows
+     Expressive    : Pinyon Script — copperplate names & flourishes
+     Handwritten   : La Belle Aurore — margin notes
+     Functional    : Jost — labels, nav, forms                */
+  --font-editorial: 'Marcellus', 'Trajan Pro', 'Cinzel', 'Times New Roman', serif;
+  --font-display: 'Cormorant Garamond', 'Cormorant', 'Times New Roman', Georgia, serif;
+  --font-script:  'Pinyon Script', 'Snell Roundhand', 'Apple Chancery', 'Segoe Script', cursive;
+  --font-hand:    'La Belle Aurore', 'Bradley Hand', 'Segoe Script', cursive;
+  --font-body:    'Jost', 'Century Gothic', 'Helvetica Neue', Arial, sans-serif;
+
+  /* fluid scale */
+  --fs-eyebrow:   clamp(.62rem, 1.6vw, .72rem);
+  --fs-small:     clamp(.74rem, 1.8vw, .85rem);
+  --fs-body:      clamp(1.02rem, 2.2vw, 1.12rem);
+  --fs-lead:      clamp(1.14rem, 2.6vw, 1.3rem);
+  --fs-h3:        clamp(1.32rem, 3.6vw, 1.6rem);
+  --fs-h2:        clamp(2rem, 6.5vw, 3.3rem);
+  --fs-h1:        clamp(2.5rem, 9vw, 5rem);
+  --fs-script:    clamp(2.6rem, 9.5vw, 5.8rem);
+  --fs-script-xl: clamp(3.6rem, 14vw, 8.8rem);
+  --fs-numerals:  clamp(2.6rem, 8.5vw, 5.4rem);
+
+  /* ── Layout ─────────────────────────────────────────────────── */
+  --w-content: 80rem;
+  --w-narrow:  52rem;
+  --w-text:     38rem;
+  --pad-section: clamp(4.5rem, 12vh, 9rem);
+  --pad-gutter: clamp(1.25rem, 5vw, 3rem);
+
+  /* ── Hairlines & shadows — leaf-gold edges on the velvet ───── */
+  --hairline: 1px solid color-mix(in srgb, var(--champagne) 30%, transparent);
+  --hairline-strong: 1px solid color-mix(in srgb, var(--champagne) 50%, transparent);
+  --hairline-light: 1px solid color-mix(in srgb, var(--ivory) 16%, transparent);
+  --hairline-ink: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+  --shadow-card:  0 1px 2px rgba(10, 2, 4, .5), 0 24px 60px rgba(10, 2, 4, .45);
+  --shadow-lift:  0 1px 3px rgba(10, 2, 4, .5), 0 26px 70px rgba(10, 2, 4, .55);
+  --shadow-flat:  0 1px 3px rgba(10, 2, 4, .4), 0 10px 26px rgba(10, 2, 4, .35);
+  --shadow-seal:  0 3px 8px color-mix(in srgb, var(--burgundy) 45%, transparent),
+                  0 14px 30px color-mix(in srgb, var(--burgundy) 28%, transparent);
+  --shadow-plate: 0 1px 0 color-mix(in srgb, var(--gilding) 30%, transparent) inset,
+                  0 30px 80px rgba(10, 2, 4, .6);
+
+  /* ── Motion ──────────────────────────────────────────────────── */
+  --ease-soft: cubic-bezier(.22, .61, .21, 1);
+  --ease-gate: cubic-bezier(.7, 0, .22, 1);
+  --t-fast: .28s;
+  --t-med:  .55s;
+  --t-slow: .72s;
+}
