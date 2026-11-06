@@ -1,8 +1,10 @@
 # Vesperwood — a wedding invitation
 
-The gilded gates of the palace at evening: a laurel monogram crest,
-heavy gold-leaf ornament, an aubusson rug field on crimson-velvet
-walls, engraved ivory cards, candlelight and a hall of mirrors. Fully
+An enchanted forest at dusk: fern-lace woven into the pine-dark ground,
+a wreath of gilded ferns holding the couple's initials, garden gates
+trellised with climbing vines, fireflies drifting between the scenes,
+and a Victorian glasshouse glowing among the pines. Engraved ivory
+cards, antique-gold hairlines and a whisper of amber light. Fully
 customisable in the browser with a guided, auto-saving visual editor —
 then published live with one click on Cloudflare.
 
@@ -25,26 +27,26 @@ then published live with one click on Cloudflare.
   hashes, and stamps every page with the build version
 - GSAP (CDN) for the opening choreography — everything degrades
   gracefully without it
+- The fireflies are pure CSS (a dozen drifting sparks); they still,
+  dim and disappear politely under `prefers-reduced-motion`
 
 ## Quick start (local)
 
 ```bash
 npm install
 npx wrangler d1 migrations apply vesperwood-invitations --local
-npm run dev          # http://localhost:8788
+npm run build
+npx wrangler dev            # http://localhost:8788
 ```
 
-## Deploy to Cloudflare
+The invitation runs in honest demonstration mode until published:
+RSVPs validate and preview but are not stored. Deploy with a D1
+database (see `DEPLOY.md`) and everything — the atelier, publishing,
+guest replies, the submissions page — goes live.
 
-See **[DEPLOY.md](DEPLOY.md)** — two paths: dashboard + GitHub
-(recommended, no terminal) or the CLI.
+## Deploying to Cloudflare
 
-## Editing your invitation
-
-1. Open `/customize`
-2. Walk the seven steps — everything autosaves
-3. Press **Publish invitation** — you get a live guest link
-4. Guest replies appear in the editor and at `/replies`
-
-Sample content (names, venue, copy) lives in `js/config.js` and is
-marked `SAMPLE`/`EDIT` — or simply change everything in the editor.
+`DEPLOY.md` walks through it step by step (dashboard path and CLI
+path): create the D1 database, paste its id into `wrangler.jsonc`,
+run `npx wrangler d1 migrations apply vesperwood-invitations --remote`,
+then `npm run build && npx wrangler deploy`.
