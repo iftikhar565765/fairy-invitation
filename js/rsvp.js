@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · rsvp.js
+   VESPERWOOD · rsvp.js
    The response card.
    · Endpoint mode  — POSTs JSON to the configured URL, reports
      real success and failure states.

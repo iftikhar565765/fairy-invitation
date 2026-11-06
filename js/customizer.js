@@ -518,7 +518,7 @@
   }
 
   function prepareConfigForPublish() {
-    config.templateId = config.templateId || 'seraphine';
+    config.templateId = config.templateId || 'vesperwood';
     sendPreview();
     return Promise.resolve(clone(config));
   }

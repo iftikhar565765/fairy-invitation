@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · main.js
+   VESPERWOOD · main.js
    Content injection · navigation · palette swatches · wedding-day
    string of lights · countdown · calendar files · reveals ·
    parallax · audio. Everything degrades gracefully:
