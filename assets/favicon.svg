@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64">
-  <!-- Seraphine · the laurel emblem -->
-  <g fill="none" stroke="#C8B486" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M48 4.5l5.6 7.5-5.6 7.5-5.6-7.5Z" fill="#C8B486" stroke="none" />
+  <!-- Vesperwood · the fern emblem -->
+  <g fill="none" stroke="#D6B87E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="48" cy="9" r="3.4" fill="#F2D9A2" stroke="none" />
     <path d="M45 59C34.5 54 26 43 23.5 24" />
     <path d="M51 59C61.5 54 70 43 72.5 24" />
-    <path d="M48 54.5l3.3 4-3.3 4-3.3-4Z" fill="#C8B486" stroke="none" />
+    <path d="M48 54.5l3.3 4-3.3 4-3.3-4Z" fill="#D6B87E" stroke="none" />
   </g>
-  <g fill="#C8B486">
+  <g fill="#D6B87E">
     <ellipse cx="34" cy="53" rx="3.1" ry="7.6" transform="rotate(-48 34 53)" />
     <ellipse cx="27.5" cy="45.5" rx="3.1" ry="7.6" transform="rotate(-24 27.5 45.5)" />
     <ellipse cx="24" cy="34" rx="3" ry="7.4" transform="rotate(2 24 34)" />

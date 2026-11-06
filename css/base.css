@@ -1,9 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · base.css
-   Foundations — the velvet walls, the aubusson rug field, the
-   typography, the shared pieces. The rug lattice is drawn as an
-   inline SVG data-URI so the identity ships without a single
-   raster image; the gilded ornaments are static transparent art.
+   VESPERWOOD · base.css
+   Foundations — the pine-velvet field, the fern-lace ground, the
+   typography, the shared pieces, the fireflies. The fern lattice
+   is drawn as an inline SVG data-URI so the identity ships without
+   a single raster image; the gilded ornaments are static
+   transparent art. The pattern is keyed at a whisper — barely
+   there until a guest looks closely.
    ═══════════════════════════════════════════════════════════════ */
 
 *,
@@ -30,20 +32,21 @@ body {
   background-image:
     radial-gradient(120% 90% at 50% 0%, color-mix(in srgb, var(--night) 82%, transparent) 0%, transparent 62%),
     radial-gradient(90% 70% at 50% 100%, color-mix(in srgb, var(--wine) 62%, transparent) 0%, transparent 58%),
-    radial-gradient(60% 42% at 50% 46%, color-mix(in srgb, var(--crimson) 16%, transparent) 0%, transparent 70%),
-    /* the rug field — a fine aubusson lattice of diamonds, rosettes
-       and corner fans, keyed in gold hairlines at a whisper */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='168' height='168' viewBox='0 0 168 168'%3E%3Cg fill='none' stroke='%23D6B87E' stroke-width='1'%3E%3Cpath stroke-opacity='.016' d='M84 6 162 84 84 162 6 84Z'/%3E%3Cpath stroke-opacity='.011' d='M84 32 136 84 84 136 32 84Z'/%3E%3Cpath stroke-opacity='.012' d='M84 6v26M84 136v26M6 84h26M136 84h26'/%3E%3Cpath stroke-opacity='.013' d='M0 0a34 34 0 0 1 34 34M168 0a34 34 0 0 0-34 34M0 168a34 34 0 0 0 34-34M168 168a34 34 0 0 1-34-34'/%3E%3C/g%3E%3Cg fill='%23D6B87E' stroke='none'%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(45 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(90 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(135 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(180 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(225 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(270 84 84)'/%3E%3Cpath fill-opacity='.045' d='M84 66c4.4 7.8 4.4 13.4 0 18-4.4-4.6-4.4-10.2 0-18Z' transform='rotate(315 84 84)'/%3E%3Ccircle fill-opacity='.058' cx='84' cy='84' r='1.7'/%3E%3Cpath fill-opacity='.052' d='M84 15.5l3.6 3.5-3.6 3.5-3.6-3.5Z'/%3E%3Cpath fill-opacity='.052' d='M84 145.5l3.6 3.5-3.6 3.5-3.6-3.5Z'/%3E%3Cpath fill-opacity='.052' d='M15.5 84l3.5-3.6 3.5 3.6-3.5 3.6Z'/%3E%3Cpath fill-opacity='.052' d='M145.5 84l3.5-3.6 3.5 3.6-3.5 3.6Z'/%3E%3Ccircle fill-opacity='.04' cx='34' cy='34' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='134' cy='34' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='34' cy='134' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='134' cy='134' r='1.3'/%3E%3C/g%3E%3C/svg%3E");
-  /* let the weave breathe — a wider repeat reads as cloth, not dot-paper */
-  background-size: auto, auto, auto, 236px 236px;
+    radial-gradient(60% 42% at 50% 46%, color-mix(in srgb, var(--crimson) 14%, transparent) 0%, transparent 70%),
+    /* the forest floor — a fern-lace lattice of sprays, fronds and
+       drifting firefly sparks, keyed in gold hairlines at a whisper */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23D6B87E' stroke-width='1'%3E%3Cpath stroke-opacity='.028' d='M100 8 192 100 100 192 8 100Z'/%3E%3Cpath stroke-opacity='.016' d='M100 34 166 100 100 166 34 100Z'/%3E%3Cpath stroke-opacity='.018' d='M100 8v26M100 166v26M8 100h26M166 100h26'/%3E%3Cpath stroke-opacity='.02' d='M0 0a40 40 0 0 1 40 40M200 0a40 40 0 0 0-40 40M0 200a40 40 0 0 0 40-40M200 200a40 40 0 0 1-40-40'/%3E%3Cpath stroke-opacity='.02' d='M100 86v28'/%3E%3C/g%3E%3Cg fill='%23D6B87E' stroke='none'%3E%3Cellipse fill-opacity='.05' cx='96.6' cy='93' rx='1.7' ry='4.4' transform='rotate(-38 96.6 93)'/%3E%3Cellipse fill-opacity='.05' cx='103.4' cy='93' rx='1.7' ry='4.4' transform='rotate(38 103.4 93)'/%3E%3Cellipse fill-opacity='.05' cx='95.6' cy='100' rx='1.7' ry='4.4' transform='rotate(-22 95.6 100)'/%3E%3Cellipse fill-opacity='.05' cx='104.4' cy='100' rx='1.7' ry='4.4' transform='rotate(22 104.4 100)'/%3E%3Cellipse fill-opacity='.05' cx='94.9' cy='107' rx='1.6' ry='4.2' transform='rotate(-8 94.9 107)'/%3E%3Cellipse fill-opacity='.05' cx='105.1' cy='107' rx='1.6' ry='4.2' transform='rotate(8 105.1 107)'/%3E%3Cpath fill-opacity='.06' d='M100 82l2 3.4-2 3.4-2-3.4Z'/%3E%3Ccircle fill-opacity='.07' cx='100' cy='118' r='1.5'/%3E%3Cpath fill-opacity='.045' d='M100 15.5l3.6 3.5-3.6 3.5-3.6-3.5Z'/%3E%3Cpath fill-opacity='.045' d='M100 177.5l3.6 3.5-3.6 3.5-3.6-3.5Z'/%3E%3Cpath fill-opacity='.045' d='M15.5 100l3.5-3.6 3.5 3.6-3.5 3.6Z'/%3E%3Cpath fill-opacity='.045' d='M177.5 100l3.5-3.6 3.5 3.6-3.5 3.6Z'/%3E%3Ccircle fill-opacity='.04' cx='40' cy='40' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='160' cy='40' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='40' cy='160' r='1.3'/%3E%3Ccircle fill-opacity='.04' cx='160' cy='160' r='1.3'/%3E%3C/g%3E%3C/svg%3E");
+  /* let the fern-lace breathe — a wide repeat reads as cloth, not dot-paper */
+  background-size: auto, auto, auto, 248px 248px;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* ── The palace rug medallion — the rosette at the centre of the
-   aubusson field; a whisper-quiet fixed layer beneath everything */
-.palace-rug {
+/* ── The grove loom — a moonlit wreath ring hanging in the
+   centre of the forest; a whisper-quiet fixed layer beneath
+   everything ─────────────────────────────────────────────────── */
+.grove-loom {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -51,10 +54,52 @@ body {
   width: clamp(360px, 76vmin, 660px);
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Cg fill='none' stroke='%23D6B87E'%3E%3Ccircle cx='320' cy='320' r='312' stroke-opacity='.028' stroke-width='1.5'/%3E%3Ccircle cx='320' cy='320' r='300' stroke-opacity='.018'/%3E%3Ccircle cx='320' cy='320' r='286' stroke-opacity='.03' stroke-width='4' stroke-dasharray='.6 17.4' stroke-linecap='round'/%3E%3Ccircle cx='320' cy='320' r='252' stroke-opacity='.016'/%3E%3Ccircle cx='320' cy='320' r='244' stroke-opacity='.012'/%3E%3Ccircle cx='320' cy='320' r='74' stroke-opacity='.024'/%3E%3C/g%3E%3Cg fill='%23D6B87E' fill-opacity='.02' stroke='none'%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(22.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(45 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(67.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(90 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(112.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(135 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(157.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(180 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(202.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(225 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(247.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(270 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(292.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(315 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(337.5 320 320)'/%3E%3Ccircle cx='320' cy='320' r='3' fill-opacity='.048'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Cg fill='none' stroke='%23D6B87E'%3E%3Ccircle cx='320' cy='320' r='312' stroke-opacity='.045' stroke-width='1.5'/%3E%3Ccircle cx='320' cy='320' r='300' stroke-opacity='.028'/%3E%3Ccircle cx='320' cy='320' r='286' stroke-opacity='.05' stroke-width='4' stroke-dasharray='.6 17.4' stroke-linecap='round'/%3E%3Ccircle cx='320' cy='320' r='252' stroke-opacity='.026'/%3E%3Ccircle cx='320' cy='320' r='244' stroke-opacity='.02'/%3E%3Ccircle cx='320' cy='320' r='74' stroke-opacity='.04'/%3E%3C/g%3E%3Cg fill='%23D6B87E' fill-opacity='.034' stroke='none'%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(22.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(45 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(67.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(90 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(112.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(135 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(157.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(180 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(202.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(225 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(247.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(270 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(292.5 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(315 320 320)'/%3E%3Cpath d='M320 82c16 40 16 90 0 132-16-42-16-92 0-132Z' transform='rotate(337.5 320 320)'/%3E%3Ccircle cx='320' cy='320' r='3' fill-opacity='.08'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
   pointer-events: none;
   -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 99%);
   mask-image: radial-gradient(closest-side, #000 62%, transparent 99%);
+}
+
+/* ── The fireflies — a dozen drifting sparks of amber light.
+   Tiny, slow and few: atmosphere that never touches legibility.
+   They ride in front of the scenes but far below the navigation,
+   the frame and the menu. ────────────────────────────────────── */
+.fireflies {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.fireflies i {
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: var(--s, 3px);
+  height: var(--s, 3px);
+  border-radius: 50%;
+  background: var(--candle);
+  box-shadow:
+    0 0 6px 2px color-mix(in srgb, var(--candle) 52%, transparent),
+    0 0 16px 7px color-mix(in srgb, var(--candle) 20%, transparent);
+  opacity: var(--o, .4);
+  animation:
+    firefly-drift var(--t, 12s) ease-in-out var(--d, 0s) infinite alternate,
+    firefly-glow calc(var(--t, 12s) * .53) ease-in-out var(--d, 0s) infinite;
+}
+@keyframes firefly-drift {
+  0%   { transform: translate(0, 0); }
+  33%  { transform: translate(16px, -22px); }
+  66%  { transform: translate(-14px, -38px); }
+  100% { transform: translate(10px, -12px); }
+}
+@keyframes firefly-glow {
+  0%, 100% { opacity: var(--o, .4); }
+  45%      { opacity: calc(var(--o, .4) * .22); }
+  62%      { opacity: var(--o, .4); }
+  80%      { opacity: calc(var(--o, .4) * .4); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fireflies i { animation: none; opacity: calc(var(--o, .4) * .5); }
 }
 
 /* the opening owns the page until the gates part — the suite stays
@@ -62,7 +107,8 @@ body {
 body.intro-pending { overflow: hidden; height: 100svh; }
 body.intro-pending .nav,
 body.intro-pending main,
-body.intro-pending .court-frame { opacity: 0; pointer-events: none; }
+body.intro-pending .court-frame,
+body.intro-pending .fireflies { opacity: 0; pointer-events: none; }
 
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; color: inherit; }
@@ -80,9 +126,9 @@ a { color: inherit; }
   color: var(--ivory);
 }
 
-/* ── The court frame — the woven border of the rug around the
-   whole court: outer guard line, diamond-chain gimp band, inner
-   guard line and corner medallions ────────────────────────── */
+/* ── The court frame — the woven boughs of the grove around the
+   whole court: outer guard line, vine-chain gimp band, inner
+   guard line and corner fiddleheads ────────────────────────── */
 .court-frame {
   position: fixed;
   inset: 0;
@@ -92,12 +138,12 @@ a { color: inherit; }
   outline: 1px solid color-mix(in srgb, var(--champagne) 15%, transparent);
   outline-offset: -28px;
 }
-/* the diamond-chain gimp band of the rug border */
+/* the vine-chain gimp band of the grove border */
 .court-frame__band {
   position: absolute;
   inset: 10px;
   border: 13px solid transparent;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath d='M0 13 13 0l13 13-13 13Z' fill='none' stroke='%23D6B87E' stroke-opacity='.38'/%3E%3Ccircle cx='13' cy='13' r='.9' fill='%23D6B87E' fill-opacity='.3'/%3E%3C/svg%3E") 26 repeat;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath d='M0 13c4-5.5 9-5.5 13 0s9 5.5 13 0' fill='none' stroke='%23D6B87E' stroke-opacity='.34'/%3E%3Ccircle cx='13' cy='9.5' r='.9' fill='%23D6B87E' fill-opacity='.28'/%3E%3C/svg%3E") 26 repeat;
   pointer-events: none;
 }
 .court-frame i {
@@ -112,7 +158,7 @@ a { color: inherit; }
 .court-frame i.tr { top: 9px; right: 9px; transform: scaleX(-1); }
 .court-frame i.bl { bottom: 9px; left: 9px; transform: scaleY(-1); }
 .court-frame i.br { bottom: 9px; right: 9px; transform: scale(-1); }
-/* diamonds at the frame midlines */
+/* fireflies at the frame midlines */
 .court-frame::before,
 .court-frame::after {
   content: "";
@@ -120,7 +166,11 @@ a { color: inherit; }
   width: 7px;
   height: 7px;
   transform: rotate(45deg);
-  background: color-mix(in srgb, var(--champagne) 55%, transparent);
+  border-radius: 50%;
+  background: radial-gradient(circle,
+    color-mix(in srgb, var(--candle) 88%, transparent) 0%,
+    color-mix(in srgb, var(--champagne) 48%, transparent) 58%,
+    transparent 72%);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--night-deep) 82%, transparent);
 }
 .court-frame::before { top: -4px; left: 50%; }
@@ -207,7 +257,7 @@ a { color: inherit; }
   color: var(--champagne);
 }
 
-/* the king's gold leaf — richer, warmer, brighter */
+/* the forest's gold leaf — richer, warmer, brighter */
 .foil {
   background: linear-gradient(100deg,
     color-mix(in srgb, var(--gold) 66%, black 10%) 0%,
@@ -258,7 +308,7 @@ a { color: inherit; }
 .btn:disabled { opacity: .45; cursor: default; transform: none; }
 .btn .icon { width: 1.05em; height: 1.05em; }
 
-/* ink variant — court-wine button on the engraved paper plates */
+/* ink variant — pine-green button on the engraved paper plates */
 .btn--ink {
   color: var(--ivory);
   background: linear-gradient(180deg,
@@ -288,7 +338,7 @@ a { color: inherit; }
   outline-color: transparent;
 }
 
-/* ── The navigation — a gilt rail above the velvet walls ────── */
+/* ── The navigation — a gilt rail above the pines ───────────── */
 .nav {
   position: fixed;
   inset: 0 0 auto 0;
@@ -416,7 +466,7 @@ a { color: inherit; }
   color: var(--champagne);
 }
 
-/* ── Scenes — the chambers of the palace ─────────────────────── */
+/* ── Scenes — the glades of the grove ────────────────────────── */
 .scene {
   position: relative;
   padding-block: var(--pad-section);
@@ -445,7 +495,7 @@ a { color: inherit; }
   border-radius: 1px;
 }
 
-/* ── The engraved paper plate — stationery on the velvet ────── */
+/* ── The engraved paper plate — stationery in the grove ─────── */
 .plate-corner {
   position: absolute;
   width: clamp(52px, 9vw, 84px);
@@ -484,8 +534,8 @@ a { color: inherit; }
   box-shadow:
     inset 0 2px 4px color-mix(in srgb, white 42%, transparent),
     inset 0 -4px 8px color-mix(in srgb, black 34%, transparent),
-    0 1px 2px rgba(10, 2, 4, .45),
-    0 12px 26px rgba(10, 2, 4, .5);
+    0 1px 2px rgba(3, 10, 6, .45),
+    0 12px 26px rgba(3, 10, 6, .5);
 }
 .seal::before {
   content: "";

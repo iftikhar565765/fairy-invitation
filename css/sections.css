@@ -1,11 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · sections.css
-   The chambers of the palace — one scene per room:
+   VESPERWOOD · sections.css
+   The glades of the grove — one scene per clearing:
    hero · story · save-the-date · details · palette · itinerary ·
    venue · countdown · closing · footer
    ═══════════════════════════════════════════════════════════════ */
 
-/* ══ Ⅰ · THE HERO — the grand hall ════════════════════════════ */
+/* ══ Ⅰ · THE HERO — the open grove ════════════════════════════ */
 .scene--hero {
   min-height: 100svh;
   display: grid;
@@ -45,11 +45,13 @@
 .hero-crest__art { width: 100%; height: auto; }
 .hero-crest__initials {
   position: absolute;
-  top: 45%;
-  font-size: clamp(1.6rem, 4vmin, 2.3rem);
+  top: 54%;
+  transform: translateY(-50%);
+  font-size: clamp(1.3rem, 3.2vmin, 1.9rem);
   letter-spacing: .08em;
-  color: color-mix(in srgb, var(--wine) 68%, black 32%);
-  text-shadow: 0 1px 1px color-mix(in srgb, white 42%, transparent);
+  color: var(--gilding);
+  text-shadow: 0 1px 2px color-mix(in srgb, var(--night-deep) 72%, transparent),
+               0 0 14px color-mix(in srgb, var(--candle) 30%, transparent);
 }
 
 .hero-eyebrow { color: var(--champagne); }
@@ -123,7 +125,7 @@
   50% { transform: scaleY(1); opacity: 1; }
 }
 
-/* ══ Ⅱ · THE STORY — the illuminated chronicle ════════════════ */
+/* ══ Ⅱ · THE STORY — an illuminated chronicle ════════════════ */
 .scene--story {
   border-top: 1px solid color-mix(in srgb, var(--champagne) 16%, transparent);
 }
@@ -304,7 +306,7 @@
   left: 50%;
   bottom: -34px;
   transform: translateX(-50%);
-  filter: drop-shadow(0 14px 22px rgba(10, 2, 4, .5));
+  filter: drop-shadow(0 14px 22px rgba(3, 10, 6, .5));
 }
 
 /* ══ Ⅳ · DETAILS — the order of celebration ═══════════════════ */
@@ -429,7 +431,7 @@
   max-width: 14rem;
 }
 
-/* ══ Ⅴ · THE COLOURS OF THE COURT ═════════════════════════════ */
+/* ══ Ⅴ · THE COLOURS OF THE GROVE ═════════════════════════════ */
 .scene--palette { text-align: center; }
 .palette-intro { margin-bottom: 2.4rem; }
 .palette-swatches {
@@ -453,7 +455,7 @@
   border: 1.5px solid color-mix(in srgb, var(--champagne) 62%, transparent);
   outline: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
   outline-offset: 4px;
-  box-shadow: inset 0 2px 6px rgba(10, 2, 4, .3), var(--shadow-flat);
+  box-shadow: inset 0 2px 6px rgba(3, 10, 6, .3), var(--shadow-flat);
 }
 .swatch-name {
   font-family: var(--font-body);
@@ -550,7 +552,7 @@
   white-space: nowrap;
 }
 
-/* ══ Ⅶ · THE PALACE — venue ═══════════════════════════════════ */
+/* ══ Ⅶ · THE GLASSHOUSE — venue ═══════════════════════════════════ */
 .scene--venue { text-align: center; }
 .venue-title {
   margin: .2rem 0 clamp(1.8rem, 5vw, 2.8rem);
@@ -561,7 +563,7 @@
   letter-spacing: .06em;
   color: var(--ivory);
 }
-/* the gilded palace — static art with a candle halo */
+/* the glasshouse — static art with a candle halo */
 .venue-facade-art {
   width: min(560px, 80vw);
   height: auto;

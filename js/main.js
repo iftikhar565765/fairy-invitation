@@ -230,15 +230,16 @@
   var elementLabels = {
     'opening-florals-top': 'Gilded swag · top',
     'opening-florals-bottom': 'Gilded swag · bottom',
-    'opening-glow': 'Lantern glow',
+    'opening-glow': 'Firefly glow',
     'opening-watermark': 'Ampersand watermark',
     'opening-eyebrow': 'Opening introduction',
     'opening-names': 'Opening names',
+    'fireflies': 'The fireflies',
     'envelope-shadow': 'Gate shadow',
     'envelope-stamps': 'Gate finial',
-    'envelope-flap': 'The palace gates',
+    'envelope-flap': 'The garden gates',
     'envelope-address': 'Gate inscription',
-    'envelope-seal': 'The monogram crest',
+    'envelope-seal': 'The fern crest',
     'opening-hint': 'Invitation hint',
     'open-button': 'Open button',
     'invite-spray-top': 'Hero crest',
@@ -252,8 +253,8 @@
     'story-caption': 'Story inscription',
     'story-note': 'Story handwritten note',
     'story-keepsake': 'Stamp & postmark',
-    'std-glow': 'Candlelight wash',
-    'std-candles': 'The laurel emblem',
+    'std-glow': 'Firefly wash',
+    'std-candles': 'The fern emblem',
     'std-note': 'The announcement plate',
     'std-seal': 'Save-the-date seal',
     'detail-ceremony': 'Details · ceremony',
@@ -264,12 +265,12 @@
     'palette-swatches': 'Palette swatches',
     'palette-dresscode': 'Dress code note',
     'day-words': 'The garland of moments',
-    'venue-lights': 'The colonnade',
-    'venue-ornament': 'The palace facade',
+    'venue-lights': 'The trellis arbor',
+    'venue-ornament': 'The glasshouse',
     'rsvp-watermark': 'RSVP watermark',
     'rsvp-ornament': 'RSVP ornament',
     'countdown-clock': 'Countdown clock',
-    'countdown-wreath': 'Laurel wreath',
+    'countdown-wreath': 'Wreath of the grove',
     'closing-swag': 'Closing swag',
     'closing-message': 'Closing message',
     'closing-seal': 'Closing wax seal',
@@ -629,14 +630,14 @@
   });
 
   var themePresets = {
-    gilt:      { burgundy: '#8C6B2F', deep: '#6E5322', wine: '#471223', crimson: '#8E2740', champagne: '#D6B87E', soft: '#B5975F', parchment: '#EFE6CF', ivory: '#F7F1E1', paper: '#FCF7EA', night: '#2E0A15', nightDeep: '#1C040B', olive: '#7A8464', oliveDeep: '#666F52', sage: '#A8B096', rose: '#C9A9A0', ink: '#2E1B14', inkSoft: '#5B4232', charcoal: '#6E5F55' },
-    royal:     { burgundy: '#8C6B2F', deep: '#6E5322', wine: '#3D1024', crimson: '#7C1F3E', champagne: '#C9AE7E', soft: '#A98E5C', parchment: '#EFE6D4', ivory: '#F7F1E4', paper: '#FBF6EB', night: '#2B0A18', nightDeep: '#1A0410', olive: '#77804F', oliveDeep: '#616A3E', sage: '#A6AD8C', rose: '#C89C9C', ink: '#2A2026', inkSoft: '#524449', charcoal: '#72646E' },
-    verdant:   { burgundy: '#8C6B2F', deep: '#6E5322', wine: '#1E3A29', crimson: '#4F8A63', champagne: '#C6B183', soft: '#AD9668', parchment: '#EFEADD', ivory: '#F7F4E9', paper: '#FBF9F0', night: '#12271B', nightDeep: '#0A1810', olive: '#777957', oliveDeep: '#66684A', sage: '#A1A18A', rose: '#C5A0A0', ink: '#24291F', inkSoft: '#484E42', charcoal: '#6A6F5C' },
-    porcelain: { burgundy: '#8C6B2F', deep: '#6E5322', wine: '#27394C', crimson: '#6F8BAD', champagne: '#C9B58C', soft: '#B09B70', parchment: '#F0EDE2', ivory: '#F8F5EC', paper: '#FCFAF2', night: '#16202C', nightDeep: '#0F1620', olive: '#77808A', oliveDeep: '#626B74', sage: '#A2AAB2', rose: '#B8A5A7', ink: '#242A30', inkSoft: '#485059', charcoal: '#68707A' }
+    grove:   { burgundy: '#7C6A3A', deep: '#5F5028', wine: '#16301F', crimson: '#35634A', champagne: '#D6B87E', soft: '#B5975F', parchment: '#EFE8D2', ivory: '#F7F3E4', paper: '#FCF8EC', night: '#0E2417', nightDeep: '#07140D', olive: '#6F7C53', oliveDeep: '#5B6842', sage: '#9DAA8C', rose: '#C0A49B', ink: '#1F2A1E', inkSoft: '#46543F', charcoal: '#6B7261' },
+    fern:    { burgundy: '#7A6C3C', deep: '#5E5228', wine: '#1E3A29', crimson: '#4F8A63', champagne: '#C6B183', soft: '#AD9668', parchment: '#EFEADD', ivory: '#F7F4E9', paper: '#FBF9F0', night: '#12271B', nightDeep: '#0A1810', olive: '#777957', oliveDeep: '#66684A', sage: '#A1A18A', rose: '#C5A0A0', ink: '#24291F', inkSoft: '#484E42', charcoal: '#6A6F5C' },
+    ember:   { burgundy: '#8C6B2F', deep: '#6E5322', wine: '#3A2618', crimson: '#8A5A34', champagne: '#D9B98A', soft: '#B99B6E', parchment: '#F2EADA', ivory: '#F9F3E6', paper: '#FDF9EF', night: '#2A1C10', nightDeep: '#1A1008', olive: '#7C7350', oliveDeep: '#6A6240', sage: '#A9A48B', rose: '#C9A98F', ink: '#2A2118', inkSoft: '#52443A', charcoal: '#726557' },
+    dusk:    { burgundy: '#7C6F45', deep: '#5F5530', wine: '#1C3236', crimson: '#4E7B80', champagne: '#CFBA8F', soft: '#B5A06F', parchment: '#EEEDE2', ivory: '#F6F5EC', paper: '#FBFAF2', night: '#122229', nightDeep: '#0A1418', olive: '#6E7B77', oliveDeep: '#5A6763', sage: '#9BA8A4', rose: '#B3A2A6', ink: '#1E2A2E', inkSoft: '#42514F', charcoal: '#67736F' }
   };
 
   function applyTheme() {
-    var themeName = Object.prototype.hasOwnProperty.call(themePresets, cfg.theme) ? cfg.theme : 'gilt';
+    var themeName = Object.prototype.hasOwnProperty.call(themePresets, cfg.theme) ? cfg.theme : 'grove';
     var colors = themePresets[themeName];
     var root = document.documentElement;
     root.style.setProperty('--burgundy', colors.burgundy);
@@ -985,10 +986,10 @@
       var lines = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Seraphine//Wedding Invitation//EN',
+        'PRODID:-//Vesperwood//Wedding Invitation//EN',
         'CALSCALE:GREGORIAN',
         'BEGIN:VEVENT',
-        'UID:' + icsUTC(data.start.getTime()) + '-seraphine@invitation',
+        'UID:' + icsUTC(data.start.getTime()) + '-vesperwood@invitation',
         'DTSTAMP:' + icsUTC(Date.now()),
         'DTSTART:' + icsUTC(data.start.getTime()),
         'DTEND:' + icsUTC(data.end.getTime()),

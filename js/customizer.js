@@ -1149,10 +1149,10 @@
   /* ── design step: curated moods & voices ───────────────────── */
 
   var THEME_META = [
-    { key: 'gilt', name: 'Royal Crimson & Gold', chips: ['#8C6B2F', '#F7F1E1', '#D6B87E', '#2E0A15'] },
-    { key: 'royal', name: 'Garnet Royale', chips: ['#8C6B2F', '#F7F1E4', '#C9AE7E', '#2B0A18'] },
-    { key: 'verdant', name: 'Imperial Emerald', chips: ['#8C6B2F', '#F7F4E9', '#C6B183', '#12271B'] },
-    { key: 'porcelain', name: 'Versailles Porcelain', chips: ['#8C6B2F', '#F8F5EC', '#C9B58C', '#16202C'] }
+    { key: 'grove', name: 'Deep Pine & Gold', chips: ['#7C6A3A', '#F7F3E4', '#D6B87E', '#0E2417'] },
+    { key: 'fern', name: 'Mossy Emerald', chips: ['#7A6C3C', '#F7F4E9', '#C6B183', '#12271B'] },
+    { key: 'ember', name: 'Autumn Ember', chips: ['#8C6B2F', '#F9F3E6', '#D9B98A', '#2A1C10'] },
+    { key: 'dusk', name: 'Twilight Dusk', chips: ['#7C6F45', '#F6F5EC', '#CFBA8F', '#122229'] }
   ];
 
   var TYPE_PAIRINGS = [
@@ -1234,7 +1234,7 @@
       });
       card.appendChild(chips);
       card.appendChild(el('span', 'choice-card__name', theme.name));
-      if ((config.theme || 'gilt') === theme.key) card.classList.add('is-selected');
+      if ((config.theme || 'grove') === theme.key) card.classList.add('is-selected');
       card.addEventListener('click', function () {
         if (config.theme === theme.key) return;
         config.theme = theme.key;

@@ -1,41 +1,41 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · variables.css
+   VESPERWOOD · variables.css
    Design tokens — the whole visual identity in one place.
-   A king's wedding: crimson velvet palace walls, heavy gilding,
-   engraved ivory cards and candlelight. The token names follow
+   An enchanted forest at dusk: deep pine velvet, firefly amber,
+   fern-hairline gold, engraved ivory paper. The token names follow
    the editor's colour roles so the theme picker recolours every
-   surface. The design reads dark-first: --night is the velvet
-   wall, --ivory the engraved card, --champagne the leaf gold.
+   surface. The design reads dark-first: --night is the forest
+   floor, --ivory the engraved card, --champagne the leaf gold.
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
   /* ── Palette (theme presets refine these at runtime) ──────────
-     gilt       : royal crimson velvet + leaf gold     (default)
-     royal      : garnet brocade + antique gold
-     verdant    : imperial emerald + gilt
-     porcelain  : Versailles porcelain blue + gold     */
-  --burgundy:      #8C6B2F;
-  --burgundy-deep: #6E5322;
-  --wine:          #471223;
-  --crimson:       #8E2740;
-  --ivory:         #F7F1E1;
-  --paper-raised:  #FCF7EA;
-  --parchment:     #EFE6CF;
+     grove  : deep pine + firefly gold          (default)
+     fern   : mossy emerald + brassy gold
+     ember  : walnut & autumn amber
+     dusk   : blue-green twilight + moon gold   */
+  --burgundy:      #7C6A3A;
+  --burgundy-deep: #5F5028;
+  --wine:          #16301F;
+  --crimson:       #35634A;
+  --ivory:         #F7F3E4;
+  --paper-raised:  #FCF8EC;
+  --parchment:     #EFE8D2;
   --champagne:     #D6B87E;
   --champagne-soft:#B5975F;
-  --olive:         #7A8464;
-  --olive-deep:    #666F52;
-  --sage:          #A8B096;
-  --rose:          #C9A9A0;
-  --ink:           #2E1B14;
-  --ink-soft:      #5B4232;
-  --charcoal:      #6E5F55;
-  /* the palace in its wedding finery — the whole of the court */
-  --night:         #2E0A15;
-  --night-deep:    #1C040B;
+  --olive:         #6F7C53;
+  --olive-deep:    #5B6842;
+  --sage:          #9DAA8C;
+  --rose:          #C0A49B;
+  --ink:           #1F2A1E;
+  --ink-soft:      #46543F;
+  --charcoal:      #6B7261;
+  /* the forest in its wedding finery — the whole of the grove */
+  --night:         #0E2417;
+  --night-deep:    #07140D;
   --gold:          #CDA750;
 
-  /* ── Derived palace tokens — computed from the theme colours,
+  /* ── Derived grove tokens — computed from the theme colours,
      so every theme preset recolours them automatically ─────── */
   --wall-1:       var(--night-deep);
   --wall-2:       color-mix(in srgb, var(--night) 84%, var(--wine) 16%);
@@ -49,7 +49,7 @@
   --moonlit-soft: color-mix(in srgb, var(--ivory) 64%, transparent);
   --night-ink:    color-mix(in srgb, var(--ivory) 72%, transparent);
   --night-faint:  color-mix(in srgb, var(--ivory) 44%, transparent);
-  --candle:       color-mix(in srgb, var(--champagne) 46%, #F2D9A2 54%);
+  --candle:       color-mix(in srgb, var(--champagne) 42%, #F2D9A2 58%);
   --seal-wax:     linear-gradient(145deg,
                     color-mix(in srgb, var(--gold) 88%, white 12%),
                     color-mix(in srgb, var(--champagne-soft) 74%, black 26%) 55%,
@@ -86,18 +86,18 @@
   --pad-section: clamp(4.5rem, 12vh, 9rem);
   --pad-gutter: clamp(1.25rem, 5vw, 3rem);
 
-  /* ── Hairlines & shadows — leaf-gold edges on the velvet ───── */
+  /* ── Hairlines & shadows — leaf-gold edges on the pines ────── */
   --hairline: 1px solid color-mix(in srgb, var(--champagne) 30%, transparent);
   --hairline-strong: 1px solid color-mix(in srgb, var(--champagne) 50%, transparent);
   --hairline-light: 1px solid color-mix(in srgb, var(--ivory) 16%, transparent);
   --hairline-ink: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
-  --shadow-card:  0 1px 2px rgba(10, 2, 4, .5), 0 24px 60px rgba(10, 2, 4, .45);
-  --shadow-lift:  0 1px 3px rgba(10, 2, 4, .5), 0 26px 70px rgba(10, 2, 4, .55);
-  --shadow-flat:  0 1px 3px rgba(10, 2, 4, .4), 0 10px 26px rgba(10, 2, 4, .35);
+  --shadow-card:  0 1px 2px rgba(3, 10, 6, .5), 0 24px 60px rgba(3, 10, 6, .45);
+  --shadow-lift:  0 1px 3px rgba(3, 10, 6, .5), 0 26px 70px rgba(3, 10, 6, .55);
+  --shadow-flat:  0 1px 3px rgba(3, 10, 6, .4), 0 10px 26px rgba(3, 10, 6, .35);
   --shadow-seal:  0 3px 8px color-mix(in srgb, var(--burgundy) 45%, transparent),
                   0 14px 30px color-mix(in srgb, var(--burgundy) 28%, transparent);
   --shadow-plate: 0 1px 0 color-mix(in srgb, var(--gilding) 30%, transparent) inset,
-                  0 30px 80px rgba(10, 2, 4, .6);
+                  0 30px 80px rgba(3, 10, 6, .6);
 
   /* ── Motion ──────────────────────────────────────────────────── */
   --ease-soft: cubic-bezier(.22, .61, .21, 1);

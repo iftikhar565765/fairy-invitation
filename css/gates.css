@@ -1,7 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
-   SERAPHINE · gates.css
-   The opening — the gilded gates of the palace, crowned by a
-   baroque pediment and sealed by the royal crest. Choreography:
+   VESPERWOOD · gates.css
+   The opening — the garden gates of the grove, crowned by two
+   arching boughs and sealed by the fern-wreath crest.
+   Choreography:
    · default      : gates closed, crest centred on the seam
    · .is-open     : GSAP drives the parting (transforms inline)
    · .is-fallback-open : pure-CSS keyframes when GSAP is absent
@@ -22,6 +23,27 @@
     var(--night-deep);
   transition: opacity .95s var(--ease-soft);
 }
+
+/* a few tame fireflies keep the cover company — held inside the
+   opening so they never stray over the page proper */
+.opening .opening__firefly {
+  position: absolute;
+  width: var(--s, 3px);
+  height: var(--s, 3px);
+  border-radius: 50%;
+  background: var(--candle);
+  box-shadow:
+    0 0 6px 2px color-mix(in srgb, var(--candle) 52%, transparent),
+    0 0 16px 7px color-mix(in srgb, var(--candle) 20%, transparent);
+  opacity: var(--o, .4);
+  animation:
+    firefly-drift var(--t, 12s) ease-in-out var(--d, 0s) infinite alternate,
+    firefly-glow calc(var(--t, 12s) * .53) ease-in-out var(--d, 0s) infinite;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .opening .opening__firefly { animation: none; opacity: calc(var(--o, .4) * .5); }
+}
 .opening.is-leaving { opacity: 0; pointer-events: none; }
 
 /* gilded baroque corners framing the invitation cover */
@@ -38,7 +60,7 @@
 .opening__corner--bl { bottom: clamp(6px, 1.6vh, 16px); left: clamp(6px, 1.6vh, 16px); transform: scaleY(-1); }
 .opening__corner--br { bottom: clamp(6px, 1.6vh, 16px); right: clamp(6px, 1.6vh, 16px); transform: scale(-1); }
 
-/* the warm light of the hall leaking through the seam */
+/* the warm glow of the grove leaking through the seam */
 .opening__glow {
   position: absolute;
   left: 50%;
@@ -95,11 +117,11 @@
   width: 86%;
   height: 12%;
   transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(10, 2, 4, .6) 0%, transparent 68%);
+  background: radial-gradient(ellipse, rgba(3, 10, 6, .6) 0%, transparent 68%);
   filter: blur(8px);
 }
 
-/* the baroque pediment above the gates */
+/* the baroque bough-arch above the gates */
 .gate-pediment {
   position: absolute;
   left: 50%;
@@ -146,24 +168,24 @@
   background:
     linear-gradient(105deg,
       color-mix(in srgb, var(--wine) 90%, black 10%) 0%,
-      color-mix(in srgb, var(--crimson) 42%, var(--wine) 58%) 48%,
+      color-mix(in srgb, var(--crimson) 34%, var(--wine) 66%) 48%,
       color-mix(in srgb, var(--wine) 92%, black 8%) 100%);
 }
 .gate--right .gate__panel { transform: scaleX(-1); }
 
-/* velvet damask upon the gate leaves */
+/* embroidered fern sprigs upon the gate leaves */
 .gate::after {
   content: "";
   position: absolute;
   inset: 5% 12%;
   background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23D6B87E' stroke-opacity='.12' stroke-width='1'%3E%3Cpath d='M36 10c7 7 7 15 0 23-7-8-7-16 0-23Z'/%3E%3Cpath d='M36 18c4 4 4 8.5 0 13-4-4.5-4-9 0-13Z'/%3E%3Cpath d='M22 36c7 7 15 7 23 0-8-7-16-7-23 0Z' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23D6B87E' stroke-opacity='.11' stroke-width='1'%3E%3Cpath d='M36 16v40'/%3E%3Cpath d='M36 24c-5 1-8 4-9 9M36 24c5 1 8 4 9 9M36 34c-5 1-8 4-9 9M36 34c5 1 8 4 9 9'/%3E%3Cpath d='M36 14l2.4 3.6L36 21l-2.4-3.4Z'/%3E%3Ccircle cx='36' cy='60' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
   mask-image: linear-gradient(to bottom, transparent 0, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, black 8%, black 92%, transparent 100%);
   pointer-events: none;
 }
 
-/* wrought-gold bars — the vertical gilding of the gate */
+/* wrought-gold trellis bars — the vertical gilding of the gate */
 .gate::before {
   content: "";
   position: absolute;
@@ -211,7 +233,7 @@
 .gate--left .gate__hinges { left: 2.5%; }
 .gate--right .gate__hinges { right: 2.5%; }
 
-/* ── The royal crest upon the seam ───────────────────────────── */
+/* ── The fern crest upon the seam ─────────────────────────── */
 .gate-crest {
   position: absolute;
   left: 50%;
@@ -229,11 +251,13 @@
 }
 .gate-crest__initials {
   position: absolute;
-  top: 45%;
-  font-size: clamp(1.5rem, 3.6vmin, 2.2rem);
+  top: 54%;
+  transform: translateY(-50%);
+  font-size: clamp(1.3rem, 3.2vmin, 1.9rem);
   letter-spacing: .08em;
-  color: color-mix(in srgb, var(--wine) 68%, black 32%);
-  text-shadow: 0 1px 1px color-mix(in srgb, white 42%, transparent);
+  color: var(--gilding);
+  text-shadow: 0 1px 2px color-mix(in srgb, var(--night-deep) 72%, transparent),
+               0 0 14px color-mix(in srgb, var(--candle) 30%, transparent);
 }
 
 /* the light between the doors */

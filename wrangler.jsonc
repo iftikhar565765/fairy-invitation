@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "seraphine-invitation",
+  "name": "vesperwood-invitation",
   "main": "worker.js",
   "compatibility_date": "2026-09-01",
   "assets": {
@@ -11,8 +11,11 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "seraphine-invitations",
-      "database_id": "0fdfdaa0-31fe-4e56-86df-139ead0c3005"
+      "database_name": "vesperwood-invitations",
+      // One-time setup: create the D1 database, then paste its id here.
+      //   npx wrangler d1 create vesperwood-invitations
+      // (DEPLOY.md walks through this step by step.)
+      "database_id": "PASTE_D1_DATABASE_ID_HERE"
     }
   ]
 }

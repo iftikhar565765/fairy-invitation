@@ -1,4 +1,4 @@
-# Seraphine — a wedding invitation
+# Vesperwood — a wedding invitation
 
 The gilded gates of the palace at evening: a laurel monogram crest,
 heavy gold-leaf ornament, an aubusson rug field on crimson-velvet
@@ -30,7 +30,7 @@ then published live with one click on Cloudflare.
 
 ```bash
 npm install
-npx wrangler d1 migrations apply seraphine-invitations --local
+npx wrangler d1 migrations apply vesperwood-invitations --local
 npm run dev          # http://localhost:8788
 ```
 
