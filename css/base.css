@@ -1,10 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════
-   FAEGLEN · base.css
-   The storybook beneath every scene: the twilight gradient, the
-   barely-there scatter of wishes, the understory wisteria, the
-   glen frame, the fireflies and wish-sparkles. Plus the
-   typographic voices, buttons, navigation and the reveal grammar
-   shared by every section.
+   AURELIA · base.css
+   The storybook beneath every scene: the morning-sky gradient,
+   the barely-there scatter of wishes, the understory glade, the
+   bower frame, the drifting dust motes and wish-sparkles. Plus
+   the typographic voices, buttons, navigation and the reveal
+   grammar shared by every section.
    ═══════════════════════════════════════════════════════════════ */
 
 *,
@@ -52,8 +52,8 @@ a { color: inherit; }
 [hidden] { display: none !important; }
 
 ::selection {
-  background: color-mix(in srgb, var(--champagne) 34%, transparent);
-  color: #fff;
+  background: color-mix(in srgb, var(--rose) 38%, transparent);
+  color: var(--wine);
 }
 
 :focus-visible {
@@ -62,19 +62,29 @@ a { color: inherit; }
   border-radius: 2px;
 }
 
-/* ── the twilight itself ─────────────────────────────────────────
-   Four fixed layers, painted once:
-   1. a rose-gold wish-light glowing at the top of the glen
-   2. the scatter tile — wish-stars & dewdrops, barely visible
-   3. giant understory wisteria hanging into the top corners
-   4. the deep gradient down to the midnight dell                */
+/* ── the morning sky ─────────────────────────────────────────────
+   Painted once, fixed, in four soft layers:
+   1. a warm wish-light glowing where the sun clears the trees
+   2. dawn blush pooling at the horizon line
+   3. wisteria mist breathing at the edges
+   4. the pearl ivory sky carrying it all                        */
 
 body {
   background-image:
-    radial-gradient(120% 86% at 50% -12%,
-      color-mix(in srgb, var(--crimson) 22%, var(--night) 78%) 0%,
-      color-mix(in srgb, var(--night) 90%, var(--crimson) 10%) 42%,
-      var(--night-deep) 100%);
+    radial-gradient(120% 90% at 50% -14%,
+      color-mix(in srgb, var(--candle) 52%, transparent) 0%,
+      color-mix(in srgb, var(--candle) 22%, transparent) 34%,
+      transparent 62%),
+    radial-gradient(150% 120% at 50% 118%,
+      color-mix(in srgb, var(--rose) 24%, transparent) 0%,
+      transparent 52%),
+    radial-gradient(130% 100% at -10% 42%,
+      color-mix(in srgb, var(--crimson) 14%, transparent) 0%,
+      transparent 55%),
+    radial-gradient(130% 100% at 110% 46%,
+      color-mix(in srgb, var(--sage) 16%, transparent) 0%,
+      transparent 55%),
+    linear-gradient(180deg, var(--night) 0%, var(--canopy-1) 52%, var(--night-deep) 100%);
   background-attachment: fixed;
 }
 
@@ -100,9 +110,9 @@ body::before {
   opacity: .9;
 }
 
-/* ── the fireflies ───────────────────────────────────────────────
-   Twelve drifting embers. Three flight paths, staggered phases —
-   each one blinks on its own rhythm, the way real fireflies do. */
+/* ── the drift — motes of pixie dust ─────────────────────────────
+   Twelve wandering embers of morning light. Three flight paths,
+   staggered phases — each one shimmers on its own rhythm. */
 
 .fireflies {
   position: fixed;
@@ -120,13 +130,13 @@ body::before {
   margin: calc(var(--s, 3px) / -2);
   border-radius: 50%;
   background: radial-gradient(circle,
-    #fff7dc 0%,
-    var(--candle) 34%,
-    color-mix(in srgb, var(--candle) 40%, transparent) 68%,
+    #fffbea 0%,
+    var(--candle) 40%,
+    color-mix(in srgb, var(--champagne) 46%, transparent) 70%,
     transparent 100%);
   box-shadow:
-    0 0 6px 2px color-mix(in srgb, var(--candle) 62%, transparent),
-    0 0 14px 5px color-mix(in srgb, var(--candle) 24%, transparent);
+    0 0 7px 2px color-mix(in srgb, var(--candle) 60%, transparent),
+    0 0 16px 6px color-mix(in srgb, var(--candle) 26%, transparent);
   opacity: var(--o, .4);
   animation:
     ff-drift-a var(--t, 16s) ease-in-out infinite alternate,
@@ -176,7 +186,7 @@ body::before {
   74%      { opacity: calc(var(--o, .4) * .3); }
 }
 
-/* ── the glen frame — a hairline at the edge of the page ──────── */
+/* ── the bower frame — a hairline at the edge of the storybook ── */
 
 .court-frame {
   position: fixed;
@@ -188,13 +198,13 @@ body::before {
 .court-frame__band {
   position: absolute;
   inset: 0;
-  border: 1px solid color-mix(in srgb, var(--champagne) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
 }
 
 .court-frame i {
   position: absolute;
   width: clamp(64px, 7.5vw, 104px);
-  opacity: .5;
+  opacity: .55;
   color: var(--champagne-soft);
 }
 
@@ -214,9 +224,9 @@ body::before {
   height: 3px;
   margin-left: -1.5px;
   border-radius: 50%;
-  background: var(--candle);
-  box-shadow: 0 0 8px 3px color-mix(in srgb, var(--candle) 45%, transparent);
-  opacity: .5;
+  background: var(--champagne);
+  box-shadow: 0 0 8px 3px color-mix(in srgb, var(--candle) 60%, transparent);
+  opacity: .6;
 }
 
 .court-frame::before { top: 3px; }
@@ -248,7 +258,7 @@ body::before {
 
 .eyebrow {
   font-size: var(--fs-eyebrow);
-  color: var(--gilding-soft);
+  color: var(--gilding-deep);
 }
 
 .kicker {
@@ -277,7 +287,7 @@ body::before {
 .display .script {
   display: block;
   font-size: .84em;
-  color: var(--champagne);
+  color: var(--champagne-soft);
 }
 
 .prose {
@@ -285,7 +295,7 @@ body::before {
   font-size: var(--fs-lead);
   font-weight: 400;
   line-height: 1.72;
-  color: color-mix(in srgb, var(--ivory) 88%, transparent);
+  color: color-mix(in srgb, var(--moonlit) 92%, transparent);
 }
 
 .prose--dropcap::first-letter {
@@ -294,20 +304,20 @@ body::before {
   line-height: .82;
   float: left;
   padding: .08em .12em 0 0;
-  color: var(--champagne);
+  color: var(--gilding-deep);
 }
 
 .foil {
   background: linear-gradient(168deg,
-    var(--gilding) 8%,
-    var(--champagne) 34%,
-    #fff2d0 50%,
+    var(--gilding-deep) 6%,
+    var(--champagne) 30%,
+    var(--gilding) 48%,
     var(--champagne) 66%,
     var(--gilding-deep) 94%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .08);
+  filter: drop-shadow(0 1px 0 color-mix(in srgb, white 55%, transparent));
 }
 
 /* ── layout primitives ─────────────────────────────────────────── */
@@ -340,10 +350,11 @@ main { position: relative; z-index: 1; }
   letter-spacing: .3em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--champagne);
-  border: 1px solid color-mix(in srgb, var(--champagne) 44%, transparent);
+  color: var(--wine);
+  border: 1px solid color-mix(in srgb, var(--champagne) 52%, transparent);
   border-radius: 4px;
-  background: color-mix(in srgb, var(--night) 42%, transparent);
+  background: var(--glass);
+  box-shadow: 0 1px 0 color-mix(in srgb, white 70%, transparent) inset;
   transition: background-color var(--t-fast) var(--ease-soft),
               border-color var(--t-fast) var(--ease-soft),
               color var(--t-fast) var(--ease-soft),
@@ -351,45 +362,47 @@ main { position: relative; z-index: 1; }
 }
 
 .btn:hover {
-  border-color: color-mix(in srgb, var(--champagne) 78%, transparent);
-  background: color-mix(in srgb, var(--champagne) 12%, transparent);
-  box-shadow: 0 6px 24px color-mix(in srgb, var(--candle) 16%, transparent);
+  border-color: color-mix(in srgb, var(--champagne) 85%, transparent);
+  background: color-mix(in srgb, var(--candle) 18%, var(--glass));
+  box-shadow: 0 6px 24px color-mix(in srgb, var(--candle) 34%, transparent);
 }
 
 .btn .icon { width: 1.35em; height: 1.35em; fill: none; stroke: currentColor; stroke-width: 1.5; flex: none; }
 
 .btn--ink {
-  color: var(--night);
-  background: linear-gradient(170deg, var(--gilding), var(--champagne) 52%, var(--champagne-soft));
+  color: var(--ivory);
+  background: linear-gradient(170deg, var(--gilding-deep), var(--champagne) 52%, var(--champagne-soft));
   border-color: transparent;
+  text-shadow: 0 1px 0 color-mix(in srgb, var(--burgundy-deep) 55%, transparent);
 }
 
 .btn--ink:hover {
-  color: #1a1406;
-  background: linear-gradient(170deg, #ffe9b8, var(--candle) 52%, var(--champagne));
-  box-shadow: 0 8px 30px color-mix(in srgb, var(--candle) 30%, transparent);
+  color: #fffaf0;
+  background: linear-gradient(170deg, var(--champagne-soft), var(--gilding-deep) 52%, var(--burgundy));
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--candle) 46%, transparent);
 }
 
 .btn--ghost {
   background: transparent;
-  border-color: color-mix(in srgb, var(--ivory) 22%, transparent);
-  color: color-mix(in srgb, var(--ivory) 78%, transparent);
+  border-color: color-mix(in srgb, var(--wine) 20%, transparent);
+  color: color-mix(in srgb, var(--wine) 78%, transparent);
 }
 
 .btn--ghost:hover {
-  border-color: color-mix(in srgb, var(--champagne) 55%, transparent);
-  color: var(--champagne);
-  background: color-mix(in srgb, var(--champagne) 7%, transparent);
+  border-color: color-mix(in srgb, var(--champagne) 60%, transparent);
+  color: var(--wine);
+  background: color-mix(in srgb, var(--candle) 10%, transparent);
 }
 
 .btn--ink.btn--ghost {
   color: var(--ink);
-  background: color-mix(in srgb, var(--ink) 7%, transparent);
-  border-color: color-mix(in srgb, var(--ink) 34%, transparent);
+  background: color-mix(in srgb, var(--ink) 6%, transparent);
+  border-color: color-mix(in srgb, var(--ink) 30%, transparent);
+  text-shadow: none;
 }
 
 .btn--ink.btn--ghost:hover {
-  background: color-mix(in srgb, var(--ink) 13%, transparent);
+  background: color-mix(in srgb, var(--ink) 12%, transparent);
   box-shadow: none;
 }
 
@@ -408,11 +421,11 @@ main { position: relative; z-index: 1; }
 }
 
 .nav.is-scrolled {
-  background: color-mix(in srgb, var(--night-deep) 82%, transparent);
+  background: color-mix(in srgb, var(--ivory) 82%, transparent);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  box-shadow: 0 1px 0 color-mix(in srgb, var(--champagne) 12%, transparent),
-              0 12px 40px rgba(4, 6, 18, .45);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--champagne) 20%, transparent),
+              0 12px 40px color-mix(in srgb, var(--wine) 10%, transparent);
 }
 
 .nav__inner {
@@ -433,11 +446,11 @@ main { position: relative; z-index: 1; }
 .nav__emblem {
   width: 52px;
   height: 35px;
-  color: var(--champagne);
+  color: var(--champagne-soft);
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
-  opacity: .9;
+  opacity: .95;
 }
 
 .nav__initials {
@@ -455,7 +468,7 @@ main { position: relative; z-index: 1; }
   letter-spacing: .3em;
   text-transform: uppercase;
   text-decoration: none;
-  color: color-mix(in srgb, var(--ivory) 66%, transparent);
+  color: color-mix(in srgb, var(--wine) 62%, transparent);
   padding: .4em 0;
   border-bottom: 1px solid transparent;
   transition: color var(--t-fast) var(--ease-soft),
@@ -464,8 +477,8 @@ main { position: relative; z-index: 1; }
 
 .nav__links a:hover,
 .nav__links a[aria-current="true"] {
-  color: var(--champagne);
-  border-bottom-color: color-mix(in srgb, var(--champagne) 55%, transparent);
+  color: var(--wine);
+  border-bottom-color: color-mix(in srgb, var(--champagne) 62%, transparent);
 }
 
 .nav__actions {
@@ -480,15 +493,16 @@ main { position: relative; z-index: 1; }
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--ivory) 18%, transparent);
-  color: color-mix(in srgb, var(--ivory) 80%, transparent);
+  border: 1px solid color-mix(in srgb, var(--wine) 20%, transparent);
+  color: color-mix(in srgb, var(--wine) 74%, transparent);
+  background: color-mix(in srgb, var(--ivory) 40%, transparent);
   transition: color var(--t-fast) var(--ease-soft),
               border-color var(--t-fast) var(--ease-soft);
 }
 
 .nav__icon-btn:hover {
-  color: var(--champagne);
-  border-color: color-mix(in srgb, var(--champagne) 55%, transparent);
+  color: var(--wine);
+  border-color: color-mix(in srgb, var(--champagne) 62%, transparent);
 }
 
 .nav__icon-btn .icon {
@@ -511,9 +525,9 @@ main { position: relative; z-index: 1; }
   padding: clamp(1.2rem, 4vw, 2.4rem);
   background:
     radial-gradient(140% 100% at 50% -20%,
-      color-mix(in srgb, var(--crimson) 20%, transparent) 0%,
+      color-mix(in srgb, var(--candle) 30%, transparent) 0%,
       transparent 52%),
-    color-mix(in srgb, var(--night-deep) 96%, transparent);
+    color-mix(in srgb, var(--ivory) 96%, transparent);
   overflow-y: auto;
 }
 
@@ -541,11 +555,11 @@ main { position: relative; z-index: 1; }
   gap: 1.1rem;
   padding: .72em .4em;
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--champagne) 9%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--champagne) 16%, transparent);
   transition: background-color var(--t-fast) var(--ease-soft);
 }
 
-.menu__list a:hover { background: color-mix(in srgb, var(--champagne) 6%, transparent); }
+.menu__list a:hover { background: color-mix(in srgb, var(--candle) 10%, transparent); }
 
 .menu__list em {
   font-family: var(--font-editorial);
@@ -559,7 +573,7 @@ main { position: relative; z-index: 1; }
   font-family: var(--font-editorial);
   font-size: clamp(1.15rem, 3.6vw, 1.5rem);
   letter-spacing: .06em;
-  color: color-mix(in srgb, var(--ivory) 86%, transparent);
+  color: color-mix(in srgb, var(--moonlit) 88%, transparent);
 }
 
 .menu__foot {
@@ -619,7 +633,7 @@ html.no-js body { overflow: auto; height: auto; }
   overflow: hidden;
 }
 
-/* fairy-tale symbol strokes — the library draws in currentColor */
+/* fairyland symbol strokes — the library draws in currentColor */
 .svg-definitions .f {
   fill: currentColor;
   fill-opacity: .13;

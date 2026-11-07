@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   FAEGLEN · responsive.css
-   The glen breathes at every size — wide desk, small phone.
+   AURELIA · responsive.css
+   The fairyland breathes at every size — wide desk, small phone.
    ═══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 1080px) {
@@ -31,11 +31,6 @@
     margin-inline: auto;
   }
 
-  .programme-item {
-    border-radius: 999px 999px 6px 6px;
-    padding: 2.8rem 1.6rem 2rem;
-  }
-
   .understory {
     background:
       url('../assets/orn/understory-left.svg') left bottom / clamp(200px, 40vw, 320px) no-repeat;
@@ -53,12 +48,24 @@
 
   .opening__corner {
     width: clamp(96px, 24vw, 150px);
-    opacity: .45;
+    opacity: .5;
+  }
+
+  .opening__dust {
+    top: -2.4rem;
+    width: 120vw;
+    opacity: .75;
+  }
+
+  .hero-dust {
+    top: -1.8rem;
+    width: 130vw;
+    opacity: .7;
   }
 
   .hero-frond {
     width: clamp(64px, 14vw, 96px);
-    opacity: .26;
+    opacity: .3;
   }
 
   .hero-crest { width: clamp(132px, 34vw, 176px); }
@@ -84,7 +91,6 @@
 
   .fireflies i:nth-child(3n) { display: none; }
 
-  .std-seal { bottom: -28px; }
   .seal { width: 58px; height: 58px; }
   .seal__initials { font-size: 1.3rem; }
 
@@ -100,6 +106,8 @@
     width: 100%;
     justify-content: center;
   }
+
+  .closing-dust { width: 120vw; opacity: .45; }
 }
 
 @media (max-width: 560px) {
@@ -113,6 +121,17 @@
   .day-words {
     gap: 1.3rem 2rem;
   }
+
+  /* on small screens the moments float — no single cable can span them */
+  .day-words::before { display: none; }
+
+  .day-word__bulb,
+  .day-word:nth-child(2n) .day-word__bulb,
+  .day-word:nth-child(3n) .day-word__bulb { margin-top: 1.3rem; }
+
+  .day-word__bulb::after,
+  .day-word:nth-child(2n) .day-word__bulb::after,
+  .day-word:nth-child(3n) .day-word__bulb::after { height: .95rem; }
 
   .day-word__text { font-size: .95rem; }
 
@@ -128,7 +147,7 @@
 
   .gate-pediment { top: -28px; }
 
-  .opening__corner { opacity: .34; }
+  .opening__corner { opacity: .4; }
 
   .opening__names { font-size: clamp(2.4rem, 12vw, 3.6rem); }
 
@@ -153,6 +172,7 @@
   .opening__open { margin-top: .9rem; }
   .opening__skip { margin-top: .6rem; }
   .gate-pediment { top: -24px; }
+  .opening__dust { display: none; }
 }
 
 /* graceful print — the invitation reads as text on paper */

@@ -93,18 +93,15 @@
     </symbol>
 
     <!-- ══════════════════════════════════════════════════════════
-         THE BOTANICAL LIBRARY — hairline ferns, vines and wild
-         roses, drawn in currentColor so every theme recolours them
-         ══════════════════════════════════════════════════════════ -->
-    <!-- ══════════════════════════════════════════════════════════
-       THE FAIRY-TALE LIBRARY — fine gold scrollwork, five-petal
-       blossoms, four-point wish-stars and wing arcs, drawn in
+       THE FAERYLAND LIBRARY — rose vines, wild blossoms, toadstools,
+       dewdrops, wing arcs and four-point wish-stars, drawn in
        currentColor so every theme recolours them
        ══════════════════════════════════════════════════════════ -->
   <defs>
     <path id="fx-star" class="f" d="M0 -6.4 C .9 -2.4 2.4 -.9 6.4 0 C 2.4 .9 .9 2.4 0 6.4 C -.9 2.4 -2.4 .9 -6.4 0 C -2.4 -.9 -.9 -2.4 0 -6.4 Z"/>
     <path id="fx-petal" class="f" d="M0 -2.8 C 3.1 -3.6 4.6 -6.8 3.3 -9.7 C 1.7 -11.1 -.5 -10.4 -1.5 -8.5 C -2.5 -6.6 -1.7 -4.2 0 -2.8 Z"/>
     <path id="fx-leaf" class="f" d="M0 0 Q 7.4 -8.2 17 -9 Q 8.6 -1.2 0 0 Z"/>
+    <path id="fx-drop" class="f" d="M0 -6.8 C 3.6 -2.4 5.6 1.4 4.4 4.6 A 5.4 5.4 0 1 1 -4.4 4.6 C -5.6 1.4 -3.6 -2.4 0 -6.8 Z"/>
     <g id="fx-blossom">
       <use href="#fx-petal"/>
       <use href="#fx-petal" transform="rotate(72)"/>
@@ -113,62 +110,84 @@
       <use href="#fx-petal" transform="rotate(288)"/>
       <circle class="dot" r="1.4"/>
     </g>
+    <g id="fx-bud">
+      <use href="#fx-petal" transform="rotate(-30) scale(.9)"/>
+      <use href="#fx-petal" transform="rotate(30) scale(.9)"/>
+      <path class="s s--thin" d="M0 -1.4 q -3.4 2.6 -3.2 6.2"/>
+      <path class="s s--thin" d="M0 -1.4 q 3.4 2.6 3.2 6.2"/>
+    </g>
+    <g id="fx-toadstool">
+      <path class="f" d="M-11 -8 C -11 -16, 11 -16, 11 -8 C 6 -6.4, -6 -6.4, -11 -8 Z"/>
+      <path class="s" style="stroke-width:1.5" d="M-3.4 -6.6 C -3.8 -1, -3.4 3.4, -2.6 6.6 L 2.6 6.6 C 3.4 3.4, 3.8 -1, 3.4 -6.6"/>
+      <circle class="dot" cx="-4.4" cy="-11" r="1.15"/>
+      <circle class="dot" cx="1.6" cy="-12.4" r=".95"/>
+      <circle class="dot" cx="5.6" cy="-9.6" r=".85"/>
+      <path class="s s--thin" d="M-9 7 q -2.6 -3.4 -6.2 -4"/>
+      <path class="s s--thin" d="M9 7 q 2.6 -3.4 6.2 -4"/>
+    </g>
   </defs>
 
   <symbol id="orn-arch" viewBox="0 0 360 340">
     <g id="arch-half">
-      <path class="s" style="stroke-width:1.7" d="M10 334 C 22 218, 56 92, 178 20"/>
-      <path class="s s--thin" d="M28 334 C 42 226, 70 106, 168 44"/>
-      <path class="s s--thin" d="M10 334 q -7 -9 0 -15 q 6 -4.6 10 1 q 3 5 -2.4 7.2"/>
-      <path class="s s--thin" d="M28 334 q 0 -8 1.6 -11.5 M28 334 q 5 -6.4 9 -7.4"/>
-      <path class="s s--thin" d="M56 148 q -13 -3 -14 -13 q -.8 -9.4 8 -9 q 7 .4 6.6 7 q -.4 5 -5.4 4.6"/>
-      <path class="s s--thin" d="M96 62 q 10 -8 18 -5.4 q 7 2.4 5 8 q -1.6 4.8 -6.6 3.4 q -3.8 -1.2 -2.6 -4.6"/>
-      <use href="#fx-leaf" transform="translate(11 306) rotate(-112) scale(1.1)"/>
-      <use href="#fx-leaf" transform="translate(14 250) rotate(-30)"/>
-      <use href="#fx-leaf" transform="translate(17 198) rotate(-106) scale(.92)"/>
-      <use href="#fx-leaf" transform="translate(25 152) rotate(-26) scale(.84)"/>
-      <use href="#fx-leaf" transform="translate(41 110) rotate(-98) scale(.74)"/>
-      <use href="#fx-leaf" transform="translate(64 72) rotate(-16) scale(.66)"/>
-      <use href="#fx-leaf" transform="translate(98 44) rotate(-82) scale(.58)"/>
-      <use href="#fx-leaf" transform="translate(138 26) rotate(-38) scale(.52)"/>
-      <use href="#fx-leaf" transform="translate(12 280) rotate(-58) scale(.88)"/>
-      <use href="#fx-leaf" transform="translate(20 178) rotate(-30) scale(.62)"/>
-      <use href="#fx-leaf" transform="translate(46 88) rotate(-90) scale(.56)"/>
-      <use href="#fx-blossom" transform="translate(50 122) scale(1.02)"/>
-      <use href="#fx-blossom" transform="translate(100 50) scale(.8)"/>
-      <use href="#fx-star" transform="translate(74 96) scale(.5)"/>
-      <circle class="dot" cx="16" cy="238" r="1.6"/>
-      <circle class="dot" cx="26" cy="166" r="1.5"/>
-      <circle class="dot" cx="44" cy="100" r="1.4"/>
-      <circle class="halo" cx="26" cy="166" r="3.6"/>
-      <circle class="halo" cx="44" cy="100" r="3.4"/>
+      <path class="s" style="stroke-width:1.7" d="M12 334 C 26 222, 62 96, 178 20"/>
+      <path class="s s--thin" d="M34 334 C 52 230, 82 110, 170 46"/>
+      <path class="s s--thin" d="M12 334 q -8 -8.6 -2.6 -14.6 q 5 -5.4 9.6 -.4 q 3.6 4.2 -.8 7.4"/>
+      <path class="s s--thin" d="M60 186 q -13.6 -1.6 -16.6 -11.2 q -2.4 -9 6 -10.6 q 7.4 -1.2 8.2 5 q .6 5 -4.4 5.4"/>
+      <path class="s s--thin" d="M104 74 q 9.4 -8.6 17.6 -6.6 q 7.4 2 5.8 7.8 q -1.2 4.8 -6.4 3.8 q -3.8 -.8 -3 -4.2"/>
+      <use href="#fx-leaf" transform="translate(13 306) rotate(-112) scale(1.1)"/>
+      <use href="#fx-leaf" transform="translate(17 248) rotate(-28)"/>
+      <use href="#fx-leaf" transform="translate(21 196) rotate(-106) scale(.92)"/>
+      <use href="#fx-leaf" transform="translate(29 150) rotate(-24) scale(.84)"/>
+      <use href="#fx-leaf" transform="translate(44 108) rotate(-98) scale(.76)"/>
+      <use href="#fx-leaf" transform="translate(68 70) rotate(-16) scale(.68)"/>
+      <use href="#fx-leaf" transform="translate(102 44) rotate(-84) scale(.58)"/>
+      <use href="#fx-leaf" transform="translate(142 26) rotate(-40) scale(.52)"/>
+      <use href="#fx-leaf" transform="translate(16 280) rotate(-56) scale(.9)"/>
+      <use href="#fx-leaf" transform="translate(50 90) rotate(-130) scale(.56)"/>
+      <use href="#fx-blossom" transform="translate(54 130) scale(1.04)"/>
+      <use href="#fx-blossom" transform="translate(104 52) scale(.82)"/>
+      <use href="#fx-bud" transform="translate(84 96) rotate(-30) scale(.9)"/>
+      <use href="#fx-drop" transform="translate(30 224) scale(.8)"/>
+      <use href="#fx-star" transform="translate(78 148) scale(.55)"/>
+      <use href="#fx-star" transform="translate(126 68) scale(.5)"/>
+      <circle class="dot" cx="18" cy="240" r="1.6"/>
+      <circle class="halo" cx="18" cy="240" r="3.8"/>
+      <circle class="dot" cx="30" cy="168" r="1.5"/>
+      <circle class="halo" cx="30" cy="168" r="3.5"/>
+      <circle class="dot" cx="48" cy="104" r="1.4"/>
+      <circle class="halo" cx="48" cy="104" r="3.3"/>
     </g>
     <use href="#arch-half" transform="translate(360 0) scale(-1 1)"/>
-    <path class="s s--thin" d="M180 22 q -8 -4 -7 -12 q 1 -7 7 -6 q 5 .8 4.6 5.4"/>
-    <path class="s s--thin" d="M180 22 q 8 -4 7 -12 q -1 -7 -7 -6 q -5 .8 -4.6 5.4"/>
-    <use href="#fx-star" transform="translate(180 10) scale(.85)"/>
-    <circle class="dot" cx="180" cy="2" r="1.5"/>
-    <circle class="halo" cx="180" cy="10" r="5"/>
+    <path class="s s--thin" d="M180 20 q -8 -4 -7.4 -12 q .8 -7 6.8 -6 q 5 .8 4.4 5.4"/>
+    <path class="s s--thin" d="M180 20 q 8 -4 7.4 -12 q -.8 -7 -6.8 -6 q -5 .8 -4.4 5.4"/>
+    <use href="#fx-star" transform="translate(180 10) scale(.95)"/>
+    <use href="#fx-star" transform="translate(168 4) scale(.42)"/>
+    <use href="#fx-star" transform="translate(192 4) scale(.42)"/>
+    <circle class="dot" cx="180" cy="-2" r="1.5"/>
+    <circle class="halo" cx="180" cy="8" r="5.6"/>
   </symbol>
 
   <symbol id="orn-door" viewBox="0 0 160 560">
-    <path class="s" style="stroke-width:1.4" d="M86 552 C 58 482, 104 420, 76 336 C 58 284, 100 238, 74 164 C 62 124, 88 94, 72 40"/>
-    <path class="s s--thin" d="M84 300 q -15 -6 -19 -17 q -3 -9 4 -11 q 6 -1.6 7 4 q .8 4.6 -3.6 5"/>
-    <path class="s s--thin" d="M74 180 q 14 -5 18 -15 q 3 -8.4 -3.6 -10.4 q -5.6 -1.4 -6.6 3.6 q -.8 4.2 3.2 4.8"/>
-    <path class="s s--thin" d="M86 552 q -13 3 -15 -6 q -1.8 -8.4 6 -9.4 q 6.4 -.6 7 5"/>
-    <use href="#fx-leaf" transform="translate(84 516) rotate(-150)"/>
-    <use href="#fx-leaf" transform="translate(72 470) rotate(-55) scale(.95)"/>
-    <use href="#fx-leaf" transform="translate(80 430) rotate(-130) scale(.9)"/>
-    <use href="#fx-leaf" transform="translate(70 388) rotate(-50) scale(.85)"/>
-    <use href="#fx-leaf" transform="translate(78 344) rotate(-126) scale(.8)"/>
-    <use href="#fx-leaf" transform="translate(70 300) rotate(-48) scale(.76)"/>
-    <use href="#fx-leaf" transform="translate(76 254) rotate(-128) scale(.72)"/>
-    <use href="#fx-leaf" transform="translate(68 210) rotate(-52) scale(.66)"/>
-    <use href="#fx-leaf" transform="translate(74 166) rotate(-124) scale(.62)"/>
-    <use href="#fx-leaf" transform="translate(70 124) rotate(-50) scale(.56)"/>
-    <use href="#fx-leaf" transform="translate(74 84) rotate(-120) scale(.5)"/>
-    <use href="#fx-blossom" transform="translate(80 462) scale(.78)"/>
-    <use href="#fx-blossom" transform="translate(72 236) scale(.66)"/>
+    <path class="s" style="stroke-width:1.4" d="M84 552 C 56 478, 104 416, 76 334 C 56 278, 102 232, 74 160 C 62 122, 88 92, 72 36"/>
+    <path class="s s--thin" d="M82 298 q -15 -6.4 -18.6 -17.4 q -2.6 -9 4.4 -10.8 q 6 -1.4 6.8 4.2 q .6 4.6 -3.8 4.8"/>
+    <path class="s s--thin" d="M74 176 q 14 -5.4 17.6 -15.4 q 2.8 -8.4 -3.8 -10.2 q -5.6 -1.2 -6.4 3.8 q -.6 4.2 3.4 4.6"/>
+    <path class="s s--thin" d="M86 552 q -13 3.2 -14.6 -6 q -1.4 -8.4 6.2 -9 q 6.4 -.4 6.8 5"/>
+    <use href="#fx-leaf" transform="translate(82 514) rotate(-150)"/>
+    <use href="#fx-leaf" transform="translate(72 468) rotate(-54) scale(.95)"/>
+    <use href="#fx-leaf" transform="translate(80 428) rotate(-130) scale(.9)"/>
+    <use href="#fx-leaf" transform="translate(70 386) rotate(-50) scale(.85)"/>
+    <use href="#fx-leaf" transform="translate(78 342) rotate(-126) scale(.8)"/>
+    <use href="#fx-leaf" transform="translate(70 298) rotate(-48) scale(.76)"/>
+    <use href="#fx-leaf" transform="translate(76 252) rotate(-128) scale(.72)"/>
+    <use href="#fx-leaf" transform="translate(68 208) rotate(-52) scale(.66)"/>
+    <use href="#fx-leaf" transform="translate(74 164) rotate(-124) scale(.62)"/>
+    <use href="#fx-leaf" transform="translate(70 122) rotate(-50) scale(.56)"/>
+    <use href="#fx-leaf" transform="translate(74 82) rotate(-120) scale(.5)"/>
+    <use href="#fx-blossom" transform="translate(80 460) scale(.8)"/>
+    <use href="#fx-blossom" transform="translate(72 234) scale(.68)"/>
+    <use href="#fx-bud" transform="translate(78 330) rotate(24) scale(.8)"/>
+    <use href="#fx-bud" transform="translate(76 108) rotate(-18) scale(.7)"/>
+    <use href="#fx-drop" transform="translate(82 396) scale(.62)"/>
     <use href="#fx-star" transform="translate(86 376) scale(.5)"/>
     <use href="#fx-star" transform="translate(70 138) scale(.44)"/>
     <circle class="dot" cx="80" cy="330" r="1.4"/>
@@ -194,10 +213,13 @@
     <use href="#fTuft" transform="translate(262 58) scale(.8)"/>
     <use href="#fTuft" transform="translate(324 58) scale(.9)"/>
     <use href="#fTuft" transform="translate(386 58) scale(.75)"/>
-    <use href="#fx-leaf" transform="translate(66 54) rotate(-38) scale(.8)"/>
+    <use href="#fx-toadstool" transform="translate(66 50) scale(.9)"/>
+    <use href="#fx-toadstool" transform="translate(356 50) scale(.78) scale(-1 1)"/>
     <use href="#fx-leaf" transform="translate(130 55) rotate(200) scale(.7)"/>
     <use href="#fx-leaf" transform="translate(238 54) rotate(-160) scale(.8)"/>
     <use href="#fx-leaf" transform="translate(302 55) rotate(12) scale(.7)"/>
+    <use href="#fx-drop" transform="translate(176 46) scale(.6)"/>
+    <use href="#fx-drop" transform="translate(288 48) scale(.55)"/>
     <circle class="dot" cx="96" cy="46" r="1.3"/><circle class="halo" cx="96" cy="46" r="3.1"/>
     <circle class="dot" cx="178" cy="42" r="1.3"/><circle class="halo" cx="178" cy="42" r="3.1"/>
     <circle class="dot" cx="266" cy="46" r="1.3"/><circle class="halo" cx="266" cy="46" r="3.1"/>
@@ -206,17 +228,19 @@
 
   <symbol id="orn-emblem" viewBox="0 0 96 64">
     <g id="wing-half">
-      <path class="s" d="M44 44 C 28 42, 14 33, 9 14 C 16 21, 26 26, 36 28"/>
-      <path class="s s--thin" d="M42 47 C 28 44, 16 36, 12 23 C 19 28, 27 31, 34 32"/>
-      <path class="s s--thin" d="M9 14 C 14 20, 22 25, 30 28"/>
+      <path class="f" style="stroke-width:1.5" d="M46 40 C 34 40, 18 33, 11 12 C 10 9, 12 7, 15 8 C 26 12, 36 20, 44 32 C 45 34, 46 37, 46 40 Z"/>
+      <path class="f" style="stroke-width:1.2" d="M45 46 C 36 49, 24 48, 15 40 C 13 38, 14 35.4, 17 36 C 27 38.4, 36 42, 44 45 Z"/>
+      <path class="s s--thin" d="M14 13 C 22 20, 31 27, 40 34"/>
+      <path class="s s--thin" d="M17 39 C 25 41.4, 32 43.4, 40 45"/>
       <circle class="dot" cx="14" cy="34" r="1.2"/>
       <circle class="halo" cx="14" cy="34" r="2.9"/>
     </g>
     <use href="#wing-half" transform="translate(96 0) scale(-1 1)"/>
-    <use href="#fx-star" transform="translate(48 32) scale(1.05)"/>
-    <circle class="halo" cx="48" cy="32" r="5.4"/>
-    <circle class="dot" cx="48" cy="18" r="1.5"/>
-    <circle class="halo" cx="48" cy="18" r="3.6"/>
+    <use href="#fx-star" transform="translate(48 30) scale(1.05)"/>
+    <circle class="halo" cx="48" cy="30" r="5.4"/>
+    <circle class="dot" cx="48" cy="15" r="1.5"/>
+    <circle class="halo" cx="48" cy="15" r="3.6"/>
+    <use href="#fx-star" transform="translate(48 52) scale(.5)"/>
   </symbol>
 
   <symbol id="orn-divider" viewBox="0 0 320 48">
@@ -227,23 +251,27 @@
       <use href="#fx-leaf" transform="translate(118 26) rotate(196) scale(.7)"/>
       <use href="#fx-leaf" transform="translate(64 27) rotate(-14) scale(.7)"/>
       <use href="#fx-leaf" transform="translate(34 24) rotate(194) scale(.6)"/>
-      <use href="#fx-star" transform="translate(92 21) scale(.5)"/>
+      <use href="#fx-bud" transform="translate(96 22) rotate(96) scale(.66)"/>
+      <use href="#fx-star" transform="translate(46 18) scale(.5)"/>
       <circle class="dot" cx="30" cy="28" r="1.3"/>
       <circle class="halo" cx="30" cy="28" r="3.1"/>
     </g>
     <use href="#divider-half" transform="translate(320 0) scale(-1 1)"/>
     <circle class="s" cx="160" cy="24" r="14.5"/>
     <circle class="s s--thin" cx="160" cy="24" r="11"/>
-    <use href="#fx-blossom" transform="translate(160 24) scale(.72)"/>
+    <use href="#fx-blossom" transform="translate(160 24) scale(.74)"/>
+    <use href="#fx-star" transform="translate(160 3) scale(.5)"/>
   </symbol>
 
   <symbol id="orn-bud" viewBox="0 0 40 56">
-    <use href="#fx-star" transform="translate(20 17) scale(1.2)"/>
-    <circle class="halo" cx="20" cy="17" r="6.2"/>
-    <path class="s s--thin" d="M20 25 q -8.4 -1.8 -10 -8.6 q -1.2 -6 3.8 -6.6 q 4.4 -.4 4.6 3.6"/>
-    <path class="s s--thin" d="M20 25 q 8.4 -1.8 10 -8.6 q 1.2 -6 -3.8 -6.6 q -4.4 -.4 -4.6 3.6"/>
-    <path class="s" d="M20 54 L20 26"/>
-    <circle class="dot" cx="20" cy="10" r="1.2"/>
+    <use href="#fx-star" transform="translate(20 15) scale(1.2)"/>
+    <circle class="halo" cx="20" cy="15" r="6.2"/>
+    <path class="s s--thin" d="M20 23 q -8.4 -1.8 -10 -8.6 q -1.2 -6 3.8 -6.6 q 4.4 -.4 4.6 3.6"/>
+    <path class="s s--thin" d="M20 23 q 8.4 -1.8 10 -8.6 q 1.2 -6 -3.8 -6.6 q -4.4 -.4 -4.6 3.6"/>
+    <use href="#fx-petal" transform="translate(20 17) rotate(180) scale(.72)"/>
+    <path class="s" d="M20 54 L20 24"/>
+    <path class="s s--thin" d="M20 40 q -6 -1 -9 -6"/>
+    <circle class="dot" cx="20" cy="8" r="1.2"/>
   </symbol>
 
   <symbol id="orn-wreath" viewBox="0 0 240 240">
@@ -262,6 +290,9 @@
       <use href="#fx-blossom" transform="translate(46 146) scale(.95)"/>
       <use href="#fx-blossom" transform="translate(38 92) scale(.8)"/>
       <use href="#fx-blossom" transform="translate(74 44) scale(.72)"/>
+      <use href="#fx-bud" transform="translate(58 118) rotate(60) scale(.7)"/>
+      <use href="#fx-bud" transform="translate(88 66) rotate(-30) scale(.6)"/>
+      <use href="#fx-drop" transform="translate(44 128) scale(.55)"/>
       <use href="#fx-star" transform="translate(66 122) scale(.55)"/>
       <use href="#fx-star" transform="translate(56 74) scale(.45)"/>
       <circle class="dot" cx="70" cy="164" r="1.5"/>
@@ -273,6 +304,8 @@
     <use href="#fx-star" transform="translate(120 38) scale(1.1)"/>
     <circle class="halo" cx="120" cy="38" r="5.6"/>
     <circle class="dot" cx="120" cy="24" r="1.6"/>
+    <use href="#fx-star" transform="translate(103 30) scale(.44)"/>
+    <use href="#fx-star" transform="translate(137 30) scale(.44)"/>
     <path class="s s--thin" d="M120 211 q -12 3 -14 12 q -1.4 7.4 5 8.4 q 5.6 .8 6.4 -4"/>
     <path class="s s--thin" d="M120 211 q 12 3 14 12 q 1.4 7.4 -5 8.4 q -5.6 .8 -6.4 -4"/>
   </symbol>
@@ -287,16 +320,18 @@
     <path class="s s--thin" d="M208 20.6 L208 38"/>
     <path class="s s--thin" d="M244 17.8 L244 33"/>
     <path class="s s--thin" d="M280 15 L280 30"/>
-    <circle class="dot" cx="112" cy="41.5" r="2"/><circle class="halo" cx="112" cy="41.5" r="4.8"/>
-    <circle class="dot" cx="160" cy="45.5" r="2.1"/><circle class="halo" cx="160" cy="45.5" r="5"/>
-    <circle class="dot" cx="208" cy="41.5" r="2"/><circle class="halo" cx="208" cy="41.5" r="4.8"/>
-    <circle class="dot" cx="40" cy="32.5" r="1.2"/><circle class="halo" cx="40" cy="32.5" r="2.9"/>
-    <circle class="dot" cx="280" cy="32.5" r="1.2"/><circle class="halo" cx="280" cy="32.5" r="2.9"/>
-    <use href="#fx-star" transform="translate(60 24) scale(.42)"/>
-    <use href="#fx-star" transform="translate(128 30) scale(.5)"/>
-    <use href="#fx-star" transform="translate(192 30) scale(.5)"/>
-    <use href="#fx-star" transform="translate(260 24) scale(.42)"/>
-    <use href="#fx-blossom" transform="translate(160 16) scale(.5)"/>
+    <use href="#fx-drop" transform="translate(112 44) scale(.8)"/>
+    <use href="#fx-drop" transform="translate(160 49) scale(.9)"/>
+    <use href="#fx-drop" transform="translate(208 44) scale(.8)"/>
+    <use href="#fx-drop" transform="translate(40 36) scale(.55)"/>
+    <use href="#fx-drop" transform="translate(280 36) scale(.55)"/>
+    <circle class="dot" cx="76" cy="36" r="1.3"/><circle class="halo" cx="76" cy="36" r="3"/>
+    <circle class="dot" cx="244" cy="36" r="1.3"/><circle class="halo" cx="244" cy="36" r="3"/>
+    <use href="#fx-star" transform="translate(60 22) scale(.42)"/>
+    <use href="#fx-star" transform="translate(128 28) scale(.5)"/>
+    <use href="#fx-star" transform="translate(192 28) scale(.5)"/>
+    <use href="#fx-star" transform="translate(260 22) scale(.42)"/>
+    <use href="#fx-blossom" transform="translate(160 16) scale(.52)"/>
   </symbol>
 
   <symbol id="orn-sprig" viewBox="0 0 120 28">
@@ -321,6 +356,8 @@
     <use href="#fx-leaf" transform="translate(100 40) rotate(-90) scale(.5)"/>
     <use href="#fx-blossom" transform="translate(88 30) scale(.9)"/>
     <use href="#fx-blossom" transform="translate(30 84) scale(.7)"/>
+    <use href="#fx-bud" transform="translate(70 58) rotate(-40) scale(.62)"/>
+    <use href="#fx-drop" transform="translate(50 72) scale(.55)"/>
     <use href="#fx-star" transform="translate(70 46) scale(.5)"/>
     <circle class="dot" cx="46" cy="60" r="1.3"/>
     <circle class="halo" cx="46" cy="60" r="3.1"/>
@@ -348,12 +385,96 @@
     <circle class="dot" cx="45" cy="222" r="1.6"/>
     <circle class="halo" cx="45" cy="222" r="3.8"/>
   </symbol>
+
+  <symbol id="orn-toadstool" viewBox="0 0 72 56">
+    <use href="#fx-toadstool" transform="translate(24 40) scale(1.15)"/>
+    <use href="#fx-toadstool" transform="translate(52 44) scale(.72)"/>
+    <use href="#fx-star" transform="translate(38 14) scale(.6)"/>
+    <circle class="halo" cx="38" cy="14" r="3.4"/>
+    <circle class="dot" cx="38" cy="14" r="1"/>
+    <path class="s s--thin" d="M6 52 q 6 -5 12 -5.4"/>
+    <path class="s s--thin" d="M66 52 q -6 -5 -12 -5.4"/>
+  </symbol>
+
+  <!-- the wish-trail — an arc of pixie dust swept across the sky -->
+  <symbol id="orn-dust" viewBox="0 0 480 260">
+    <use href="#fx-star" transform="translate(18 214) scale(1.5)"/>
+    <circle class="halo" cx="18" cy="214" r="8.5"/>
+    <use href="#fx-star" transform="translate(31 196) scale(0.98)"/>
+    <use href="#fx-star" transform="translate(20 200) scale(0.31)"/>
+    <use href="#fx-star" transform="translate(43 182) scale(0.95)"/>
+    <circle class="dot" cx="44" cy="179" r="1"/>
+    <circle class="dot" cx="44" cy="172" r="1.4"/>
+    <use href="#fx-star" transform="translate(56 170) scale(0.93)"/>
+    <circle class="halo" cx="56" cy="170" r="3.2"/>
+    <use href="#fx-star" transform="translate(43 168) scale(0.47)"/>
+    <use href="#fx-star" transform="translate(69 161) scale(0.90)"/>
+    <circle class="dot" cx="59" cy="155" r="1.5"/>
+    <circle class="dot" cx="81" cy="163" r="1.4"/>
+    <use href="#fx-star" transform="translate(82 154) scale(0.88)"/>
+    <use href="#fx-star" transform="translate(95 149) scale(0.86)"/>
+    <circle class="halo" cx="95" cy="149" r="2.9"/>
+    <circle class="dot" cx="84" cy="157" r="1.4"/>
+    <circle class="dot" cx="86" cy="140" r="1.4"/>
+    <use href="#fx-star" transform="translate(109 145) scale(0.83)"/>
+    <use href="#fx-star" transform="translate(122 143) scale(0.81)"/>
+    <circle class="dot" cx="114" cy="145" r="1.5"/>
+    <circle class="dot" cx="119" cy="144" r="1"/>
+    <use href="#fx-star" transform="translate(136 143) scale(0.79)"/>
+    <circle class="halo" cx="136" cy="143" r="2.7"/>
+    <use href="#fx-star" transform="translate(127 147) scale(0.39)"/>
+    <use href="#fx-star" transform="translate(151 143) scale(0.76)"/>
+    <circle class="dot" cx="146" cy="145" r="1.4"/>
+    <circle class="dot" cx="146" cy="149" r="1.7"/>
+    <use href="#fx-star" transform="translate(166 143) scale(0.74)"/>
+    <use href="#fx-star" transform="translate(168 144) scale(0.48)"/>
+    <use href="#fx-star" transform="translate(181 145) scale(0.71)"/>
+    <circle class="halo" cx="181" cy="145" r="2.4"/>
+    <circle class="dot" cx="187" cy="140" r="1.9"/>
+    <circle class="dot" cx="171" cy="143" r="1.7"/>
+    <use href="#fx-star" transform="translate(196 146) scale(0.69)"/>
+    <use href="#fx-star" transform="translate(196 134) scale(0.43)"/>
+    <use href="#fx-star" transform="translate(213 147) scale(0.67)"/>
+    <circle class="dot" cx="220" cy="148" r="1.9"/>
+    <circle class="dot" cx="208" cy="151" r="1.5"/>
+    <use href="#fx-star" transform="translate(229 148) scale(0.64)"/>
+    <circle class="halo" cx="229" cy="148" r="2.2"/>
+    <use href="#fx-star" transform="translate(228 156) scale(0.49)"/>
+    <use href="#fx-star" transform="translate(247 148) scale(0.62)"/>
+    <circle class="dot" cx="246" cy="151" r="1"/>
+    <circle class="dot" cx="252" cy="151" r="1.9"/>
+    <use href="#fx-star" transform="translate(265 147) scale(0.59)"/>
+    <use href="#fx-star" transform="translate(283 144) scale(0.57)"/>
+    <circle class="halo" cx="283" cy="144" r="1.9"/>
+    <circle class="dot" cx="278" cy="142" r="1.7"/>
+    <circle class="dot" cx="271" cy="144" r="1.2"/>
+    <use href="#fx-star" transform="translate(303 141) scale(0.55)"/>
+    <use href="#fx-star" transform="translate(289 148) scale(0.33)"/>
+    <use href="#fx-star" transform="translate(323 135) scale(0.52)"/>
+    <circle class="dot" cx="316" cy="133" r="1.9"/>
+    <circle class="dot" cx="312" cy="134" r="1.4"/>
+    <use href="#fx-star" transform="translate(344 128) scale(0.50)"/>
+    <circle class="halo" cx="344" cy="128" r="1.7"/>
+    <use href="#fx-star" transform="translate(366 118) scale(0.48)"/>
+    <circle class="dot" cx="374" cy="126" r="1.2"/>
+    <circle class="dot" cx="363" cy="115" r="1.8"/>
+    <use href="#fx-star" transform="translate(388 106) scale(0.45)"/>
+    <use href="#fx-star" transform="translate(412 91) scale(0.43)"/>
+    <circle class="halo" cx="412" cy="91" r="1.5"/>
+    <circle class="dot" cx="403" cy="84" r="1.2"/>
+    <circle class="dot" cx="405" cy="91" r="1.5"/>
+    <use href="#fx-star" transform="translate(436 73) scale(0.40)"/>
+    <use href="#fx-star" transform="translate(421 71) scale(0.37)"/>
+    <use href="#fx-star" transform="translate(462 52) scale(.72)"/>
+    <circle class="dot" cx="462" cy="52" r="1.7"/>
+  </symbol>
 </svg>
 
-  <!-- the understory — giant soft fronds breathing beneath every scene -->
+  <!-- the understory — wisteria, foxgloves and toadstools breathing
+       beneath every scene, barely there, like memory of the glade -->
   <div class="understory" aria-hidden="true"></div>
 
-  <!-- the fireflies — a dozen drifting embers, above the scenes -->
+  <!-- the drift — motes of pixie dust wandering through the light -->
   <div class="fireflies" aria-hidden="true" data-element-key="fireflies">
     <i style="--x:8%;  --y:24%; --s:3px;   --o:.4;  --t:16s;   --d:0s"></i>
     <i style="--x:16%; --y:64%; --s:2.5px; --o:.28; --t:19s;   --d:-6s"></i>
@@ -369,8 +490,8 @@
     <i style="--x:22%; --y:10%; --s:2px;   --o:.18; --t:17.5s; --d:-15s"></i>
   </div>
 
-  <!-- the glade frame — a hairline border with fern corners,
-       barely there, like the edge of a storybook page -->
+  <!-- the bower frame — a hairline at the edge of the storybook,
+       with rose vines curling into every corner -->
   <div class="court-frame" aria-hidden="true" data-element-key="court-frame">
     <span class="court-frame__band"></span>
     <i class="tl"><svg viewBox="0 0 120 120"><use href="#orn-corner" /></svg></i>
@@ -380,9 +501,10 @@
   </div>
 
   <!-- ════════════════════════════════════════════════════════════
-       THE OPENING — the fairy-tale gate of the glen: twin moonlit
-       doors beneath a gilded scrollwork arch, sealed by the winged
-       medallion. Touch, and the doors part onto the starlight.
+       THE OPENING — the bower gate of the fairyland: twin ivory
+       doors beneath a rose arch, sealed by the winged medallion,
+       a wish-trail of pixie dust arcing overhead. Touch, and the
+       doors part onto the celebration.
        ════════════════════════════════════════════════════════════ -->
   <section id="opening" class="opening" aria-label="Your invitation awaits">
     <i class="opening__firefly" style="--x:12%; --y:26%; --s:3px;   --o:.4;  --t:15s;  --d:0s"  aria-hidden="true"></i>
@@ -400,7 +522,7 @@
     <img class="opening__corner opening__corner--bl" src="assets/orn/corner-vine.webp" alt="" aria-hidden="true" data-element-key="opening-corner-bl">
     <img class="opening__corner opening__corner--br" src="assets/orn/corner-vine.webp" alt="" aria-hidden="true" data-element-key="opening-corner-br">
 
-    <!-- wish-stars — four-point sparkles that breathe in the dark -->
+    <!-- wish-stars — four-point sparkles that breathe in the light -->
     <i class="opening__sparkle" style="--x:22%; --y:18%; --s:9px; --o:.5; --t:5.2s; --d:-1s"  aria-hidden="true"></i>
     <i class="opening__sparkle" style="--x:78%; --y:24%; --s:7px; --o:.42; --t:6.1s; --d:-3s" aria-hidden="true"></i>
     <i class="opening__sparkle" style="--x:12%; --y:56%; --s:6px; --o:.36; --t:4.8s; --d:-2s" aria-hidden="true"></i>
@@ -411,6 +533,7 @@
     <span class="opening__watermark" aria-hidden="true" data-element-key="opening-watermark">&amp;</span>
 
     <div class="opening__inner">
+      <svg class="opening__dust" viewBox="0 0 480 260" aria-hidden="true" data-element-key="opening-dust"><use href="#orn-dust" /></svg>
       <p class="opening__eyebrow eyebrow" data-content="content.openingEyebrow" data-element-key="opening-eyebrow">You are cordially invited to the wedding of</p>
       <p class="opening__names script" data-content="couple.names" data-element-key="opening-names">Elowen &amp; Finnian</p>
 
@@ -517,11 +640,12 @@
        ══════════════════════════════════════════════════════════ -->
     <section id="invitation" class="scene scene--hero" aria-labelledby="invitation-title">
       <span class="hero-glow" aria-hidden="true"></span>
+      <svg class="hero-dust" viewBox="0 0 480 260" aria-hidden="true" data-element-key="hero-dust"><use href="#orn-dust" /></svg>
       <svg class="hero-frond hero-frond--left" viewBox="0 0 90 230" aria-hidden="true"><use href="#orn-frond" /></svg>
       <svg class="hero-frond hero-frond--right" viewBox="0 0 90 230" aria-hidden="true"><use href="#orn-frond" /></svg>
       <div class="container hero-inner">
         <figure class="hero-crest reveal" data-element-key="invite-spray-top" role="img"
-          aria-label="The winged medallion — fairy wings cradling the couple's initials.">
+          aria-label="The winged medallion — ethereal wings cradling the couple's initials.">
           <img class="hero-crest__art" src="assets/orn/crest-wings.webp" alt="" aria-hidden="true">
           <span class="hero-crest__initials script" aria-hidden="true" data-content="couple.initials">E · F</span>
         </figure>
@@ -534,7 +658,7 @@
           <span class="hero-name foil reveal" data-content="couple.partner-two">Finnian</span>
         </h1>
 
-        <p class="hero-lead reveal" data-content="content.invitationLead">request the honour of your presence at the celebration of their marriage — an evening of starlight, blossoms and dancing until midnight.</p>
+        <p class="hero-lead reveal" data-content="content.invitationLead">request the honour of your presence at the celebration of their marriage — an evening of wishes, blossoms and dancing until midnight.</p>
 
         <svg class="hero-divider reveal" viewBox="0 0 320 48" aria-hidden="true"><use href="#orn-divider" /></svg>
 
@@ -552,7 +676,7 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════
-       Ⅱ · THEIR STORY — a field journal
+       Ⅱ · THEIR STORY — a page from the storybook
        ══════════════════════════════════════════════════════════ -->
     <section id="story" class="scene scene--story" aria-labelledby="story-title">
       <div class="container">
@@ -699,7 +823,7 @@
         <p class="kicker kicker--center reveal" data-content="content.paletteKicker">№ 05 · The Colours of the Day</p>
         <h2 id="palette-title" class="display display--h2 reveal"><span data-content="content.paletteTitleFirst">The wedding</span>
           <em class="script" data-content="content.paletteTitleSecond">palette</em></h2>
-        <p class="palette-intro prose reveal" data-content="content.paletteIntro">Twilight indigo and gleaming gold, moonlit ivory and wisteria — the colours of the celebration.</p>
+        <p class="palette-intro prose reveal" data-content="content.paletteIntro">Blush petal and wisteria mist, pearl ivory and pixie gold, a whisper of fern — the colours of the celebration.</p>
 
         <ul id="palette-swatches" class="palette-swatches reveal" data-element-key="palette-swatches"></ul>
 
@@ -707,7 +831,7 @@
           <img class="dresscode-rose" src="assets/orn/rose-blossom.webp" alt="" aria-hidden="true">
           <span class="dresscode-label label-caps" data-content="content.dressCodeLabel">Attire · Evening Dress</span>
           <span class="dresscode-title" data-content="content.dressCodeTitle">Garden formal</span>
-          <span class="dresscode-note" data-content="content.dressCodeNote">Twilight indigo, ivory and a flourish of gold are most welcome — dress as splendidly as you feel.</span>
+          <span class="dresscode-note" data-content="content.dressCodeNote">Blush, pearl and a flourish of gold are most welcome — dress as splendidly as you feel.</span>
         </div>
       </div>
     </section>
@@ -725,7 +849,7 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════
-       Ⅶ · THE GLASSHOUSE — venue & location
+       Ⅶ · THE GLADE PAVILION — venue & location
        ══════════════════════════════════════════════════════════ -->
     <section id="venue" class="scene scene--venue" aria-labelledby="venue-title">
       <div class="container">
@@ -739,7 +863,7 @@
           <use href="#orn-arbor" />
         </svg>
 
-        <p class="venue-description prose reveal" data-content="content.venueDescription">A moonlit pavilion deep in an old garden estate — wisteria in the rafters, lantern-lit paths through the roses, and a terrace glowing with wishes for one unforgettable evening.</p>
+        <p class="venue-description prose reveal" data-content="content.venueDescription">A blossom-crowned pavilion deep in an old garden estate — wisteria in the rafters, lantern-lit paths through the roses, and a terrace glowing with wishes for one unforgettable evening.</p>
 
         <div class="venue-sublines reveal">
           <p class="sub"><span class="label-caps" data-content="content.venueCeremonyLabel">Ceremony</span> <em data-content="content.venueCeremonyText">beneath the wisteria, as the sun sets</em></p>
@@ -763,7 +887,7 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════
-       Ⅷ · THE COUNTDOWN — beneath the fern wreath
+       Ⅷ · THE COUNTDOWN — beneath the blossom wreath
        ══════════════════════════════════════════════════════════ -->
     <section id="countdown" class="scene scene--countdown" aria-labelledby="countdown-title">
       <svg class="countdown-wreath" viewBox="0 0 240 240" aria-hidden="true" data-element-key="countdown-wreath">
@@ -893,6 +1017,7 @@
        ══════════════════════════════════════════════════════════ -->
     <section id="closing" class="scene scene--closing" aria-labelledby="closing-title">
       <img class="closing-garland reveal" src="assets/orn/garland-blossom.webp" alt="" aria-hidden="true" data-element-key="closing-swag">
+      <svg class="closing-dust" viewBox="0 0 480 260" aria-hidden="true"><use href="#orn-dust" /></svg>
       <div class="container container--narrow">
         <p class="closing-script" data-content="content.closingScript">with all our love</p>
         <h2 id="closing-title" class="closing-names script" data-content="couple.names">Elowen &amp; Finnian</h2>
@@ -901,7 +1026,7 @@
           &nbsp;·&nbsp;
           <span data-content="venue.name">The Wisteria Pavilion at Starhollow</span>
         </p>
-        <p class="closing-message" data-content="content.closingMessage" data-element-key="closing-message">Thank you, from the depths of our hearts, for being part of our story. We cannot wait to celebrate with you beneath the wisteria and the stars — an evening straight out of a fairy tale.</p>
+        <p class="closing-message" data-content="content.closingMessage" data-element-key="closing-message">Thank you, from the depths of our hearts, for being part of our story. We cannot wait to celebrate with you beneath the wisteria and the morning stars — an evening straight out of a storybook.</p>
         <div class="closing-seal" aria-hidden="true" data-element-key="closing-seal">
           <span class="seal seal--gold"><span class="seal__initials" data-content="couple.initials">E · F</span></span>
         </div>

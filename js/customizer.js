@@ -1149,10 +1149,10 @@
   /* ── design step: curated moods & voices ───────────────────── */
 
   var THEME_META = [
-    { key: 'twilight', name: 'Pixie Twilight', chips: ['#B08A5A', '#F8F3E6', '#E9CC86', '#141938'] },
-    { key: 'blossom', name: 'Rose & Wisteria', chips: ['#B07D63', '#FAF4E8', '#EFC98F', '#1B1436'] },
-    { key: 'gilded', name: 'Gilded Ever After', chips: ['#C2955B', '#FBF4E4', '#F0D191', '#221327'] },
-    { key: 'moonlit', name: 'Moonlit Dell', chips: ['#A69068', '#F4F3E5', '#E4CB8F', '#0E1B2A'] }
+    { key: 'twilight', name: 'Petals & Dawn', chips: ['#B9885B', '#FFFDF8', '#C89355', '#4A3A67'] },
+    { key: 'blossom', name: 'Wisteria & Pearl', chips: ['#B57E93', '#FFFCFE', '#C89355', '#4E3667'] },
+    { key: 'gilded', name: 'Gilded Ever After', chips: ['#BC8A4F', '#FFFCF2', '#C08C3E', '#55405C'] },
+    { key: 'moonlit', name: 'Powder Sky', chips: ['#8FA3B8', '#FBFDFE', '#C9A96A', '#33475C'] }
   ];
 
   var TYPE_PAIRINGS = [

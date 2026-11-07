@@ -1,10 +1,10 @@
-# Faeglen — a fairy-tale wedding invitation
+# Faeglen — a fairyland wedding invitation
 
-A fairy-tale garden at twilight: fine gold scrollwork, five-petal
-blossoms and four-point wish-stars engraved over storybook indigo,
-a gilded arch crowning twin moonlit doors, fireflies drifting
-between the scenes, enchanted ivory cards with arched tops, and a
-wisteria pavilion glowing with string lights. Fully customisable
+A fairyland at first light: pearl-ivory skies washed with dawn blush
+and wisteria mist, rose-gold vines and wild blossoms, toadstools and
+dewdrops in the understory, wish-trails of pixie dust arcing over the
+names, ethereal wings cradling the couple's medallion, and twin
+ivory bower doors that part onto the celebration. Fully customisable
 in the browser with a guided, auto-saving visual editor — then
 published live with one click on Cloudflare.
 
@@ -27,8 +27,8 @@ published live with one click on Cloudflare.
   hashes, and stamps every page with the build version
 - GSAP (CDN) for the opening choreography — everything degrades
   gracefully without it
-- The fireflies are pure CSS (a dozen drifting sparks); they still,
-  dim and disappear politely under `prefers-reduced-motion`
+- The drifting dust motes are pure CSS (a dozen wandering lights);
+  they still, dim and disappear politely under `prefers-reduced-motion`
 
 ## Quick start (local)
 

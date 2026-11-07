@@ -1,41 +1,45 @@
 <!DOCTYPE html><html><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Prata&family=Great+Vibes&family=Cormorant+Garamond:ital@0;1&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
-body { margin:0; width:1200px; height:630px; overflow:hidden; background:#0B0F24; }
+body { margin:0; width:1200px; height:630px; overflow:hidden; background:#FBF6EC; }
 .cover { width:1200px; height:630px; position:relative;
   background:
-    radial-gradient(120% 100% at 50% -10%, #2a2f56 0%, #141938 52%, #0b0f24 100%);
+    radial-gradient(110% 90% at 50% -12%, #F9E9C8 0%, rgba(249,233,200,0) 46%),
+    radial-gradient(120% 90% at 50% 116%, #F3D9E2 0%, rgba(243,217,226,0) 52%),
+    radial-gradient(90% 80% at -6% 44%, #E9E4F2 0%, rgba(233,228,242,0) 55%),
+    radial-gradient(90% 80% at 106% 46%, #E7EEE2 0%, rgba(231,238,226,0) 55%),
+    linear-gradient(180deg, #FBF6EC 0%, #F6EFE6 100%);
   display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
-.glow { position:absolute; top:30px; left:50%; transform:translateX(-50%);
+.glow { position:absolute; top:20px; left:50%; transform:translateX(-50%);
   width:560px; height:560px; border-radius:50%;
-  background:radial-gradient(circle, rgba(246,223,164,.15) 0%, rgba(233,204,134,.06) 40%, transparent 68%); }
-.fern { position:absolute; opacity:.3; color:#e9cc86; }
+  background:radial-gradient(circle, rgba(233,201,143,.30) 0%, rgba(201,147,92,.10) 42%, transparent 68%); }
+.fern { position:absolute; opacity:.55; }
 .fl { left:-30px; bottom:-60px; }
 .fr { right:-34px; top:-40px; transform:scaleX(-1) rotate(6deg); }
-.wreath { position:relative; width:238px; height:238px; }
+.wreath { position:relative; width:250px; height:250px; filter:drop-shadow(0 14px 34px rgba(74,58,103,.18)); }
 .init { position:absolute; inset:0; display:grid; place-items:center; padding-top:26px;
-  font-family:'Great Vibes',cursive; font-size:60px; color:#c6a66c; }
-.names { font-family:'Prata',serif; font-size:60px; letter-spacing:.05em; color:#f8f3e6; margin-top:16px; }
-.names .amp { font-family:'Great Vibes',cursive; color:#e9cc86; font-size:54px; padding:0 16px; }
+  font-family:'Great Vibes',cursive; font-size:42px; color:#8a5f33; }
+.names { font-family:'Prata',serif; font-size:58px; letter-spacing:.04em; color:#4A3A67; margin-top:16px; }
+.names .amp { font-family:'Great Vibes',cursive; color:#C9935C; font-size:52px; padding:0 14px; }
 .line { width:430px; height:1px; margin:20px 0 18px;
-  background:linear-gradient(90deg, transparent, rgba(233,204,134,.65), transparent); position:relative; }
+  background:linear-gradient(90deg, transparent, rgba(201,147,92,.75), transparent); position:relative; }
 .line i { position:absolute; left:50%; top:-3.5px; width:8px; height:8px; transform:translateX(-50%) rotate(45deg);
-  border:1px solid rgba(233,204,134,.8); background:#141938; }
-.date { font-family:'Jost',sans-serif; font-weight:300; font-size:19px; letter-spacing:.44em; text-transform:uppercase; color:#c6a66c; }
-.sub { margin-top:13px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:#9BAE94; }
+  border:1px solid rgba(178,127,69,.85); background:#FFFDF8; }
+.date { font-family:'Jost',sans-serif; font-weight:300; font-size:19px; letter-spacing:.44em; text-transform:uppercase; color:#B27F45; }
+.sub { margin-top:13px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:#7E8F6B; }
 .wordmark { position:absolute; bottom:26px; left:0; right:0; font-family:'Jost',sans-serif;
-  font-size:12px; letter-spacing:.5em; color:rgba(233,204,134,.5); text-transform:uppercase; }
+  font-size:12px; letter-spacing:.5em; color:rgba(178,127,69,.65); text-transform:uppercase; }
 </style></head><body><div class="cover">
   <div class="glow"></div>
   <img class="fern fl" src="assets/orn/understory-left.svg" width="430" alt="">
   <img class="fern fr" src="assets/orn/understory-right.svg" width="400" alt="">
   <div class="wreath">
-    <img src="assets/orn/crest-wings.webp" style="width:238px;height:238px;object-fit:contain" alt="">
+    <img src="assets/orn/crest-wings.webp" style="width:250px;height:250px;object-fit:contain" alt="">
     <div class="init">E · F</div>
   </div>
   <div class="names">Elowen<span class="amp">&amp;</span>Finnian</div>
   <div class="line"><i></i></div>
   <div class="date">19 · 06 · 2027</div>
-  <div class="sub">an evening of starlight &amp; blossoms — you are cordially invited</div>
+  <div class="sub">an evening of wishes &amp; blossoms — you are cordially invited</div>
   <div class="wordmark">Faeglen · Wedding Invitation</div>
 </div></body></html>
