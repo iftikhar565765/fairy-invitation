@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · main.js
+   FAEGLEN · main.js
    Content injection · navigation · palette swatches · wedding-day
    string of lights · countdown · calendar files · reveals ·
    parallax · audio. Everything degrades gracefully:
@@ -630,14 +630,14 @@
   });
 
   var themePresets = {
-    grove:   { burgundy: '#A8894C', deep: '#82683A', wine: '#14291B', crimson: '#2E5B44', champagne: '#D9BC7F', soft: '#B79B62', parchment: '#EEE6D1', ivory: '#F6F1E2', paper: '#FCF8EC', night: '#0A1C12', nightDeep: '#06120B', olive: '#6E7C50', oliveDeep: '#596740', sage: '#9EA98B', rose: '#C3A39B', ink: '#1E2A20', inkSoft: '#48563F', charcoal: '#6D7462' },
-    fern:    { burgundy: '#A38A52', deep: '#7E6A3C', wine: '#1C3222', crimson: '#41765A', champagne: '#D3BC8B', soft: '#B09B6E', parchment: '#EFEBDD', ivory: '#F7F4E9', paper: '#FBF9F0', night: '#0E2016', nightDeep: '#081409', olive: '#77824F', oliveDeep: '#5F6A3C', sage: '#A3AC8C', rose: '#C5A3A3', ink: '#212B20', inkSoft: '#47523F', charcoal: '#6C7360' },
-    ember:   { burgundy: '#9A7433', deep: '#785826', wine: '#33220F', crimson: '#7E5230', champagne: '#DBBB88', soft: '#B99B6E', parchment: '#F2EADA', ivory: '#F9F3E6', paper: '#FDF9EF', night: '#241608', nightDeep: '#150C04', olive: '#7C7350', oliveDeep: '#6A6240', sage: '#A9A48B', rose: '#C9A98F', ink: '#2A2118', inkSoft: '#52443A', charcoal: '#726557' },
-    dusk:    { burgundy: '#9C9256', deep: '#786F3C', wine: '#142C26', crimson: '#3E6E62', champagne: '#D5C394', soft: '#B4A273', parchment: '#EEEDE2', ivory: '#F6F5EC', paper: '#FBFAF2', night: '#0A1A16', nightDeep: '#050F0C', olive: '#6E7B72', oliveDeep: '#5A6760', sage: '#9BA8A0', rose: '#B3A6A6', ink: '#1B2824', inkSoft: '#3F4F48', charcoal: '#64706A' }
+    twilight: { burgundy: '#B08A5A', deep: '#8C6C44', wine: '#1C2244', crimson: '#5C5593', champagne: '#E9CC86', soft: '#C6A66C', parchment: '#EFE9D9', ivory: '#F8F3E6', paper: '#FDF9EE', night: '#141938', nightDeep: '#0B0F24', olive: '#6E7F62', oliveDeep: '#576C52', sage: '#9BAE94', rose: '#D9A8BC', ink: '#262041', inkSoft: '#4C4672', charcoal: '#6F6A8F' },
+    blossom:  { burgundy: '#B07D63', deep: '#8C5E4C', wine: '#2A1F47', crimson: '#8A5E93', champagne: '#EFC98F', soft: '#CBA76E', parchment: '#F3EADC', ivory: '#FAF4E8', paper: '#FEFAF0', night: '#1B1436', nightDeep: '#100B22', olive: '#7B7A62', oliveDeep: '#62644C', sage: '#A5AB8C', rose: '#E3B1C4', ink: '#322247', inkSoft: '#5E4470', charcoal: '#7C6890' },
+    gilded:   { burgundy: '#C2955B', deep: '#9A7138', wine: '#2E1C34', crimson: '#9A5E76', champagne: '#F0D191', soft: '#D0AC70', parchment: '#F5ECD9', ivory: '#FBF4E4', paper: '#FEFAF0', night: '#221327', nightDeep: '#140A18', olive: '#7E7757', oliveDeep: '#656044', sage: '#AB9F82', rose: '#DFB0AE', ink: '#33203A', inkSoft: '#5F4A66', charcoal: '#816E85' },
+    moonlit:  { burgundy: '#A69068', deep: '#7F6E48', wine: '#13293A', crimson: '#4A6E80', champagne: '#E4CB8F', soft: '#BFA670', parchment: '#EBEDDF', ivory: '#F4F3E5', paper: '#FAF9EE', night: '#0E1B2A', nightDeep: '#081019', olive: '#5F7A6E', oliveDeep: '#4C655B', sage: '#8FA79B', rose: '#C0A8B2', ink: '#1C2C38', inkSoft: '#41545E', charcoal: '#64777F' }
   };
 
   function applyTheme() {
-    var themeName = Object.prototype.hasOwnProperty.call(themePresets, cfg.theme) ? cfg.theme : 'grove';
+    var themeName = Object.prototype.hasOwnProperty.call(themePresets, cfg.theme) ? cfg.theme : 'twilight';
     var colors = themePresets[themeName];
     var root = document.documentElement;
     root.style.setProperty('--burgundy', colors.burgundy);
@@ -986,10 +986,10 @@
       var lines = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Vesperwood//Wedding Invitation//EN',
+        'PRODID:-//Faeglen//Wedding Invitation//EN',
         'CALSCALE:GREGORIAN',
         'BEGIN:VEVENT',
-        'UID:' + icsUTC(data.start.getTime()) + '-vesperwood@invitation',
+        'UID:' + icsUTC(data.start.getTime()) + '-faeglen@invitation',
         'DTSTAMP:' + icsUTC(Date.now()),
         'DTSTART:' + icsUTC(data.start.getTime()),
         'DTEND:' + icsUTC(data.end.getTime()),

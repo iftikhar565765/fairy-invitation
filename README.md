@@ -1,12 +1,12 @@
-# Vesperwood — a wedding invitation
+# Faeglen — a fairy-tale wedding invitation
 
-An enchanted forest at dusk: hairline ferns and wild roses engraved in
-leaf-gold over pine-dark velvet, a bower door of woven branches beneath
-a fern arch, fireflies drifting between the scenes, engraved ivory
-cards with arched tops, and a Victorian glasshouse glowing among the
-pines. Fully
-customisable in the browser with a guided, auto-saving visual editor —
-then published live with one click on Cloudflare.
+A fairy-tale garden at twilight: fine gold scrollwork, five-petal
+blossoms and four-point wish-stars engraved over storybook indigo,
+a gilded arch crowning twin moonlit doors, fireflies drifting
+between the scenes, enchanted ivory cards with arched tops, and a
+wisteria pavilion glowing with string lights. Fully customisable
+in the browser with a guided, auto-saving visual editor — then
+published live with one click on Cloudflare.
 
 **Live template pieces**
 
@@ -34,7 +34,7 @@ then published live with one click on Cloudflare.
 
 ```bash
 npm install
-npx wrangler d1 migrations apply vesperwood-invitations --local
+npx wrangler d1 migrations apply fairy-invitations --local
 npm run build
 npx wrangler dev            # http://localhost:8788
 ```
@@ -48,5 +48,5 @@ guest replies, the submissions page — goes live.
 
 `DEPLOY.md` walks through it step by step (dashboard path and CLI
 path): create the D1 database, paste its id into `wrangler.jsonc`,
-run `npx wrangler d1 migrations apply vesperwood-invitations --remote`,
+run `npx wrangler d1 migrations apply fairy-invitations --remote`,
 then `npm run build && npx wrangler deploy`.

@@ -1,4 +1,4 @@
-# Deploying Vesperwood to Cloudflare
+# Deploying Faeglen to Cloudflare
 
 The site is a **Cloudflare Worker** (static assets + a small API) with a
 **D1 database** for invitations and RSVPs. The free plan is enough:
@@ -10,9 +10,9 @@ Key names used throughout this project:
 
 | Setting | Value |
 | --- | --- |
-| Worker name | `vesperwood-invitation` |
-| D1 database name | `vesperwood-invitations` |
-| Repository | `https://github.com/iftikhar565765/vesperwood-invitation` |
+| Worker name | `fairy-invitation` |
+| D1 database name | `fairy-invitations` |
+| Repository | `https://github.com/iftikhar565765/fairy-invitation` |
 
 Use exactly the database name above so the migration commands resolve.
 
@@ -29,7 +29,7 @@ terminal; **Path B** uses the CLI from your own machine.
 2. In the left sidebar choose **Storage & Databases → D1 SQL Database**.
    (Older layouts: **Workers & Pages → D1**.)
 3. Click **Create Database**.
-4. **Database name:** `vesperwood-invitations`
+4. **Database name:** `fairy-invitations`
 5. **Location:** *Auto* is fine (or pick the region closest to most guests).
 6. Click **Create**.
 7. On the database's detail page find **Database ID** and copy it —
@@ -46,7 +46,7 @@ push to `main`.
 
 ### Step 3 — Create the tables (schema)
 
-1. In the dashboard, open your `vesperwood-invitations` database.
+1. In the dashboard, open your `fairy-invitations` database.
 2. Open the **Console** tab.
 3. Open `migrations/0001_initial.sql` from the repo, copy **all** of it,
    paste into the console, and click **Run**.
@@ -58,14 +58,14 @@ push to `main`.
 1. Dashboard → **Workers & Pages → Create → Workers**.
 2. Choose **Connect to Git** (Import an existing repository) and
    authorize GitHub access.
-3. Select the repository `iftikhar565765/vesperwood-invitation`, branch `main`.
+3. Select the repository `iftikhar565765/fairy-invitation`, branch `main`.
 4. Build settings:
    - **Build command:** `npm run build`
    - **Deploy command:** `npx wrangler deploy`
    - (Leave the rest as defaults; `wrangler.jsonc` is the source of truth.)
 5. Click **Create and Deploy**. The first build takes a minute or two.
 6. When it finishes you get a live URL like
-   `https://vesperwood-invitation.<your-subdomain>.workers.dev`.
+   `https://fairy-invitation.<your-subdomain>.workers.dev`.
 
 Every future `git push` to `main` rebuilds and redeploys automatically.
 
@@ -88,7 +88,7 @@ After the first deploy, update the `og:url` / `og:image` / `twitter:image`
 URLs in `index.html` to your real `*.workers.dev` (or custom-domain)
 address so shared links show the correct preview card, then push.
 (They currently point at
-`https://vesperwood-invitation.glauxstudio.workers.dev` — if that is your
+`https://fairy-invitation.glauxstudio.workers.dev` — if that is your
 final URL, nothing to change.)
 
 ### Step 7 — Optional custom domain
@@ -103,21 +103,21 @@ at a domain hosted in the same Cloudflare account (e.g.
 
 ```bash
 # 1. Get the code and install dependencies
-git clone https://github.com/iftikhar565765/vesperwood-invitation.git
-cd vesperwood-invitation
+git clone https://github.com/iftikhar565765/fairy-invitation.git
+cd fairy-invitation
 npm install
 
 # 2. Log in to Cloudflare (opens a browser)
 npx wrangler login
 
 # 3. Create the database and copy the printed database_id
-npx wrangler d1 create vesperwood-invitations
+npx wrangler d1 create fairy-invitations
 
 # 4. Put the database_id into wrangler.jsonc
 #    (replace REPLACE_WITH_YOUR_NEW_D1_DATABASE_ID)
 
 # 5. Create the tables
-npx wrangler d1 migrations apply vesperwood-invitations --remote
+npx wrangler d1 migrations apply fairy-invitations --remote
 
 # 6. Deploy
 npm run deploy
@@ -126,7 +126,7 @@ npm run deploy
 ## Verify the deployment
 
 ```
-curl -s https://vesperwood-invitation.<your-subdomain>.workers.dev/ | grep name=\"build\"
+curl -s https://fairy-invitation.<your-subdomain>.workers.dev/ | grep name=\"build\"
 ```
 
 Every page carries a build stamp (`<meta name="build">`) — the printed
@@ -136,6 +136,6 @@ value tells you exactly which build is live.
 
 ```bash
 npm install
-npx wrangler d1 migrations apply vesperwood-invitations --local
+npx wrangler d1 migrations apply fairy-invitations --local
 npm run dev        # http://localhost:8788
 ```

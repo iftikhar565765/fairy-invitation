@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · config.js
+   FAEGLEN · config.js
    ---------------------------------------------------------------
    Main personalisation data for the site and visual editor.
    Longer copy, palette, and theme are editable here. Values
@@ -8,14 +8,14 @@
    ═══════════════════════════════════════════════════════════════ */
 
 window.HEIRLOOM = {
-  templateId: "vesperwood",
+  templateId: "faeglen",
 
   /* ── The couple — SAMPLE content, replace with your names ────── */
   couple: {
-    partnerOne: "Wren",                      // SAMPLE
-    partnerTwo: "Theodore",                  // SAMPLE
-    initials:  "W · T",                      // SAMPLE — used on seals & monograms
-    namesLine: "Wren & Theodore"             // SAMPLE — used across the site
+    partnerOne: "Elowen",                    // SAMPLE
+    partnerTwo: "Finnian",                   // SAMPLE
+    initials:  "E · F",                      // SAMPLE — used on seals & monograms
+    namesLine: "Elowen & Finnian"            // SAMPLE — used across the site
   },
 
   /* ── The wedding date & time ─────────────────────────────────
@@ -32,13 +32,13 @@ window.HEIRLOOM = {
     zoneLabel: "",                                                           // EDIT — optional note for guests abroad, e.g. "EDT"
     words: "Saturday · The Nineteenth of June · Two Thousand Twenty-Seven",  // EDIT
     numerals: "19 · 06 · 2027",                                              // EDIT
-    eventTitle: "Wren & Theodore — Wedding"                                  // EDIT (calendar entry)
+    eventTitle: "Elowen & Finnian — Wedding"                                 // EDIT (calendar entry)
   },
 
   /* ── The venue ──────────────────────────────────────────────── */
   venue: {
-    name: "The Glasshouse at Aldergrove",        // SAMPLE
-    address: "Aldergrove Estate, Hudson Valley, New York", // SAMPLE
+    name: "The Wisteria Pavilion at Starhollow",         // SAMPLE
+    address: "Starhollow Gardens, Hudson Valley, New York", // SAMPLE
     mapsQuery: "",                               // optional Maps search override
     /* A full URL here overrides the map link built above, e.g. an
        exact Google Maps place link or an Apple Maps URL.          */
@@ -48,10 +48,10 @@ window.HEIRLOOM = {
   /* ── Copy shown throughout the invitation ────────────────────
      The visual editor can change these values without editing HTML. */
   content: {
-    pageTitle: "Wren & Theodore · 19 June 2027 — Wedding Invitation",
-    pageDescription: "Wren and Theodore request the pleasure of your company at the Glasshouse at Aldergrove — ferns, fireflies and one perfect evening, on Saturday the nineteenth of June 2027. Open your invitation.",
-    socialTitle: "Wren & Theodore — An Invitation · 19.06.2027",
-    socialDescription: "Ferns, fireflies and a forever kind of love — you are cordially invited.",
+    pageTitle: "Elowen & Finnian · 19 June 2027 — Wedding Invitation",
+    pageDescription: "Elowen and Finnian request the pleasure of your company at the Wisteria Pavilion at Starhollow — starlight, blossoms and one perfect evening, on Saturday the nineteenth of June 2027. Open your invitation.",
+    socialTitle: "Elowen & Finnian — An Invitation · 19.06.2027",
+    socialDescription: "Starlight, blossoms and a happily ever after — you are cordially invited.",
     navStory: "Story",
     navDetails: "Details",
     navVenue: "Venue",
@@ -72,23 +72,23 @@ window.HEIRLOOM = {
     skipButton: "Skip straight to the invitation",
     envelopeAddress: "their honoured guests",
     invitationEyebrow: "Together with their families",
-    invitationLead: "request the honour of your presence at the celebration of their marriage — an evening of fireflies, ferns and dancing beneath the boughs.",
+    invitationLead: "request the honour of your presence at the celebration of their marriage — an evening of starlight, blossoms and dancing until midnight.",
     invitationVenueSuffix: "· Hudson Valley",
     storyKicker: "№ 02 · Their Story",
     storyTitle: "Once upon",
     storyTitleScript: "a time",
-    storyParagraphOne: "Every great story deserves a beautiful beginning, and ours began quietly — a glasshouse full of ferns, one shared umbrella, and a first conversation that outlasted the rain.",
-    storyParagraphTwo: "Six years, two cities and a thousand small kindnesses later, we are writing our next chapter in the oldest language we know — love. Nothing would mean more than to have you standing beside us when we do.",
+    storyParagraphOne: "Every true story deserves a beautiful beginning, and ours began quietly — a garden full of wisteria, one shared umbrella, and a first conversation that outlasted the rain.",
+    storyParagraphTwo: "Six years, two cities and a thousand small kindnesses later, we are writing our next chapter in the oldest language we know — love. Nothing would mean more than to have you beside us when we do.",
     storyQuote: "Whatever our souls are made of, his and mine are the same.",
     storyQuoteLabel: "— Emily Brontë, read aloud on our first walk home",
     storyNote: "chapter the first, and all the rest",
-    storyNoteCredit: "— written in the margin of a field guide, on our first trip",
+    storyNoteCredit: "— scribbled in the margin of a storybook, on our first trip",
     storyCaptionOne: "the beginning",
     storyCaptionTwo: "always, us",
     storyCaptionFour: "the long path",
     storyAside: "and they lived",
     saveDateTitle: "Save the Date",
-    saveDateCrossing: "an evening of fireflies & first dances",
+    saveDateCrossing: "an evening of wishes & first dances",
     saveDateNote: "Add the date to your calendar and keep these particulars close.",
     calendarDownloadLabel: "Add to Calendar",
     calendarGoogleLabel: "Google Calendar",
@@ -98,10 +98,10 @@ window.HEIRLOOM = {
     detailsIntro: "The day, at a glance.",
     ceremonyLabel: "The Ceremony",
     ceremonyTime: "Half past six",
-    ceremonyNote: "Vows in the fern court as the light turns to gold.",
+    ceremonyNote: "Vows beneath the wisteria as the light turns to gold.",
     receptionLabel: "The Reception",
     receptionTime: "Eight o'clock",
-    receptionNote: "Dinner and dancing in the glasshouse, until the last lantern fades.",
+    receptionNote: "Dinner and dancing in the pavilion, until the last lantern fades.",
     kindlyReplyLabel: "Kindly Reply",
     kindlyReplyNote: "Kindly send your response using the reply card further below.",
     particularsEyebrow: "The Particulars",
@@ -109,26 +109,26 @@ window.HEIRLOOM = {
     particularsPlaceLabel: "The Place",
     particularsAttireLabel: "The Attire",
     particularsAttire: "Garden formal",
-    particularsAttireNote: "Evening dress with a flourish of green and gold is most welcome.",
+    particularsAttireNote: "Evening dress with a flourish of gold and wisteria is most welcome.",
     particularsCarriagesLabel: "The Carriages",
     particularsCarriagesTime: "At one o'clock",
     particularsCarriagesNote: "The last lantern dims as the nightingales begin.",
     paletteKicker: "№ 05 · The Colours of the Day",
     paletteTitleFirst: "The wedding",
     paletteTitleSecond: "palette",
-    paletteIntro: "Deep pine and glimmering gold, ivory birch and fern — the colours of the celebration.",
+    paletteIntro: "Twilight indigo and gleaming gold, moonlit ivory and wisteria — the colours of the celebration.",
     dressCodeLabel: "Attire · Evening Dress",
     dressCodeTitle: "Garden formal",
-    dressCodeNote: "Deep green, ivory and a flourish of gold are most welcome — dress as splendidly as you feel.",
+    dressCodeNote: "Twilight indigo, ivory and a flourish of gold are most welcome — dress as splendidly as you feel.",
     weddingDayKicker: "№ 06 · The Celebration",
     weddingDayTitleFirst: "The Wedding",
     weddingDayTitleSecond: "Day",
     venueKicker: "№ 07 · The Place",
-    venueDescription: "A Victorian glasshouse deep in an old-growth estate — ferns in the rafters, candlelit paths through the pines, and a moonlit clearing glowing with lanterns for one unforgettable evening.",
+    venueDescription: "A moonlit pavilion deep in an old garden estate — wisteria in the rafters, lantern-lit paths through the roses, and a terrace glowing with wishes for one unforgettable evening.",
     venueCeremonyLabel: "Ceremony",
-    venueCeremonyText: "in the fern court, as the sun sets",
+    venueCeremonyText: "beneath the wisteria, as the sun sets",
     venueReceptionLabel: "Reception",
-    venueReceptionText: "dinner & dancing in the glasshouse",
+    venueReceptionText: "dinner & dancing in the pavilion",
     mapButton: "View Location",
     rsvpKicker: "№ 08 · Your Reply",
     rsvpTitle: "Kindly Respond",
@@ -158,30 +158,30 @@ window.HEIRLOOM = {
     countdownTitle: "counting the hours until",
     countdownPromise: "“I do”",
     closingScript: "with all our love",
-    closingMessage: "Thank you, from the depths of our hearts, for being part of our story. We cannot wait to celebrate with you among the ferns and the fireflies — an evening worthy of a fairy tale.",
-    footerTagline: "A vow, a firefly, a forever."
+    closingMessage: "Thank you, from the depths of our hearts, for being part of our story. We cannot wait to celebrate with you beneath the wisteria and the stars — an evening straight out of a fairy tale.",
+    footerTagline: "A wish, a vow, a happily ever after."
   },
 
   palette: [
-    { name: "Deep Pine",     color: "#0F2417" },
-    { name: "Fern & Moss",   color: "#6F7C53" },
-    { name: "Antique Gold",  color: "#CDA750" },
-    { name: "Ivory Birch",   color: "#F7F3E4" },
-    { name: "Firefly Amber", color: "#E8C06B" }
+    { name: "Twilight Indigo", color: "#1C2244" },
+    { name: "Wisteria",        color: "#5C5593" },
+    { name: "Pixie Gold",      color: "#E9CC86" },
+    { name: "Moonlit Ivory",   color: "#F8F3E6" },
+    { name: "Blossom Rose",    color: "#D9A8BC" }
   ],
-  theme: "grove",
+  theme: "twilight",
   themeColors: {},
   fonts: {
-    editorial: "italiana",
-    display: "ebGaramond",
-    script: "allura",
-    hand: "cedarville",
-    body: "karla"
+    editorial: "prata",
+    display: "cormorant",
+    script: "greatVibes",
+    hand: "shadowsIntoLight",
+    body: "jost"
   },
 
   /* ── Wedding-day moments — SAMPLE words for the wedding programme.
      Use one short word per entry; an empty list hides the section. */
-  moments: ["Gathering", "Vows", "The Feast", "Toasts", "The Waltz", "Fireflies", "Carriages"],
+  moments: ["Gathering", "The Vows", "The Feast", "Toasts", "The First Dance", "Starlight", "Carriages"],
 
   /* ── RSVP ─────────────────────────────────────────────────────
      endpoint : leave "" for the honest demonstration mode — the
@@ -199,7 +199,7 @@ window.HEIRLOOM = {
 
   /* ── Countdown wording (invalid or passed dates) ─────────────── */
   countdown: {
-    invalidMessage: "The exact hour is still being pressed between the pages — see the details below.",
+    invalidMessage: "The exact hour is still being written between the pages — see the details below.",
     pastMessage: "The celebration has begun — thank you for being part of our story."
   },
 

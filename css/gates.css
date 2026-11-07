@@ -1,13 +1,14 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · gates.css
-   The opening — the gate of the grove. A bower of living branches
-   arches over two moss-dark oak doors; iron bands and ring handles,
-   fern tufts at the threshold, and the sealed fern roundel at the
-   heart of the doors, warm light breathing through the seam.
-   Touch, and the doors part onto the fireflies.
+   FAEGLEN · gates.css
+   The opening — the fairy-tale gate of the glen. A gilded
+   scrollwork arch crowns two moonlit ivory doors etched with
+   gold filigree; delicate rails and a little wish-charm, blossom
+   tufts at the threshold, and the winged medallion at the heart
+   of the doors, warm light breathing through the seam.
+   Touch, and the doors part onto the starlight.
    · .is-open          : GSAP drives the parting (inline transforms)
    · .is-fallback-open : pure-CSS keyframes when GSAP is absent
-   · .is-leaving       : the cover crossfades into the grove
+   · .is-leaving       : the cover crossfades into the glen
    · prefers-reduced-motion : quiet, near-instant handover
    ═══════════════════════════════════════════════════════════════ */
 
@@ -21,7 +22,7 @@
   overflow: hidden;
   background:
     radial-gradient(94% 62% at 50% -10%,
-      color-mix(in srgb, var(--crimson) 24%, transparent) 0%,
+      color-mix(in srgb, var(--rose) 14%, transparent) 0%,
       transparent 62%),
     radial-gradient(130% 96% at 50% 114%,
       color-mix(in srgb, var(--night-deep) 88%, black 12%) 0%,
@@ -30,7 +31,18 @@
       color-mix(in srgb, var(--night) 86%, var(--crimson) 14%) 0%,
       var(--night) 46%,
       var(--canopy-2) 100%);
-  box-shadow: inset 0 0 22vmax rgba(2, 8, 5, .55);
+  box-shadow: inset 0 0 22vmax rgba(4, 6, 18, .55);
+}
+
+/* the night sky — a quiet field of fixed stars, one tile */
+#opening::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('../assets/orn/star-tile.svg');
+  background-size: 520px 520px;
+  opacity: .85;
 }
 
 .opening.is-leaving {
@@ -65,6 +77,55 @@
     ff-blink 4.8s ease-in-out infinite;
   animation-delay: var(--d, 0s), var(--d, 0s);
   pointer-events: none;
+}
+
+/* ── wish-stars — four-point sparkles breathing in the dark ────── */
+
+.opening__sparkle {
+  position: absolute;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  width: var(--s, 8px);
+  height: var(--s, 8px);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.opening__sparkle::before,
+.opening__sparkle::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right,
+    transparent, var(--candle) 32%, var(--candle) 68%, transparent);
+  box-shadow: 0 0 6px 1px color-mix(in srgb, var(--candle) 55%, transparent);
+}
+
+.opening__sparkle::before {
+  left: 0;
+  right: 0;
+  top: calc(50% - .75px);
+  height: 1.5px;
+}
+
+.opening__sparkle::after {
+  top: 0;
+  bottom: 0;
+  left: calc(50% - .75px);
+  width: 1.5px;
+  background: linear-gradient(to bottom,
+    transparent, var(--candle) 32%, var(--candle) 68%, transparent);
+  animation: sparkle-breathe var(--t, 6s) ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+  opacity: var(--o, .4);
+}
+
+.opening__sparkle::before { animation: sparkle-breathe var(--t, 6s) ease-in-out infinite; animation-delay: var(--d, 0s); opacity: var(--o, .4); }
+
+@keyframes sparkle-breathe {
+  0%, 100% { opacity: calc(var(--o, .4) * .25); transform: scale(.55); }
+  48%      { opacity: var(--o, .4); transform: scale(1); }
+  62%      { opacity: calc(var(--o, .4) * .5); transform: scale(.72); }
 }
 
 /* ── corner sprays, watermark, glow ────────────────────────────── */
@@ -104,9 +165,9 @@
   height: min(105vh, 860px);
   transform: translate(-50%, -50%);
   background: radial-gradient(circle,
-    color-mix(in srgb, var(--candle) 16%, transparent) 0%,
-    color-mix(in srgb, var(--champagne) 8%, transparent) 30%,
-    color-mix(in srgb, var(--crimson) 12%, transparent) 58%,
+    color-mix(in srgb, var(--candle) 17%, transparent) 0%,
+    color-mix(in srgb, var(--champagne) 9%, transparent) 30%,
+    color-mix(in srgb, var(--crimson) 13%, transparent) 58%,
     transparent 74%);
   opacity: .55;
   pointer-events: none;
@@ -137,7 +198,7 @@
   margin-bottom: clamp(1rem, 3vh, 1.8rem);
 }
 
-/* ── the bower stage ───────────────────────────────────────────── */
+/* ── the gate stage ────────────────────────────────────────────── */
 
 .gate-stage {
   position: relative;
@@ -162,7 +223,7 @@
   filter: drop-shadow(0 0 18px color-mix(in srgb, var(--candle) 12%, transparent));
 }
 
-/* the doorway outline — a mossy stone arch just outside the doors */
+/* the doorway outline — a gilded arch just outside the doors */
 .gate-stage::after {
   content: "";
   position: absolute;
@@ -199,12 +260,12 @@
   bottom: -30px;
   height: 48px;
   background: radial-gradient(50% 100% at 50% 0%,
-    rgba(3, 12, 7, .6) 0%, transparent 72%);
+    rgba(3, 4, 12, .6) 0%, transparent 72%);
   filter: blur(6px);
   pointer-events: none;
 }
 
-/* ── the two door leaves — mossy oak ───────────────────────────── */
+/* ── the two door leaves — moonlit ivory, etched in gold ───────── */
 
 .gate {
   position: absolute;
@@ -222,52 +283,52 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    color-mix(in srgb, var(--bark) 88%, black 12%) 0%,
-    color-mix(in srgb, var(--bark) 72%, var(--night) 28%) 10%,
-    color-mix(in srgb, var(--bark) 58%, var(--night) 42%) 52%,
-    color-mix(in srgb, var(--bark) 50%, var(--night) 50%) 100%);
+    color-mix(in srgb, var(--ivory) 90%, var(--champagne) 10%) 0%,
+    color-mix(in srgb, var(--ivory) 82%, var(--parchment) 18%) 46%,
+    color-mix(in srgb, var(--parchment) 86%, var(--champagne-soft) 14%) 100%);
+  box-shadow: inset 0 -18px 44px color-mix(in srgb, var(--bark) 16%, transparent);
 }
 
-/* plank grooves — four boards per leaf */
+/* panel seams — two slender gold hairlines per leaf */
 .gate__planks {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg,
-    transparent 0, transparent calc(25% - 1px),
-    rgba(2, 8, 5, .5) calc(25% - 1px) calc(25% + 1px),
-    transparent calc(25% + 1px), transparent calc(50% - 1px),
-    rgba(2, 8, 5, .5) calc(50% - 1px) calc(50% + 1px),
-    transparent calc(50% + 1px), transparent calc(75% - 1px),
-    rgba(2, 8, 5, .5) calc(75% - 1px) calc(75% + 1px),
-    transparent calc(75% + 1px), transparent 100%);
+    transparent 0, transparent calc(33.4% - 1px),
+    color-mix(in srgb, var(--burgundy) 30%, transparent) calc(33.4% - 1px) calc(33.4% + 1px),
+    transparent calc(33.4% + 1px), transparent calc(66.7% - 1px),
+    color-mix(in srgb, var(--burgundy) 30%, transparent) calc(66.7% - 1px) calc(66.7% + 1px),
+    transparent calc(66.7% + 1px), transparent 100%);
 }
 
-/* moss breathing up from the threshold */
+/* the glow of the hall breathing up from the threshold */
 .gate__panel::after {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(58% 16% at 50% 101%,
-    color-mix(in srgb, var(--crimson) 30%, transparent) 0%, transparent 78%);
+    color-mix(in srgb, var(--candle) 30%, transparent) 0%, transparent 78%);
 }
 
 .gate__frame {
   position: absolute;
   inset: 9px;
-  border: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--burgundy) 44%, transparent);
   border-radius: 999px 0 0 5px;
+  box-shadow: inset 0 0 0 3px color-mix(in srgb, var(--ivory) 55%, transparent),
+              inset 0 0 0 4px color-mix(in srgb, var(--burgundy) 22%, transparent);
 }
 
 .gate--right .gate__frame { border-radius: 0 999px 5px 0; }
 
-/* the climbing vine on each leaf */
+/* the climbing filigree on each leaf */
 .gate__scroll {
   position: absolute;
   inset: 0;
   margin: auto;
   height: 76%;
   width: auto;
-  color: var(--champagne);
+  color: var(--burgundy);
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
@@ -276,18 +337,18 @@
 
 .gate--right .gate__scroll { transform: scaleX(-1); }
 
-/* iron hinge-bands with rivets */
+/* delicate gilded rails with wish-star finials */
 .gate__band {
   position: absolute;
   left: 7%;
   right: 7%;
-  height: 6px;
+  height: 3px;
   border-radius: 2px;
   background: linear-gradient(180deg,
-    color-mix(in srgb, var(--champagne-soft) 52%, black 48%) 0%,
-    color-mix(in srgb, var(--champagne) 78%, black 22%) 42%,
-    color-mix(in srgb, var(--champagne-soft) 46%, black 54%) 100%);
-  box-shadow: 0 1px 3px rgba(2, 8, 5, .5);
+    color-mix(in srgb, var(--champagne-soft) 62%, white 8%) 0%,
+    color-mix(in srgb, var(--burgundy) 78%, black 8%) 55%,
+    color-mix(in srgb, var(--burgundy) 52%, black 22%) 100%);
+  box-shadow: 0 1px 3px rgba(4, 6, 18, .35);
 }
 
 .gate__band::before,
@@ -295,12 +356,12 @@
   content: "";
   position: absolute;
   top: 50%;
-  width: 3.5px;
-  height: 3.5px;
-  margin-top: -1.75px;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--gilding) 88%, white 12%);
-  box-shadow: 0 0 4px rgba(2, 8, 5, .6);
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  background: var(--gilding);
+  transform: rotate(45deg);
+  box-shadow: 0 0 4px color-mix(in srgb, var(--candle) 45%, transparent);
 }
 
 .gate__band::before { left: 6px; }
@@ -309,36 +370,36 @@
 .gate__band--top { top: 22%; }
 .gate__band--bottom { top: 74%; }
 
-/* the ring handles, hung from the lower band */
+/* the little wish-charm hung from the lower rail */
 .gate__ring {
   position: absolute;
   top: 77.5%;
-  width: clamp(36px, 9vw, 44px);
+  width: clamp(34px, 8.4vw, 42px);
   aspect-ratio: 1;
-  border: 2.5px solid color-mix(in srgb, var(--champagne) 78%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--champagne) 74%, transparent);
   border-radius: 50%;
   box-shadow:
-    0 2px 6px rgba(2, 8, 5, .45),
-    inset 0 1px 3px rgba(2, 8, 5, .35);
+    0 2px 6px rgba(4, 6, 18, .3),
+    inset 0 1px 3px rgba(4, 6, 18, .22);
 }
 
 .gate__ring::before {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -12px;
   left: 50%;
-  margin-left: -2.5px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
+  margin-left: -3px;
+  width: 6px;
+  height: 6px;
   background: var(--gilding);
-  box-shadow: 0 0 5px color-mix(in srgb, var(--candle) 40%, transparent);
+  transform: rotate(45deg);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--candle) 50%, transparent);
 }
 
 .gate--left .gate__ring { right: 12%; }
 .gate--right .gate__ring { left: 12%; }
 
-/* ── the fern roundel, sealed at the heart of the doors ────────── */
+/* ── the winged medallion, sealed at the heart of the doors ────── */
 
 .gate-crest {
   position: absolute;
@@ -351,19 +412,19 @@
   pointer-events: none;
 }
 
-/* carved wood disc behind the fern wreath */
+/* a soft ivory glass disc behind the winged crest */
 .gate-crest::before {
   content: "";
   position: absolute;
   inset: 7%;
   border-radius: 50%;
   background: radial-gradient(circle at 34% 26%,
-    color-mix(in srgb, var(--crimson) 26%, var(--night) 74%) 0%,
-    color-mix(in srgb, var(--night) 86%, black 14%) 58%,
-    color-mix(in srgb, var(--night) 66%, black 34%) 100%);
+    color-mix(in srgb, var(--ivory) 96%, white 4%) 0%,
+    color-mix(in srgb, var(--ivory) 88%, var(--parchment) 12%) 58%,
+    color-mix(in srgb, var(--parchment) 92%, var(--champagne-soft) 8%) 100%);
   box-shadow:
-    0 10px 30px rgba(2, 8, 5, .55),
-    inset 0 0 0 1px color-mix(in srgb, var(--champagne) 28%, transparent);
+    0 10px 30px rgba(4, 6, 18, .35),
+    inset 0 0 0 1px color-mix(in srgb, var(--burgundy) 34%, transparent);
 }
 
 /* outer hairline ring */
@@ -372,7 +433,7 @@
   position: absolute;
   inset: 1.5%;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--champagne) 24%, transparent);
+  border: 1px solid color-mix(in srgb, var(--burgundy) 30%, transparent);
 }
 
 .gate-crest__art {
@@ -381,7 +442,7 @@
   height: 100%;
   object-fit: contain;
   opacity: .92;
-  filter: drop-shadow(0 6px 18px rgba(2, 8, 5, .45));
+  filter: drop-shadow(0 6px 18px rgba(4, 6, 18, .3));
 }
 
 .gate-crest__initials {
@@ -389,10 +450,10 @@
   inset: 0;
   display: grid;
   place-items: center;
-  padding-top: .35em;
+  padding-top: .3em;
   font-size: clamp(1.5rem, 4.5vw, 2.1rem);
-  color: var(--gilding);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
+  color: var(--gilding-deep);
+  text-shadow: 0 1px 0 rgba(255, 250, 235, .65);
 }
 
 /* ── the seam of light between the leaves ──────────────────────── */
@@ -416,7 +477,7 @@
   pointer-events: none;
 }
 
-/* ── fern tufts at the threshold ───────────────────────────────── */
+/* ── blossom tufts at the threshold ────────────────────────────── */
 
 .gate-threshold {
   position: absolute;
@@ -426,7 +487,7 @@
   color: var(--champagne-soft);
   fill: none;
   stroke: currentColor;
-  opacity: .5;
+  opacity: .55;
   pointer-events: none;
   z-index: 4;
 }
@@ -524,6 +585,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .opening__firefly,
+  .opening__sparkle,
   .opening__glow { animation: none; }
 
   .gates,

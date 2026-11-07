@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · sections.css
-   The scenes of the invitation — hero bower, field-journal story,
-   announcement plate, arched programme plaques, the palette, the
-   garland of moments, the glasshouse, the fern-wreath countdown,
-   the closing note and the footer.
+   FAEGLEN · sections.css
+   The scenes of the invitation — the moonlit hero, the storybook
+   page, the royal proclamation plate, arched storybook windows,
+   the palette, the string of wish-lights, the wisteria pavilion,
+   the blossom-wreath countdown, the closing note and the footer.
    ═══════════════════════════════════════════════════════════════ */
 
-/* ══ Ⅰ · THE INVITATION — beneath the bower arch ═══════════════ */
+/* ══ Ⅰ · THE INVITATION — beneath the gilded arch ══════════════ */
 
 .scene--hero {
   min-height: 100svh;
@@ -25,7 +25,7 @@
   width: min(120vh, 880px);
   height: min(120vh, 880px);
   background: radial-gradient(circle,
-    color-mix(in srgb, var(--candle) 13%, transparent) 0%,
+    color-mix(in srgb, var(--candle) 14%, transparent) 0%,
     color-mix(in srgb, var(--champagne) 7%, transparent) 34%,
     transparent 66%);
   pointer-events: none;
@@ -72,10 +72,10 @@
   inset: 0;
   display: grid;
   place-items: center;
-  padding-top: .35em;
+  padding-top: .3em;
   font-size: clamp(2rem, 5.4vw, 3rem);
-  color: var(--gilding);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .22);
+  color: var(--gilding-deep);
+  text-shadow: 0 1px 0 rgba(255, 250, 235, .6);
 }
 
 .hero-eyebrow { margin-bottom: clamp(1.6rem, 4vh, 2.6rem); }
@@ -182,7 +182,7 @@
   .hero-scroll__line { animation: none; transform: none; opacity: .6; }
 }
 
-/* ══ Ⅱ · THEIR STORY — the field journal ═══════════════════════ */
+/* ══ Ⅱ · THEIR STORY — the storybook page ══════════════════════ */
 
 .scene--story .kicker { margin-bottom: 1.4rem; }
 
@@ -306,7 +306,7 @@
   stroke-width: 2;
 }
 
-/* ══ Ⅲ · SAVE THE DATE — the announcement plate ════════════════ */
+/* ══ Ⅲ · SAVE THE DATE — the royal proclamation ════════════════ */
 
 .scene--std { overflow-x: clip; }
 
@@ -330,7 +330,7 @@
     linear-gradient(174deg,
       color-mix(in srgb, var(--paper-raised) 96%, var(--champagne) 4%),
       color-mix(in srgb, var(--ivory) 96%, var(--champagne) 4%));
-  border-radius: 999px 999px 6px 6px;
+  border-radius: 999px 999px 8px 8px;
   box-shadow: var(--shadow-plate);
   text-align: center;
   color: var(--ink);
@@ -341,7 +341,7 @@
   position: absolute;
   inset: 12px;
   border: 1px solid color-mix(in srgb, var(--burgundy) 26%, transparent);
-  border-radius: 999px 999px 3px 3px;
+  border-radius: 999px 999px 5px 5px;
   pointer-events: none;
 }
 
@@ -380,6 +380,7 @@
   font-size: var(--fs-numerals);
   letter-spacing: .1em;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .std-display {
@@ -436,7 +437,7 @@
   transform: rotate(-6deg);
 }
 
-/* ══ Ⅳ · THE DETAILS — arched plaques ═══════════════════════════ */
+/* ══ Ⅳ · THE DETAILS — storybook windows ════════════════════════ */
 
 .details-head {
   text-align: center;
@@ -464,10 +465,10 @@
   padding: 3rem 1.8rem 2.2rem;
   text-align: center;
   background: linear-gradient(176deg,
-    color-mix(in srgb, var(--night) 68%, var(--crimson) 8%) 0%,
+    color-mix(in srgb, var(--night) 66%, var(--crimson) 8%) 0%,
     var(--glass-deep) 100%);
   border: 1px solid color-mix(in srgb, var(--champagne) 17%, transparent);
-  border-radius: 999px 999px 6px 6px / 210px 210px 6px 6px;
+  border-radius: 999px 999px 8px 8px / 210px 210px 8px 8px;
   box-shadow: var(--shadow-flat);
 }
 
@@ -530,7 +531,7 @@
   padding: clamp(2rem, 5vw, 3rem) clamp(1.4rem, 4vw, 2.8rem);
   background: color-mix(in srgb, var(--night) 55%, transparent);
   border: 1px solid color-mix(in srgb, var(--champagne) 15%, transparent);
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: var(--shadow-flat);
 }
 
@@ -596,7 +597,7 @@
   border: 1px solid color-mix(in srgb, var(--champagne) 55%, transparent);
   box-shadow:
     inset 0 0 0 4px color-mix(in srgb, var(--night) 82%, transparent),
-    0 8px 24px rgba(2, 8, 5, .45);
+    0 8px 24px rgba(4, 6, 18, .45);
 }
 
 .palette-swatches .swatch-name {
@@ -614,7 +615,7 @@
   margin: clamp(2.8rem, 7vh, 4.2rem) auto 0;
   padding: 1.8rem clamp(1.4rem, 4vw, 2.4rem);
   border: 1px solid color-mix(in srgb, var(--champagne) 20%, transparent);
-  border-radius: 6px;
+  border-radius: 8px;
   background: color-mix(in srgb, var(--night) 52%, transparent);
 }
 
@@ -649,7 +650,7 @@
   color: var(--night-faint);
 }
 
-/* ══ Ⅵ · THE WEDDING DAY — the garland of moments ══════════════ */
+/* ══ Ⅵ · THE WEDDING DAY — the string of wish-lights ═══════════ */
 
 .scene--itinerary { text-align: center; }
 
@@ -666,7 +667,7 @@
   padding-top: 6px;
 }
 
-/* the sagging vine cable the moments hang from */
+/* the sagging golden cable the wishes hang from */
 .day-words::before {
   content: "";
   position: absolute;
@@ -674,7 +675,7 @@
   left: max(-8px, calc(-1 * var(--pad-gutter)));
   right: max(-8px, calc(-1 * var(--pad-gutter)));
   height: 30px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 30' preserveAspectRatio='none'><path d='M0,4 Q200,26 400,14 T800,4' fill='none' stroke='rgba(217,188,127,0.5)' stroke-width='1.6'/></svg>") center / 100% 100% no-repeat;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 30' preserveAspectRatio='none'><path d='M0,4 Q200,26 400,14 T800,4' fill='none' stroke='rgba(233,204,134,0.5)' stroke-width='1.6'/></svg>") center / 100% 100% no-repeat;
   opacity: .8;
 }
 
@@ -730,7 +731,7 @@
   .day-word__bulb::after { animation: none; opacity: .85; }
 }
 
-/* ══ Ⅶ · THE GLASSHOUSE ══════════════════════════════════════════ */
+/* ══ Ⅶ · THE WISTERIA PAVILION ══════════════════════════════════ */
 
 .scene--venue { text-align: center; }
 
@@ -808,7 +809,7 @@
   margin-top: clamp(1.8rem, 4vh, 2.6rem);
 }
 
-/* ══ Ⅷ · THE COUNTDOWN — beneath the fern wreath ════════════════ */
+/* ══ Ⅷ · THE COUNTDOWN — beneath the blossom wreath ═════════════ */
 
 .scene--countdown {
   text-align: center;
@@ -817,16 +818,16 @@
 
 .countdown-wreath {
   position: absolute;
-  top: calc(var(--pad-section) + 6.8rem);
+  top: calc(var(--pad-section) - .2rem);
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(180px, 30vw, 280px);
+  width: clamp(180px, 26vw, 236px);
   height: auto;
   color: var(--champagne-soft);
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
-  opacity: .55;
+  opacity: .5;
   pointer-events: none;
 }
 

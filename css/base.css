@@ -1,9 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · base.css
-   The forest floor beneath every scene: the dusk gradient, the
-   barely-there scatter of ferns, the understory fronds, the glade
-   frame, the fireflies. Plus the typographic voices, buttons,
-   navigation and the reveal grammar shared by every section.
+   FAEGLEN · base.css
+   The storybook beneath every scene: the twilight gradient, the
+   barely-there scatter of wishes, the understory wisteria, the
+   glen frame, the fireflies and wish-sparkles. Plus the
+   typographic voices, buttons, navigation and the reveal grammar
+   shared by every section.
    ═══════════════════════════════════════════════════════════════ */
 
 *,
@@ -61,18 +62,18 @@ a { color: inherit; }
   border-radius: 2px;
 }
 
-/* ── the dusk itself ─────────────────────────────────────────────
+/* ── the twilight itself ─────────────────────────────────────────
    Four fixed layers, painted once:
-   1. a warm clearing glowing at the top of the grove
-   2. the scatter tile — fern pinnules & spores, barely visible
-   3. giant understory fronds breathing in the corners
-   4. the deep gradient down to the forest floor                */
+   1. a rose-gold wish-light glowing at the top of the glen
+   2. the scatter tile — wish-stars & dewdrops, barely visible
+   3. giant understory wisteria hanging into the top corners
+   4. the deep gradient down to the midnight dell                */
 
 body {
   background-image:
     radial-gradient(120% 86% at 50% -12%,
-      color-mix(in srgb, var(--crimson) 26%, var(--night) 74%) 0%,
-      color-mix(in srgb, var(--night) 92%, var(--crimson) 8%) 42%,
+      color-mix(in srgb, var(--crimson) 22%, var(--night) 78%) 0%,
+      color-mix(in srgb, var(--night) 90%, var(--crimson) 10%) 42%,
       var(--night-deep) 100%);
   background-attachment: fixed;
 }
@@ -94,7 +95,7 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background:
-    url('../assets/orn/understory-left.svg') left bottom / clamp(240px, 34vw, 480px) no-repeat,
+    url('../assets/orn/understory-left.svg') left top / clamp(240px, 34vw, 480px) no-repeat,
     url('../assets/orn/understory-right.svg') right top / clamp(220px, 30vw, 430px) no-repeat;
   opacity: .9;
 }
@@ -175,7 +176,7 @@ body::before {
   74%      { opacity: calc(var(--o, .4) * .3); }
 }
 
-/* ── the glade frame — a hairline at the edge of the page ─────── */
+/* ── the glen frame — a hairline at the edge of the page ──────── */
 
 .court-frame {
   position: fixed;
@@ -268,14 +269,14 @@ body::before {
   font-family: var(--font-editorial);
   font-weight: 400;
   font-size: var(--fs-h2);
-  line-height: 1.12;
-  letter-spacing: .015em;
+  line-height: 1.14;
+  letter-spacing: .02em;
   color: var(--moonlit);
 }
 
 .display .script {
   display: block;
-  font-size: .82em;
+  font-size: .84em;
   color: var(--champagne);
 }
 
@@ -341,7 +342,7 @@ main { position: relative; z-index: 1; }
   text-decoration: none;
   color: var(--champagne);
   border: 1px solid color-mix(in srgb, var(--champagne) 44%, transparent);
-  border-radius: 3px;
+  border-radius: 4px;
   background: color-mix(in srgb, var(--night) 42%, transparent);
   transition: background-color var(--t-fast) var(--ease-soft),
               border-color var(--t-fast) var(--ease-soft),
@@ -364,7 +365,7 @@ main { position: relative; z-index: 1; }
 }
 
 .btn--ink:hover {
-  color: #140f05;
+  color: #1a1406;
   background: linear-gradient(170deg, #ffe9b8, var(--candle) 52%, var(--champagne));
   box-shadow: 0 8px 30px color-mix(in srgb, var(--candle) 30%, transparent);
 }
@@ -411,7 +412,7 @@ main { position: relative; z-index: 1; }
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 1px 0 color-mix(in srgb, var(--champagne) 12%, transparent),
-              0 12px 40px rgba(2, 8, 5, .45);
+              0 12px 40px rgba(4, 6, 18, .45);
 }
 
 .nav__inner {
@@ -618,7 +619,7 @@ html.no-js body { overflow: auto; height: auto; }
   overflow: hidden;
 }
 
-/* botanical symbol strokes — the library draws in currentColor */
+/* fairy-tale symbol strokes — the library draws in currentColor */
 .svg-definitions .f {
   fill: currentColor;
   fill-opacity: .13;

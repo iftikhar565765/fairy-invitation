@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "vesperwood-invitation",
+  "name": "fairy-invitation",
   "main": "worker.js",
   "compatibility_date": "2026-09-01",
   "assets": {
@@ -11,11 +11,11 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "vesperwood-invitations",
+      "database_name": "fairy-invitations",
       // One-time setup: create the D1 database, then paste its id here.
-      //   npx wrangler d1 create vesperwood-invitations
+      //   npx wrangler d1 create fairy-invitations
       // (DEPLOY.md walks through this step by step.)
-      "database_id": "4dc7d7c2-8d8d-4c09-829b-fb91d054f190"
+      "database_id": "PASTE-YOUR-D1-DATABASE-ID-HERE"
     }
   ]
 }

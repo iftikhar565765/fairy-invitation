@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════
-   VESPERWOOD · responsive.css
-   The grove breathes at every size — wide desk, small phone.
+   FAEGLEN · responsive.css
+   The glen breathes at every size — wide desk, small phone.
    ═══════════════════════════════════════════════════════════════ */
 
 @media (max-width: 1080px) {
@@ -76,9 +76,11 @@
   .count-num { font-size: clamp(1.9rem, 9vw, 2.6rem); }
 
   .countdown-wreath {
-    width: clamp(150px, 38vw, 210px);
-    top: calc(var(--pad-section) - 2.6rem);
+    width: clamp(140px, 34vw, 196px);
+    top: calc(var(--pad-section) + .1rem);
   }
+
+  .std-numerals { font-size: clamp(2rem, 8.8vw, 3.4rem); }
 
   .fireflies i:nth-child(3n) { display: none; }
 

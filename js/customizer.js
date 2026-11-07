@@ -518,7 +518,7 @@
   }
 
   function prepareConfigForPublish() {
-    config.templateId = config.templateId || 'vesperwood';
+    config.templateId = config.templateId || 'faeglen';
     sendPreview();
     return Promise.resolve(clone(config));
   }
@@ -1149,19 +1149,19 @@
   /* ── design step: curated moods & voices ───────────────────── */
 
   var THEME_META = [
-    { key: 'grove', name: 'Pine & Firelight', chips: ['#A8894C', '#F6F1E2', '#D9BC7F', '#0A1C12'] },
-    { key: 'fern', name: 'Moss & Fern', chips: ['#A38A52', '#F7F4E9', '#D3BC8B', '#0E2016'] },
-    { key: 'ember', name: 'Autumn Ember', chips: ['#9A7433', '#F9F3E6', '#DBBB88', '#241608'] },
-    { key: 'dusk', name: 'Twilight Fern', chips: ['#9C9256', '#F6F5EC', '#D5C394', '#0A1A16'] }
+    { key: 'twilight', name: 'Pixie Twilight', chips: ['#B08A5A', '#F8F3E6', '#E9CC86', '#141938'] },
+    { key: 'blossom', name: 'Rose & Wisteria', chips: ['#B07D63', '#FAF4E8', '#EFC98F', '#1B1436'] },
+    { key: 'gilded', name: 'Gilded Ever After', chips: ['#C2955B', '#FBF4E4', '#F0D191', '#221327'] },
+    { key: 'moonlit', name: 'Moonlit Dell', chips: ['#A69068', '#F4F3E5', '#E4CB8F', '#0E1B2A'] }
   ];
 
   var TYPE_PAIRINGS = [
-    { name: 'Woodland Classic', fonts: { editorial: 'italiana', display: 'ebGaramond', script: 'allura', hand: 'cedarville', body: 'karla' } },
-    { name: 'Ink & Ivory', fonts: { editorial: 'bodoni', display: 'playfair', script: 'greatVibes', hand: 'caveat', body: 'dmSans' } },
+    { name: 'Happily Ever After', fonts: { editorial: 'prata', display: 'cormorant', script: 'greatVibes', hand: 'shadowsIntoLight', body: 'jost' } },
+    { name: 'Enchanted Ink', fonts: { editorial: 'bodoni', display: 'playfair', script: 'greatVibes', hand: 'caveat', body: 'dmSans' } },
     { name: 'Moonlit Garden', fonts: { editorial: 'prata', display: 'ebGaramond', script: 'parisienne', hand: 'shadowsIntoLight', body: 'montserrat' } },
-    { name: 'Field Notes', fonts: { editorial: 'libreCaslon', display: 'crimsonPro', script: 'homemadeApple', hand: 'nothingYouCouldDo', body: 'karla' } },
-    { name: 'Wildflower Ink', fonts: { editorial: 'dmSerif', display: 'lora', script: 'tangerine', hand: 'shadowsIntoLight', body: 'outfit' } },
-    { name: 'Gilded Fern', fonts: { editorial: 'marcellus', display: 'cormorant', script: 'pinyon', hand: 'laBelle', body: 'jost' } }
+    { name: 'Storybook Notes', fonts: { editorial: 'libreCaslon', display: 'crimsonPro', script: 'homemadeApple', hand: 'nothingYouCouldDo', body: 'karla' } },
+    { name: 'Wildflower Verse', fonts: { editorial: 'dmSerif', display: 'lora', script: 'tangerine', hand: 'shadowsIntoLight', body: 'outfit' } },
+    { name: 'Gilded Wings', fonts: { editorial: 'marcellus', display: 'cormorant', script: 'pinyon', hand: 'laBelle', body: 'jost' } }
   ];
 
   function fontPreviewFamily(font) {
@@ -1234,7 +1234,7 @@
       });
       card.appendChild(chips);
       card.appendChild(el('span', 'choice-card__name', theme.name));
-      if ((config.theme || 'grove') === theme.key) card.classList.add('is-selected');
+      if ((config.theme || 'twilight') === theme.key) card.classList.add('is-selected');
       card.addEventListener('click', function () {
         if (config.theme === theme.key) return;
         config.theme = theme.key;
