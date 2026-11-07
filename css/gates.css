@@ -1,8 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════
    VESPERWOOD · gates.css
-   The opening — a bower door of woven branches beneath a fern
-   arch, sealed by the fern medallion. Touch, and the doors part
-   onto the fireflies.
+   The opening — the gate of the grove. A bower of living branches
+   arches over two moss-dark oak doors; iron bands and ring handles,
+   fern tufts at the threshold, and the sealed fern roundel at the
+   heart of the doors, warm light breathing through the seam.
+   Touch, and the doors part onto the fireflies.
    · .is-open          : GSAP drives the parting (inline transforms)
    · .is-fallback-open : pure-CSS keyframes when GSAP is absent
    · .is-leaving       : the cover crossfades into the grove
@@ -18,10 +20,17 @@
   padding: clamp(1rem, 4vh, 3rem);
   overflow: hidden;
   background:
-    radial-gradient(130% 90% at 50% -14%,
-      color-mix(in srgb, var(--crimson) 22%, var(--night) 78%) 0%,
-      color-mix(in srgb, var(--night) 90%, var(--crimson) 10%) 46%,
-      var(--night-deep) 100%);
+    radial-gradient(94% 62% at 50% -10%,
+      color-mix(in srgb, var(--crimson) 24%, transparent) 0%,
+      transparent 62%),
+    radial-gradient(130% 96% at 50% 114%,
+      color-mix(in srgb, var(--night-deep) 88%, black 12%) 0%,
+      transparent 58%),
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--night) 86%, var(--crimson) 14%) 0%,
+      var(--night) 46%,
+      var(--canopy-2) 100%);
+  box-shadow: inset 0 0 22vmax rgba(2, 8, 5, .55);
 }
 
 .opening.is-leaving {
@@ -63,7 +72,7 @@
 .opening__corner {
   position: absolute;
   width: clamp(130px, 19vw, 240px);
-  opacity: .55;
+  opacity: .42;
   pointer-events: none;
   z-index: 1;
 }
@@ -75,13 +84,13 @@
 
 .opening__watermark {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
-  transform: translate(-52%, -54%);
+  transform: translate(-50%, -50%);
   font-family: var(--font-script);
-  font-size: clamp(26rem, 64vh, 46rem);
+  font-size: clamp(17rem, 38vh, 28rem);
   line-height: 1;
-  color: color-mix(in srgb, var(--champagne) 7%, transparent);
+  color: color-mix(in srgb, var(--champagne) 5%, transparent);
   pointer-events: none;
   z-index: 0;
   user-select: none;
@@ -89,17 +98,17 @@
 
 .opening__glow {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  width: min(115vh, 900px);
-  height: min(115vh, 900px);
-  transform: translate(-50%, -46%);
+  width: min(105vh, 860px);
+  height: min(105vh, 860px);
+  transform: translate(-50%, -50%);
   background: radial-gradient(circle,
-    color-mix(in srgb, var(--candle) 20%, transparent) 0%,
-    color-mix(in srgb, var(--champagne) 10%, transparent) 30%,
-    color-mix(in srgb, var(--crimson) 14%, transparent) 58%,
+    color-mix(in srgb, var(--candle) 16%, transparent) 0%,
+    color-mix(in srgb, var(--champagne) 8%, transparent) 30%,
+    color-mix(in srgb, var(--crimson) 12%, transparent) 58%,
     transparent 74%);
-  opacity: .5;
+  opacity: .55;
   pointer-events: none;
   z-index: 0;
 }
@@ -125,7 +134,7 @@
   line-height: 1.02;
   color: var(--moonlit);
   text-shadow: 0 2px 30px color-mix(in srgb, var(--candle) 22%, transparent);
-  margin-bottom: clamp(1.2rem, 3.6vh, 2.2rem);
+  margin-bottom: clamp(1rem, 3vh, 1.8rem);
 }
 
 /* ── the bower stage ───────────────────────────────────────────── */
@@ -139,28 +148,30 @@
 }
 
 .gate-pediment {
-  width: min(400px, 94%);
+  position: absolute;
+  top: -40px;
+  left: -7.5%;
+  width: 115%;
   height: auto;
   color: var(--champagne-soft);
   fill: none;
   stroke: currentColor;
-  stroke-width: 2;
-  margin-bottom: -10px;
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--candle) 14%, transparent));
+  stroke-width: 1.5;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 0 18px color-mix(in srgb, var(--candle) 12%, transparent));
 }
 
-/* the doorway outline — a hairline arch just outside the doors */
+/* the doorway outline — a mossy stone arch just outside the doors */
 .gate-stage::after {
   content: "";
   position: absolute;
-  top: clamp(64px, 12vw, 92px);
-  left: -13px;
-  right: -13px;
-  bottom: -14px;
-  border: 1px solid color-mix(in srgb, var(--champagne) 30%, transparent);
-  border-radius: 999px 999px 14px 14px;
+  top: -10px;
+  left: -14px;
+  right: -14px;
+  bottom: -15px;
+  border: 1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
+  border-radius: 999px 999px 16px 16px;
   pointer-events: none;
 }
 
@@ -168,7 +179,7 @@
   position: relative;
   display: block;
   width: 100%;
-  height: clamp(280px, 42vh, 430px);
+  height: clamp(300px, 44vh, 440px);
   padding: 0;
   border-radius: 999px 999px 0 0;
   overflow: hidden;
@@ -183,17 +194,17 @@
 
 .gate-shadow {
   position: absolute;
-  left: 8%;
-  right: 8%;
+  left: 6%;
+  right: 6%;
   bottom: -30px;
-  height: 46px;
+  height: 48px;
   background: radial-gradient(50% 100% at 50% 0%,
-    rgba(2, 8, 5, .55) 0%, transparent 72%);
+    rgba(3, 12, 7, .6) 0%, transparent 72%);
   filter: blur(6px);
   pointer-events: none;
 }
 
-/* ── the two door leaves ───────────────────────────────────────── */
+/* ── the two door leaves — mossy oak ───────────────────────────── */
 
 .gate {
   position: absolute;
@@ -210,33 +221,51 @@
 .gate__panel {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(112deg,
-      color-mix(in srgb, var(--bark) 90%, black 10%) 0%,
-      color-mix(in srgb, var(--wine) 84%, var(--night) 16%) 46%,
-      color-mix(in srgb, var(--bark) 88%, black 12%) 100%);
-  box-shadow: inset -1px 0 0 color-mix(in srgb, var(--champagne) 20%, transparent);
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--bark) 88%, black 12%) 0%,
+    color-mix(in srgb, var(--bark) 72%, var(--night) 28%) 10%,
+    color-mix(in srgb, var(--bark) 58%, var(--night) 42%) 52%,
+    color-mix(in srgb, var(--bark) 50%, var(--night) 50%) 100%);
 }
 
-.gate--right .gate__panel {
-  box-shadow: inset 1px 0 0 color-mix(in srgb, var(--champagne) 20%, transparent);
+/* plank grooves — four boards per leaf */
+.gate__planks {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    transparent 0, transparent calc(25% - 1px),
+    rgba(2, 8, 5, .5) calc(25% - 1px) calc(25% + 1px),
+    transparent calc(25% + 1px), transparent calc(50% - 1px),
+    rgba(2, 8, 5, .5) calc(50% - 1px) calc(50% + 1px),
+    transparent calc(50% + 1px), transparent calc(75% - 1px),
+    rgba(2, 8, 5, .5) calc(75% - 1px) calc(75% + 1px),
+    transparent calc(75% + 1px), transparent 100%);
+}
+
+/* moss breathing up from the threshold */
+.gate__panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(58% 16% at 50% 101%,
+    color-mix(in srgb, var(--crimson) 30%, transparent) 0%, transparent 78%);
 }
 
 .gate__frame {
   position: absolute;
-  inset: 10px;
-  border: 1px solid color-mix(in srgb, var(--champagne) 26%, transparent);
-  border-radius: inherit;
+  inset: 9px;
+  border: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
+  border-radius: 999px 0 0 5px;
 }
 
-.gate--left .gate__frame { border-radius: 999px 0 0 0; }
-.gate--right .gate__frame { border-radius: 0 999px 0 0; }
+.gate--right .gate__frame { border-radius: 0 999px 5px 0; }
 
+/* the climbing vine on each leaf */
 .gate__scroll {
   position: absolute;
   inset: 0;
   margin: auto;
-  height: 88%;
+  height: 76%;
   width: auto;
   color: var(--champagne);
   fill: none;
@@ -247,39 +276,112 @@
 
 .gate--right .gate__scroll { transform: scaleX(-1); }
 
-.gate__hinges {
+/* iron hinge-bands with rivets */
+.gate__band {
   position: absolute;
-  top: 18%;
-  height: 64%;
-  width: 3px;
-  background:
-    radial-gradient(circle at 50% 12%, var(--candle) 0 2.4px, transparent 3px),
-    radial-gradient(circle at 50% 50%, var(--candle) 0 2.4px, transparent 3px),
-    radial-gradient(circle at 50% 88%, var(--candle) 0 2.4px, transparent 3px);
-  opacity: .8;
+  left: 7%;
+  right: 7%;
+  height: 6px;
+  border-radius: 2px;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--champagne-soft) 52%, black 48%) 0%,
+    color-mix(in srgb, var(--champagne) 78%, black 22%) 42%,
+    color-mix(in srgb, var(--champagne-soft) 46%, black 54%) 100%);
+  box-shadow: 0 1px 3px rgba(2, 8, 5, .5);
 }
 
-.gate--left .gate__hinges { left: 3px; }
-.gate--right .gate__hinges { right: 3px; }
+.gate__band::before,
+.gate__band::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 3.5px;
+  height: 3.5px;
+  margin-top: -1.75px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--gilding) 88%, white 12%);
+  box-shadow: 0 0 4px rgba(2, 8, 5, .6);
+}
 
-/* ── the fern medallion ────────────────────────────────────────── */
+.gate__band::before { left: 6px; }
+.gate__band::after { right: 6px; }
+
+.gate__band--top { top: 22%; }
+.gate__band--bottom { top: 74%; }
+
+/* the ring handles, hung from the lower band */
+.gate__ring {
+  position: absolute;
+  top: 77.5%;
+  width: clamp(36px, 9vw, 44px);
+  aspect-ratio: 1;
+  border: 2.5px solid color-mix(in srgb, var(--champagne) 78%, transparent);
+  border-radius: 50%;
+  box-shadow:
+    0 2px 6px rgba(2, 8, 5, .45),
+    inset 0 1px 3px rgba(2, 8, 5, .35);
+}
+
+.gate__ring::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -2.5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gilding);
+  box-shadow: 0 0 5px color-mix(in srgb, var(--candle) 40%, transparent);
+}
+
+.gate--left .gate__ring { right: 12%; }
+.gate--right .gate__ring { left: 12%; }
+
+/* ── the fern roundel, sealed at the heart of the doors ────────── */
 
 .gate-crest {
   position: absolute;
-  top: clamp(-30px, -4vw, -24px);
+  top: 9%;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(110px, 26vw, 168px);
+  width: clamp(116px, 27vw, 156px);
   aspect-ratio: 1;
   z-index: 3;
   pointer-events: none;
 }
 
+/* carved wood disc behind the fern wreath */
+.gate-crest::before {
+  content: "";
+  position: absolute;
+  inset: 7%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 26%,
+    color-mix(in srgb, var(--crimson) 26%, var(--night) 74%) 0%,
+    color-mix(in srgb, var(--night) 86%, black 14%) 58%,
+    color-mix(in srgb, var(--night) 66%, black 34%) 100%);
+  box-shadow:
+    0 10px 30px rgba(2, 8, 5, .55),
+    inset 0 0 0 1px color-mix(in srgb, var(--champagne) 28%, transparent);
+}
+
+/* outer hairline ring */
+.gate-crest::after {
+  content: "";
+  position: absolute;
+  inset: 1.5%;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--champagne) 24%, transparent);
+}
+
 .gate-crest__art {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 10px 30px rgba(2, 8, 5, .5));
+  opacity: .92;
+  filter: drop-shadow(0 6px 18px rgba(2, 8, 5, .45));
 }
 
 .gate-crest__initials {
@@ -287,10 +389,10 @@
   inset: 0;
   display: grid;
   place-items: center;
-  padding-top: .4em;
-  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  padding-top: .35em;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
   color: var(--gilding);
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .3);
 }
 
 /* ── the seam of light between the leaves ──────────────────────── */
@@ -304,14 +406,29 @@
   transform: translateX(-50%);
   background: linear-gradient(to bottom,
     transparent 0%,
-    color-mix(in srgb, var(--candle) 85%, transparent) 22%,
-    color-mix(in srgb, var(--candle) 95%, transparent) 50%,
-    color-mix(in srgb, var(--candle) 85%, transparent) 78%,
+    color-mix(in srgb, var(--ember) 80%, transparent) 22%,
+    color-mix(in srgb, var(--ember) 95%, white 5%) 50%,
+    color-mix(in srgb, var(--ember) 80%, transparent) 78%,
     transparent 100%);
-  box-shadow: 0 0 18px 4px color-mix(in srgb, var(--candle) 40%, transparent);
-  opacity: .55;
+  box-shadow: 0 0 18px 4px color-mix(in srgb, var(--candle) 42%, transparent);
+  opacity: .7;
   z-index: 2;
   pointer-events: none;
+}
+
+/* ── fern tufts at the threshold ───────────────────────────────── */
+
+.gate-threshold {
+  position: absolute;
+  left: -7%;
+  bottom: -13px;
+  width: 114%;
+  color: var(--champagne-soft);
+  fill: none;
+  stroke: currentColor;
+  opacity: .5;
+  pointer-events: none;
+  z-index: 4;
 }
 
 /* ── hint, open, skip ──────────────────────────────────────────── */
@@ -320,7 +437,7 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  margin-top: clamp(1.6rem, 4.2vh, 2.6rem);
+  margin-top: clamp(1.5rem, 4vh, 2.4rem);
   font-size: var(--fs-eyebrow);
   letter-spacing: .3em;
   text-transform: uppercase;
@@ -396,7 +513,7 @@
 }
 
 @keyframes fb-seam {
-  0%   { opacity: .55; transform: translateX(-50%) scaleX(1); }
+  0%   { opacity: .6; transform: translateX(-50%) scaleX(1); }
   38%  { opacity: 1; }
   100% { opacity: 0; transform: translateX(-50%) scaleX(26); }
 }

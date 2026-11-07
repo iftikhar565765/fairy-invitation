@@ -118,11 +118,15 @@
 
   .gate-stage { width: min(340px, 86vw); }
 
-  .gates { height: clamp(240px, 38vh, 340px); }
+  .gates { height: clamp(260px, 42vh, 360px); }
 
-  .gate-crest { width: clamp(96px, 30vw, 130px); }
+  .gate-crest { width: clamp(102px, 29vw, 132px); top: 8%; }
 
   .gate-crest__initials { font-size: clamp(1.4rem, 6vw, 2rem); }
+
+  .gate-pediment { top: -28px; }
+
+  .opening__corner { opacity: .34; }
 
   .opening__names { font-size: clamp(2.4rem, 12vw, 3.6rem); }
 
@@ -140,12 +144,13 @@
 /* very short phones (landscape opening) */
 @media (max-height: 640px) {
   .gate-stage { width: min(320px, 62vh); }
-  .gates { height: clamp(190px, 34vh, 280px); }
+  .gates { height: clamp(200px, 36vh, 290px); }
+  .gate-crest { width: clamp(92px, 26vw, 118px); top: 8%; }
   .opening__names { font-size: clamp(2rem, 8vh, 3rem); margin-bottom: .8rem; }
   .opening__hint { margin-top: 1rem; }
   .opening__open { margin-top: .9rem; }
   .opening__skip { margin-top: .6rem; }
-  .gate-pediment { margin-bottom: -6px; }
+  .gate-pediment { top: -24px; }
 }
 
 /* graceful print — the invitation reads as text on paper */
