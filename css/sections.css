@@ -117,9 +117,10 @@
 .hero-name { display: inline-block; }
 
 .hero-amp {
-  font-size: .72em;
-  color: var(--rose);
-  transform: translateY(-.08em);
+  font-size: .78em;
+  color: var(--champagne-soft);
+  text-shadow: 0 1px 0 color-mix(in srgb, white 60%, transparent);
+  transform: translateY(-.06em);
 }
 
 .hero-lead {
@@ -128,7 +129,7 @@
   font-family: var(--font-display);
   font-size: var(--fs-lead);
   line-height: 1.66;
-  color: var(--moonlit-soft);
+  color: color-mix(in srgb, var(--moonlit) 92%, transparent);
 }
 
 .hero-divider {
@@ -147,12 +148,12 @@
   font-size: var(--fs-small);
   letter-spacing: .16em;
   text-transform: uppercase;
-  color: var(--night-ink);
+  color: var(--burgundy);
 }
 
 .hero-venue {
   margin-top: .8rem;
-  color: var(--night-faint);
+  color: var(--night-ink);
 }
 
 .hero-venue-suffix { opacity: .8; }
