@@ -42,13 +42,9 @@
     --pad-section: clamp(3.6rem, 11vh, 6rem);
   }
 
-  .court-frame i {
-    width: clamp(46px, 11vw, 64px);
-  }
-
   .opening__corner {
     width: clamp(96px, 24vw, 150px);
-    opacity: .5;
+    opacity: .4;
   }
 
   .opening__dust {
@@ -147,7 +143,7 @@
 
   .gate-pediment { top: -28px; }
 
-  .opening__corner { opacity: .4; }
+  .opening__corner { opacity: .34; }
 
   .opening__names { font-size: clamp(2.4rem, 12vw, 3.6rem); }
 

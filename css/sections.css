@@ -1128,7 +1128,7 @@
 .leaf-corner {
   position: absolute;
   width: clamp(56px, 8vw, 84px);
-  opacity: .75;
+  opacity: .58;
   pointer-events: none;
 }
 

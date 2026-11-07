@@ -47,7 +47,7 @@
   pointer-events: none;
   background-image: url('../assets/orn/star-tile.svg');
   background-size: 520px 520px;
-  opacity: .7;
+  opacity: .38;   /* wish-sparkles found only on a closer look */
 }
 
 .opening.is-leaving {
@@ -163,7 +163,7 @@
 .opening__corner {
   position: absolute;
   width: clamp(130px, 19vw, 240px);
-  opacity: .6;
+  opacity: .45;
   pointer-events: none;
   z-index: 1;
 }

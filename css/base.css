@@ -97,6 +97,7 @@ body::before {
   background-image: url('../assets/orn/scatter-tile.svg');
   background-size: 460px 460px;
   background-attachment: fixed;
+  opacity: .32;   /* barely there — found only by looking closely */
 }
 
 .understory {
@@ -107,7 +108,7 @@ body::before {
   background:
     url('../assets/orn/understory-left.svg') left top / clamp(240px, 34vw, 480px) no-repeat,
     url('../assets/orn/understory-right.svg') right top / clamp(220px, 30vw, 430px) no-repeat;
-  opacity: .9;
+  opacity: .4;    /* a breath of the glade — never competing with the page */
 }
 
 /* ── the drift — motes of pixie dust ─────────────────────────────
@@ -200,20 +201,6 @@ body::before {
   inset: 0;
   border: 1px solid color-mix(in srgb, var(--champagne) 22%, transparent);
 }
-
-.court-frame i {
-  position: absolute;
-  width: clamp(64px, 7.5vw, 104px);
-  opacity: .55;
-  color: var(--champagne-soft);
-}
-
-.court-frame i svg { width: 100%; height: auto; }
-
-.court-frame i.tl { top: 7px; left: 7px; }
-.court-frame i.tr { top: 7px; right: 7px; transform: scaleX(-1); }
-.court-frame i.bl { bottom: 7px; left: 7px; transform: scaleY(-1); }
-.court-frame i.br { bottom: 7px; right: 7px; transform: scale(-1); }
 
 .court-frame::before,
 .court-frame::after {
